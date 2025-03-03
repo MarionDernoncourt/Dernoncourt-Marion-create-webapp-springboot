@@ -40,11 +40,8 @@ public class MedicalRecordRepository implements IMedicalRecordRepository {
 			return List.of();
 		}
 
-		logger.info("Nombre de MedicalRecord trouvé : " + medicalRecordNode.size());
 		return objectMapper.convertValue(medicalRecordNode, new TypeReference<List<MedicalRecord>>() {
 		});
 	}
 
-	
-	
 }

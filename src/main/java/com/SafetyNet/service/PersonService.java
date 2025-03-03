@@ -48,7 +48,6 @@ public class PersonService {
 		logger.info("Nombre de personnes rattachées à la station " + stationNumber + " : " + coveredPerson.size());
 		
 		return coveredPerson;
-
 	}
 
 	public int calculatePersonAge(String firstName, String lastName) throws Exception {
@@ -56,7 +55,6 @@ public class PersonService {
 		LocalDate birthdate = medicalRecordService.getMedicalRecord_ByLastNameAndFirstName(firstName, lastName).getBirthdate();
 		
 		return ageCalculatorService.calculateAge(birthdate);
-		
-	}
+		}
 
 }

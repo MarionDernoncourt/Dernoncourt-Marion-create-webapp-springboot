@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 import com.SafetyNet.model.MedicalRecord;
 import com.SafetyNet.repository.IMedicalRecordRepository;
 
-import lombok.Data;
 
 
 @Service
@@ -35,9 +34,7 @@ public class MedicalRecordService {
 		
 		if(medicalRecord == null ) {
 			logger.warn("Aucun dossier medical trouvé pour {} {} ", firstName, lastName);
-		} else {
-			logger.info("Dossier medical trouvé pour {} {}", firstName, lastName);
-		}
+		} 
 		
 		return medicalRecord;
 

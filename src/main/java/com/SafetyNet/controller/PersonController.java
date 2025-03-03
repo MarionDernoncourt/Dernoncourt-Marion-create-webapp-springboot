@@ -9,13 +9,19 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.SafetyNet.model.Person;
+import com.SafetyNet.service.FireStationCoverageService;
 import com.SafetyNet.service.PersonService;
+
+import dto.FireStationCoverageDTO;
 
 @RestController
 public class PersonController {
 
 	@Autowired
 	private PersonService personService;
+	@Autowired
+	private FireStationCoverageService fireStationCoverageService ;
+	
 
 	
 
@@ -25,8 +31,8 @@ public class PersonController {
 	}
 	
 	@GetMapping("/firestation")
-	public List<Person> getPerson_ByStationNumber(@RequestParam int stationNumber) throws IOException {
-		return personService.getPerson_ByStationNumber(stationNumber);
+	public FireStationCoverageDTO getPerson_ByStationNumber(@RequestParam int stationNumber) throws Exception {
+		return fireStationCoverageService.getFireStationCoverage(stationNumber);
 	}
 	
 	
