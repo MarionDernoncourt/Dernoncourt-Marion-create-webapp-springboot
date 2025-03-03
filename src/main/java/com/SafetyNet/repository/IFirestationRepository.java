@@ -1,11 +1,17 @@
-package com.SafetyNet.Repository;
+package com.SafetyNet.repository;
 
-import org.springframework.data.repository.CrudRepository;
+import java.io.IOException;
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import com.SafetyNet.model.Firestation;
 
 @Repository
-public interface FirestationRepository extends CrudRepository<Firestation, Long> {
+public interface IFirestationRepository {
 
+	public List<Firestation> getAllFirestation() throws IOException;
+
+	
 }
+

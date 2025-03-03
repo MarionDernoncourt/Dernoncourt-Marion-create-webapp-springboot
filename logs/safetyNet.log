@@ -1,0 +1,187 @@
+2025-03-03T10:58:35.684+01:00  INFO 10824 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Starting SafetyNetApplication using Java 21.0.5 with PID 10824 (C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet\target\classes started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-03T10:58:35.695+01:00  INFO 10824 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-03T10:58:37.170+01:00  INFO 10824 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-03T10:58:37.220+01:00  INFO 10824 --- [SafetyNet] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-03T10:58:37.221+01:00  INFO 10824 --- [SafetyNet] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-03T10:58:37.289+01:00  INFO 10824 --- [SafetyNet] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-03T10:58:37.290+01:00  INFO 10824 --- [SafetyNet] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1515 ms
+2025-03-03T10:58:37.742+01:00  INFO 10824 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-03T10:58:37.749+01:00  INFO 10824 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Started SafetyNetApplication in 2.716 seconds (process running for 4.181)
+2025-03-03T10:58:46.344+01:00  INFO 10824 --- [SafetyNet] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-03T10:58:46.346+01:00  INFO 10824 --- [SafetyNet] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-03T10:58:46.348+01:00  INFO 10824 --- [SafetyNet] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-03-03T10:58:46.398+01:00  INFO 10824 --- [SafetyNet] [http-nio-8080-exec-1] c.S.repository.FirestationRepository     : lecture du fichier JSON
+2025-03-03T11:00:29.355+01:00  INFO 10824 --- [SafetyNet] [RMI TCP Connection(6)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-03-03T11:00:29.357+01:00  INFO 10824 --- [SafetyNet] [RMI TCP Connection(6)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-03T11:00:29.365+01:00  INFO 10824 --- [SafetyNet] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-03T11:00:31.302+01:00  INFO 35524 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Starting SafetyNetApplication using Java 21.0.5 with PID 35524 (C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet\target\classes started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-03T11:00:31.305+01:00  INFO 35524 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-03T11:00:32.210+01:00  INFO 35524 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-03T11:00:32.224+01:00  INFO 35524 --- [SafetyNet] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-03T11:00:32.225+01:00  INFO 35524 --- [SafetyNet] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-03T11:00:32.274+01:00  INFO 35524 --- [SafetyNet] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-03T11:00:32.274+01:00  INFO 35524 --- [SafetyNet] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 904 ms
+2025-03-03T11:00:32.627+01:00  INFO 35524 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-03T11:00:32.637+01:00  INFO 35524 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Started SafetyNetApplication in 1.884 seconds (process running for 2.521)
+2025-03-03T11:00:46.510+01:00  INFO 35524 --- [SafetyNet] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-03T11:00:46.510+01:00  INFO 35524 --- [SafetyNet] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-03T11:00:46.511+01:00  INFO 35524 --- [SafetyNet] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-03-03T11:00:46.563+01:00  INFO 35524 --- [SafetyNet] [http-nio-8080-exec-1] c.S.repository.FirestationRepository     : lecture du fichier JSON
+2025-03-03T11:00:46.641+01:00  INFO 35524 --- [SafetyNet] [http-nio-8080-exec-1] c.SafetyNet.repository.PersonRepository  : Lecture du fichier json
+2025-03-03T11:00:46.645+01:00  INFO 35524 --- [SafetyNet] [http-nio-8080-exec-1] c.SafetyNet.repository.PersonRepository  : Nombre de personnes trouvées : 23
+2025-03-03T11:30:53.266+01:00  INFO 35524 --- [SafetyNet] [http-nio-8080-exec-4] c.S.repository.FirestationRepository     : lecture du fichier JSON
+2025-03-03T11:30:53.277+01:00  INFO 35524 --- [SafetyNet] [http-nio-8080-exec-4] c.SafetyNet.repository.PersonRepository  : Lecture du fichier json
+2025-03-03T11:30:53.279+01:00  INFO 35524 --- [SafetyNet] [http-nio-8080-exec-4] c.SafetyNet.repository.PersonRepository  : Nombre de personnes trouvées : 23
+2025-03-03T11:31:06.451+01:00  INFO 35524 --- [SafetyNet] [RMI TCP Connection(34)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-03-03T11:31:06.464+01:00  INFO 35524 --- [SafetyNet] [RMI TCP Connection(34)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-03T11:31:06.479+01:00  INFO 35524 --- [SafetyNet] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-03T11:31:08.480+01:00  INFO 26580 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Starting SafetyNetApplication using Java 21.0.5 with PID 26580 (C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet\target\classes started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-03T11:31:08.482+01:00  INFO 26580 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-03T11:31:09.399+01:00  INFO 26580 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-03T11:31:09.415+01:00  INFO 26580 --- [SafetyNet] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-03T11:31:09.415+01:00  INFO 26580 --- [SafetyNet] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-03T11:31:09.473+01:00  INFO 26580 --- [SafetyNet] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-03T11:31:09.473+01:00  INFO 26580 --- [SafetyNet] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 927 ms
+2025-03-03T11:31:09.838+01:00  INFO 26580 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-03T11:31:09.848+01:00  INFO 26580 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Started SafetyNetApplication in 1.785 seconds (process running for 2.447)
+2025-03-03T11:31:15.493+01:00  INFO 26580 --- [SafetyNet] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-03T11:31:15.493+01:00  INFO 26580 --- [SafetyNet] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-03T11:31:15.494+01:00  INFO 26580 --- [SafetyNet] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-03-03T11:31:15.537+01:00  INFO 26580 --- [SafetyNet] [http-nio-8080-exec-1] c.S.repository.FirestationRepository     : lecture du fichier JSON
+2025-03-03T11:31:15.560+01:00  INFO 26580 --- [SafetyNet] [http-nio-8080-exec-1] c.S.repository.FirestationRepository     : Lecture du fichier ok, nombre de firestation : 13
+2025-03-03T11:31:15.612+01:00  INFO 26580 --- [SafetyNet] [http-nio-8080-exec-1] c.S.repository.FirestationRepository     : Lecture des firestations et recherche par stationNumber
+2025-03-03T11:31:15.612+01:00  INFO 26580 --- [SafetyNet] [http-nio-8080-exec-1] c.S.repository.FirestationRepository     : Nombre de firestations ayant 1 comme station : 13
+2025-03-03T11:31:15.612+01:00  INFO 26580 --- [SafetyNet] [http-nio-8080-exec-1] c.SafetyNet.repository.PersonRepository  : Récupération des adresses des stations : 1
+2025-03-03T11:31:15.613+01:00  INFO 26580 --- [SafetyNet] [http-nio-8080-exec-1] c.SafetyNet.repository.PersonRepository  : Lecture du fichier json
+2025-03-03T11:31:15.617+01:00  INFO 26580 --- [SafetyNet] [http-nio-8080-exec-1] c.SafetyNet.repository.PersonRepository  : Nombre de personnes trouvées : 23
+2025-03-03T11:34:02.869+01:00  INFO 26580 --- [SafetyNet] [RMI TCP Connection(6)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-03-03T11:34:02.871+01:00  INFO 26580 --- [SafetyNet] [RMI TCP Connection(6)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-03T11:34:02.878+01:00  INFO 26580 --- [SafetyNet] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-03T11:34:04.973+01:00  INFO 35172 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Starting SafetyNetApplication using Java 21.0.5 with PID 35172 (C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet\target\classes started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-03T11:34:04.975+01:00  INFO 35172 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-03T11:34:05.856+01:00  INFO 35172 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-03T11:34:05.872+01:00  INFO 35172 --- [SafetyNet] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-03T11:34:05.872+01:00  INFO 35172 --- [SafetyNet] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-03T11:34:05.921+01:00  INFO 35172 --- [SafetyNet] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-03T11:34:05.921+01:00  INFO 35172 --- [SafetyNet] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 881 ms
+2025-03-03T11:34:06.271+01:00  INFO 35172 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-03T11:34:06.278+01:00  INFO 35172 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Started SafetyNetApplication in 1.741 seconds (process running for 2.442)
+2025-03-03T11:34:48.625+01:00  INFO 35172 --- [SafetyNet] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-03T11:34:48.626+01:00  INFO 35172 --- [SafetyNet] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-03T11:34:48.627+01:00  INFO 35172 --- [SafetyNet] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-03-03T11:34:48.665+01:00  INFO 35172 --- [SafetyNet] [http-nio-8080-exec-1] c.SafetyNet.repository.PersonRepository  : Lecture du fichier json
+2025-03-03T11:34:48.691+01:00  INFO 35172 --- [SafetyNet] [http-nio-8080-exec-1] c.SafetyNet.repository.PersonRepository  : Nombre de personnes trouvées : 23
+2025-03-03T11:35:07.068+01:00  INFO 35172 --- [SafetyNet] [RMI TCP Connection(3)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-03-03T11:35:07.071+01:00  INFO 35172 --- [SafetyNet] [RMI TCP Connection(3)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-03T11:35:07.078+01:00  INFO 35172 --- [SafetyNet] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-03T11:35:09.180+01:00  INFO 42736 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Starting SafetyNetApplication using Java 21.0.5 with PID 42736 (C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet\target\classes started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-03T11:35:09.190+01:00  INFO 42736 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-03T11:35:10.009+01:00  INFO 42736 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-03T11:35:10.022+01:00  INFO 42736 --- [SafetyNet] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-03T11:35:10.023+01:00  INFO 42736 --- [SafetyNet] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-03T11:35:10.072+01:00  INFO 42736 --- [SafetyNet] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-03T11:35:10.073+01:00  INFO 42736 --- [SafetyNet] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 828 ms
+2025-03-03T11:35:10.433+01:00  INFO 42736 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-03T11:35:10.441+01:00  INFO 42736 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Started SafetyNetApplication in 1.683 seconds (process running for 2.372)
+2025-03-03T11:35:12.886+01:00  INFO 42736 --- [SafetyNet] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-03T11:35:12.886+01:00  INFO 42736 --- [SafetyNet] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-03T11:35:12.887+01:00  INFO 42736 --- [SafetyNet] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-03-03T11:35:12.916+01:00  INFO 42736 --- [SafetyNet] [http-nio-8080-exec-1] c.SafetyNet.repository.PersonRepository  : Lecture du fichier json
+2025-03-03T11:35:12.936+01:00  INFO 42736 --- [SafetyNet] [http-nio-8080-exec-1] c.SafetyNet.repository.PersonRepository  : Nombre de personnes trouvées : 
+2025-03-03T11:36:28.800+01:00  INFO 42736 --- [SafetyNet] [RMI TCP Connection(5)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-03-03T11:36:28.802+01:00  INFO 42736 --- [SafetyNet] [RMI TCP Connection(5)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-03T11:36:28.808+01:00  INFO 42736 --- [SafetyNet] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-03T11:36:30.803+01:00  INFO 27728 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Starting SafetyNetApplication using Java 21.0.5 with PID 27728 (C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet\target\classes started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-03T11:36:30.813+01:00  INFO 27728 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-03T11:36:31.619+01:00  INFO 27728 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-03T11:36:31.636+01:00  INFO 27728 --- [SafetyNet] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-03T11:36:31.636+01:00  INFO 27728 --- [SafetyNet] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-03T11:36:31.687+01:00  INFO 27728 --- [SafetyNet] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-03T11:36:31.688+01:00  INFO 27728 --- [SafetyNet] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 825 ms
+2025-03-03T11:36:32.031+01:00  INFO 27728 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-03T11:36:32.039+01:00  INFO 27728 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Started SafetyNetApplication in 1.635 seconds (process running for 2.296)
+2025-03-03T11:36:34.009+01:00  INFO 27728 --- [SafetyNet] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-03T11:36:34.010+01:00  INFO 27728 --- [SafetyNet] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-03T11:36:34.011+01:00  INFO 27728 --- [SafetyNet] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-03-03T11:36:34.061+01:00  INFO 27728 --- [SafetyNet] [http-nio-8080-exec-1] c.S.repository.FirestationRepository     : lecture du fichier JSON
+2025-03-03T11:36:34.084+01:00  INFO 27728 --- [SafetyNet] [http-nio-8080-exec-1] c.S.repository.FirestationRepository     : Lecture du fichier ok, nombre de firestation : 13
+2025-03-03T11:36:34.139+01:00  INFO 27728 --- [SafetyNet] [http-nio-8080-exec-1] c.S.repository.FirestationRepository     : Lecture des firestations et recherche par stationNumber
+2025-03-03T11:36:34.139+01:00  INFO 27728 --- [SafetyNet] [http-nio-8080-exec-1] c.S.repository.FirestationRepository     : Nombre de firestations ayant 2 comme station : 13
+2025-03-03T11:36:34.139+01:00  INFO 27728 --- [SafetyNet] [http-nio-8080-exec-1] c.SafetyNet.repository.PersonRepository  : Récupération des adresses des stations 2
+2025-03-03T11:36:34.140+01:00  INFO 27728 --- [SafetyNet] [http-nio-8080-exec-1] c.SafetyNet.repository.PersonRepository  : Lecture du fichier json
+2025-03-03T11:36:34.143+01:00  INFO 27728 --- [SafetyNet] [http-nio-8080-exec-1] c.SafetyNet.repository.PersonRepository  : Nombre de personnes trouvées : 23
+2025-03-03T11:36:34.146+01:00  INFO 27728 --- [SafetyNet] [http-nio-8080-exec-1] c.SafetyNet.repository.PersonRepository  : Nombre de personne rattachées à la station 2 {}5
+2025-03-03T11:36:55.724+01:00  INFO 27728 --- [SafetyNet] [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-03-03T11:36:55.726+01:00  INFO 27728 --- [SafetyNet] [RMI TCP Connection(2)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-03T11:36:55.733+01:00  INFO 27728 --- [SafetyNet] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-03T11:36:57.539+01:00  INFO 41424 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Starting SafetyNetApplication using Java 21.0.5 with PID 41424 (C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet\target\classes started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-03T11:36:57.541+01:00  INFO 41424 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-03T11:36:58.357+01:00  INFO 41424 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-03T11:36:58.373+01:00  INFO 41424 --- [SafetyNet] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-03T11:36:58.373+01:00  INFO 41424 --- [SafetyNet] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-03T11:36:58.421+01:00  INFO 41424 --- [SafetyNet] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-03T11:36:58.421+01:00  INFO 41424 --- [SafetyNet] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 823 ms
+2025-03-03T11:36:58.767+01:00  INFO 41424 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-03T11:36:58.773+01:00  INFO 41424 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Started SafetyNetApplication in 1.669 seconds (process running for 2.321)
+2025-03-03T11:37:01.291+01:00  INFO 41424 --- [SafetyNet] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-03T11:37:01.291+01:00  INFO 41424 --- [SafetyNet] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-03T11:37:01.293+01:00  INFO 41424 --- [SafetyNet] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-03-03T11:37:01.341+01:00  INFO 41424 --- [SafetyNet] [http-nio-8080-exec-1] c.S.repository.FirestationRepository     : lecture du fichier JSON
+2025-03-03T11:37:01.360+01:00  INFO 41424 --- [SafetyNet] [http-nio-8080-exec-1] c.S.repository.FirestationRepository     : Lecture du fichier ok, nombre de firestation : 13
+2025-03-03T11:37:01.409+01:00  INFO 41424 --- [SafetyNet] [http-nio-8080-exec-1] c.S.repository.FirestationRepository     : Lecture des firestations et recherche par stationNumber
+2025-03-03T11:37:01.410+01:00  INFO 41424 --- [SafetyNet] [http-nio-8080-exec-1] c.S.repository.FirestationRepository     : Nombre de firestations ayant 2 comme station : 13
+2025-03-03T11:37:01.410+01:00  INFO 41424 --- [SafetyNet] [http-nio-8080-exec-1] c.SafetyNet.repository.PersonRepository  : Récupération des adresses des stations 2
+2025-03-03T11:37:01.411+01:00  INFO 41424 --- [SafetyNet] [http-nio-8080-exec-1] c.SafetyNet.repository.PersonRepository  : Lecture du fichier json
+2025-03-03T11:37:01.415+01:00  INFO 41424 --- [SafetyNet] [http-nio-8080-exec-1] c.SafetyNet.repository.PersonRepository  : Nombre de personnes trouvées : 23
+2025-03-03T11:37:01.421+01:00  INFO 41424 --- [SafetyNet] [http-nio-8080-exec-1] c.SafetyNet.repository.PersonRepository  : Nombre de personne rattachées à la station 2 : 5
+2025-03-03T11:40:06.655+01:00  INFO 41424 --- [SafetyNet] [RMI TCP Connection(6)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-03-03T11:40:06.656+01:00  INFO 41424 --- [SafetyNet] [RMI TCP Connection(6)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-03T11:40:06.663+01:00  INFO 41424 --- [SafetyNet] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-03T11:40:08.705+01:00  INFO 42540 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Starting SafetyNetApplication using Java 21.0.5 with PID 42540 (C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet\target\classes started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-03T11:40:08.708+01:00  INFO 42540 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-03T11:40:09.529+01:00  INFO 42540 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-03T11:40:09.545+01:00  INFO 42540 --- [SafetyNet] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-03T11:40:09.546+01:00  INFO 42540 --- [SafetyNet] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-03T11:40:09.596+01:00  INFO 42540 --- [SafetyNet] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-03T11:40:09.597+01:00  INFO 42540 --- [SafetyNet] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 830 ms
+2025-03-03T11:40:09.942+01:00  INFO 42540 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-03T11:40:09.948+01:00  INFO 42540 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Started SafetyNetApplication in 1.645 seconds (process running for 2.283)
+2025-03-03T11:40:16.784+01:00  INFO 42540 --- [SafetyNet] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-03T11:40:16.784+01:00  INFO 42540 --- [SafetyNet] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-03T11:40:16.786+01:00  INFO 42540 --- [SafetyNet] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-03-03T11:40:36.517+01:00  INFO 42540 --- [SafetyNet] [http-nio-8080-exec-4] c.S.repository.MedicalRecordRepository   : Nomber de MedicalRecord trouvé : 23
+2025-03-03T11:41:39.265+01:00  INFO 42540 --- [SafetyNet] [RMI TCP Connection(5)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-03-03T11:41:39.268+01:00  INFO 42540 --- [SafetyNet] [RMI TCP Connection(5)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-03T11:41:39.274+01:00  INFO 42540 --- [SafetyNet] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-03T11:41:41.287+01:00  INFO 34528 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Starting SafetyNetApplication using Java 21.0.5 with PID 34528 (C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet\target\classes started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-03T11:41:41.289+01:00  INFO 34528 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-03T11:41:42.139+01:00  INFO 34528 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-03T11:41:42.154+01:00  INFO 34528 --- [SafetyNet] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-03T11:41:42.154+01:00  INFO 34528 --- [SafetyNet] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-03T11:41:42.207+01:00  INFO 34528 --- [SafetyNet] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-03T11:41:42.207+01:00  INFO 34528 --- [SafetyNet] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 871 ms
+2025-03-03T11:41:42.590+01:00  INFO 34528 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-03T11:41:42.600+01:00  INFO 34528 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Started SafetyNetApplication in 1.729 seconds (process running for 2.407)
+2025-03-03T11:42:13.623+01:00  INFO 34528 --- [SafetyNet] [http-nio-8080-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-03T11:42:13.624+01:00  INFO 34528 --- [SafetyNet] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-03T11:42:13.625+01:00  INFO 34528 --- [SafetyNet] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-03-03T11:42:13.696+01:00  INFO 34528 --- [SafetyNet] [http-nio-8080-exec-4] c.S.repository.MedicalRecordRepository   : Nombre de MedicalRecord trouvé : 23
+2025-03-03T11:50:31.882+01:00  INFO 34528 --- [SafetyNet] [RMI TCP Connection(13)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-03-03T11:50:31.885+01:00  INFO 34528 --- [SafetyNet] [RMI TCP Connection(13)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-03T11:50:31.893+01:00  INFO 34528 --- [SafetyNet] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-03T11:50:33.937+01:00  INFO 41076 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Starting SafetyNetApplication using Java 21.0.5 with PID 41076 (C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet\target\classes started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-03T11:50:33.940+01:00  INFO 41076 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-03T11:50:34.796+01:00  INFO 41076 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-03T11:50:34.812+01:00  INFO 41076 --- [SafetyNet] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-03T11:50:34.812+01:00  INFO 41076 --- [SafetyNet] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-03T11:50:34.864+01:00  INFO 41076 --- [SafetyNet] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-03T11:50:34.865+01:00  INFO 41076 --- [SafetyNet] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 864 ms
+2025-03-03T11:50:35.219+01:00  INFO 41076 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-03T11:50:35.228+01:00  INFO 41076 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Started SafetyNetApplication in 1.702 seconds (process running for 2.361)
+2025-03-03T11:50:37.525+01:00  INFO 41076 --- [SafetyNet] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-03T11:50:37.525+01:00  INFO 41076 --- [SafetyNet] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-03T11:50:37.527+01:00  INFO 41076 --- [SafetyNet] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-03-03T11:50:37.603+01:00  INFO 41076 --- [SafetyNet] [http-nio-8080-exec-2] c.S.repository.MedicalRecordRepository   : Nombre de MedicalRecord trouvé : 23
+2025-03-03T11:56:01.873+01:00  INFO 41076 --- [SafetyNet] [RMI TCP Connection(7)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-03-03T11:56:01.877+01:00  INFO 41076 --- [SafetyNet] [RMI TCP Connection(7)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-03T11:56:01.885+01:00  INFO 41076 --- [SafetyNet] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
