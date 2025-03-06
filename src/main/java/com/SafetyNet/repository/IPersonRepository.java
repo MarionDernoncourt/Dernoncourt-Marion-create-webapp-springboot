@@ -11,4 +11,12 @@ import com.SafetyNet.model.Person;
 public interface IPersonRepository {
 
 	public List<Person> getAllPersons() throws IOException ;
+	
+	public Person getPersonByFirstNameAndLastName(String firstName, String lastName) throws IOException;
+	
+	public void createPerson(Person person) throws IOException ;
+	
+	public Person updatePerson(Person person);
+	
+	public void deletePerson(Person person);
 }

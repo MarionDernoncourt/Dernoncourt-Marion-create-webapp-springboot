@@ -1,6 +1,5 @@
 package com.SafetyNet.repository;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
@@ -11,10 +10,6 @@ import org.springframework.stereotype.Repository;
 
 import com.SafetyNet.model.MedicalRecord;
 import com.SafetyNet.service.AgeCalculatorService;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 @Repository
 public class MedicalRecordRepository implements IMedicalRecordRepository {
@@ -22,26 +17,38 @@ public class MedicalRecordRepository implements IMedicalRecordRepository {
 	private static final Logger logger = LoggerFactory.getLogger(MedicalRecordRepository.class);
 
 	@Autowired
-	AgeCalculatorService ageCalculatorService;
+	InitializationListsRepository initializationListsRepository;
 
-	private ObjectMapper objectMapper = new ObjectMapper();
-	private File jsonFile = new File("src/main/resources/data.json");
+	private List<MedicalRecord> medicalRecords = null;
 
 	@Override
 	public List<MedicalRecord> getAllMedicalRecord() throws IOException {
+		medicalRecords = initializationListsRepository.getAllMedicalRecord();
+		return medicalRecords;
+	}
 
-		objectMapper.registerModule(new JavaTimeModule());
+	@Override
+	public MedicalRecord getMedicalRecord(String firstName, String lastName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
-		JsonNode root = objectMapper.readTree(jsonFile);
-		JsonNode medicalRecordNode = root.get("medicalrecords");
+	@Override
+	public void createMedicalRecord(MedicalRecord medicalRecord) {
+		// TODO Auto-generated method stub
 
-		if (medicalRecordNode == null || !medicalRecordNode.isArray()) {
-			logger.warn("Aucune donnée trouvées / Retour d'une liste vide");
-			return List.of();
-		}
+	}
 
-		return objectMapper.convertValue(medicalRecordNode, new TypeReference<List<MedicalRecord>>() {
-		});
+	@Override
+	public MedicalRecord updateMedicalRecord(MedicalRecord medicalRecord) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteMedicalRecord(MedicalRecord medicalRecord) {
+		// TODO Auto-generated method stub
+
 	}
 
 }

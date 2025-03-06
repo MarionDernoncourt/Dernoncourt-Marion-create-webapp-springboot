@@ -27,7 +27,7 @@ public class FireStationCoverageService {
 
 		if(residents.isEmpty()) {
 			logger.warn("Aucun habitant trouvé pour ce numero de station");
-			return new FireStationCoverageDTO(List.of(), 0, 0);
+			return null;
 		}
 		List<ResidentInfoDTO> residentsInfoDTO = residents.stream()
 				.map(person -> new ResidentInfoDTO(person.getFirstName(), person.getLastName(), person.getAddress(),

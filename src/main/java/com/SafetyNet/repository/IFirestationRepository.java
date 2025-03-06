@@ -11,6 +11,14 @@ import com.SafetyNet.model.Firestation;
 public interface IFirestationRepository {
 
 	public List<Firestation> getAllFirestation() throws IOException;
+	
+	public Firestation getFirestation_ByAddress(String address);
+	
+	public void createFirestation(Firestation firestation);
+	
+	public Firestation updateFirestation(Firestation firestation);
+	
+	public void deleteFirestation(Firestation firestation);
 
 	
 }

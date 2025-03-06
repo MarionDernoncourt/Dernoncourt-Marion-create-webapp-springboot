@@ -12,29 +12,39 @@ import org.springframework.stereotype.Service;
 
 import com.SafetyNet.model.Firestation;
 import com.SafetyNet.model.Person;
+import com.SafetyNet.repository.InitializationListsRepository;
 import com.SafetyNet.repository.PersonRepository;
 
 @Service
 public class PersonService {
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(PersonService.class);
 
 	@Autowired
 	private FirestationService firestationService;
 	@Autowired
 	private PersonRepository personRepository;
-	@Autowired 
+	@Autowired
 	private MedicalRecordService medicalRecordService;
 	@Autowired
 	private AgeCalculatorService ageCalculatorService;
 
+	
+
 	public List<Person> getAllPersons() throws IOException {
 		return personRepository.getAllPersons();
+	}
+	
+	public Person getPersonByFirstNameAndLastName(String firstName, String lastName) throws IOException {
+		return personRepository.getPersonByFirstNameAndLastName(firstName, lastName);
+	}
+	
+	public void createPerson(Person person) throws IOException {
+		personRepository.createPerson(person);
 	}
 
 	public List<Person> getPerson_ByStationNumber(int stationNumber) throws IOException {
 
-		
 		List<Firestation> stations = firestationService.getStation_ByStationNumber(stationNumber);
 		List<String> address = new ArrayList<String>();
 
@@ -46,15 +56,19 @@ public class PersonService {
 		List<Person> coveredPerson = new ArrayList<>();
 		coveredPerson = getAllPersons().stream().filter(person -> address.contains(person.getAddress())).toList();
 		logger.info("Nombre de personnes rattachées à la station " + stationNumber + " : " + coveredPerson.size());
-		
+
 		return coveredPerson;
 	}
 
 	public int calculatePersonAge(String firstName, String lastName) throws Exception {
-		
-		LocalDate birthdate = medicalRecordService.getMedicalRecord_ByLastNameAndFirstName(firstName, lastName).getBirthdate();
-		
-		return ageCalculatorService.calculateAge(birthdate);
+
+		LocalDate birthdate = medicalRecordService.getMedicalRecord_ByLastNameAndFirstName(firstName, lastName)
+				.getBirthdate();
+		if (birthdate == null) {
+			throw new IllegalArgumentException("Birthdate est NULL");
 		}
+		return  ageCalculatorService.calculateAge(birthdate);
+		
+	}
 
 }
