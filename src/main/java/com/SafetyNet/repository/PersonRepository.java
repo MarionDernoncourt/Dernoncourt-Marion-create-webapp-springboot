@@ -51,15 +51,30 @@ public class PersonRepository implements IPersonRepository {
 	}
 
 	@Override
-	public Person updatePerson(Person person)  {
-	
+	public Person updatePerson(Person person) throws IOException {
+		List<Person> persons = initializationListsRepository.getAllPersons();
+
+		for (Person resident : persons) {
+			if (resident.getFirstName().equalsIgnoreCase(person.getFirstName())
+					&& resident.getLastName().equalsIgnoreCase(person.getLastName())) {
+				resident.setAddress(person.getAddress());
+				resident.setCity(person.getCity());
+				resident.setZip(person.getZip());
+				resident.setPhone(person.getPhone());
+				resident.setEmail(person.getEmail());
+
+				return resident;
+			}
+		}
 		return null;
 	}
 
 	@Override
-	public void deletePerson(Person person) {
-		// TODO Auto-generated method stub
+	public void deletePerson(String firstName, String lastName) throws IOException {
+		List<Person> persons = initializationListsRepository.getAllPersons();
 
+		persons.removeIf(resident -> resident.getFirstName().equalsIgnoreCase(firstName) && resident.getLastName().equalsIgnoreCase(lastName));
+		System.out.println("après suppression : " + persons);
 	}
 
 }

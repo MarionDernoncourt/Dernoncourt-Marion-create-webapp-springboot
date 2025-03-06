@@ -30,6 +30,9 @@ public class FirestationService {
 		return firestationRepository.getAllFirestation();
 	}
 
+	public Firestation getFirestation_ByAddress(String address) {
+		return firestationRepository.getFirestation_ByAddress(address);
+	}
 	
 	public List<Firestation> getStation_ByStationNumber(int stationNumber) throws IOException {
 

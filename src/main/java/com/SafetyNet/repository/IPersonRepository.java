@@ -16,7 +16,7 @@ public interface IPersonRepository {
 	
 	public void createPerson(Person person) throws IOException ;
 	
-	public Person updatePerson(Person person);
+	public Person updatePerson(Person person) throws IOException;
 	
-	public void deletePerson(Person person);
+	public void deletePerson(String firstName, String lastName) throws IOException;
 }

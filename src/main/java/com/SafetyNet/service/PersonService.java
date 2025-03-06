@@ -42,6 +42,14 @@ public class PersonService {
 	public void createPerson(Person person) throws IOException {
 		personRepository.createPerson(person);
 	}
+	
+	public Person updatePerson(Person person) throws IOException {
+		return personRepository.updatePerson(person);
+	}
+	
+	public void deletePerson(String firstName, String lastName) throws IOException {
+		personRepository.deletePerson(firstName, lastName);
+	}
 
 	public List<Person> getPerson_ByStationNumber(int stationNumber) throws IOException {
 

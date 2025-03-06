@@ -18,16 +18,21 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
+import lombok.Data;
+
+@Data
 @Repository
 public class InitializationListsRepository implements CommandLineRunner {
 	private static final Logger logger = LoggerFactory.getLogger(InitializationListsRepository.class);
 
 	private List<Person> persons = new ArrayList<Person>();
+	
+	private List<Firestation> firestations = new ArrayList<Firestation>();
 
 	private ObjectMapper objectMapper = new ObjectMapper();
 	private File jsonFile = new File("src/main/resources/data.json");
 
-	public List<Person> getAllPersons() throws IOException {
+	public List<Person> getAllPersons()  {
 
 		try {
 			if (!persons.isEmpty()) {
@@ -48,11 +53,8 @@ public class InitializationListsRepository implements CommandLineRunner {
 
 			persons = objectMapper.convertValue(personsNode, new TypeReference<List<Person>>() {
 			});
-			System.out.println(persons);
 			return persons;
-		} catch (
-
-		IOException e) {
+		} catch (IOException e) {
 			logger.error("Erreur lors de la lecture du fichier JSON", e);
 			return List.of();
 		}
@@ -60,7 +62,7 @@ public class InitializationListsRepository implements CommandLineRunner {
 	};
 
 	public List<Firestation> getAllFirestation() {
-		List<Firestation> firestations = null;
+		
 		ObjectMapper objectMapper = new ObjectMapper();
 		File jsonFile = new File("src/main/resources/data.json");
 
