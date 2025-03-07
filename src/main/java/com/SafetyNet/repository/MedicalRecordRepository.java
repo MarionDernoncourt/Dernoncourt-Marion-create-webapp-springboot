@@ -36,14 +36,27 @@ public class MedicalRecordRepository implements IMedicalRecordRepository {
 	@Override
 	public MedicalRecord getMedicalRecord(String firstName, String lastName) {
 
-		List<MedicalRecord> medicalRecords = initializationListsRepository.getAllMedicalRecord()	;
-		return medicalRecords.stream()	.filter(medicalRecord -> medicalRecord.getFirstName().equalsIgnoreCase(firstName) && medicalRecord.getLastName().equalsIgnoreCase(lastName)).findFirst().orElse(null);
+		List<MedicalRecord> medicalRecords = initializationListsRepository.getAllMedicalRecord();
+		
+		return medicalRecords.stream().filter(medicalRecord -> medicalRecord.getFirstName().equalsIgnoreCase(firstName)
+				&& medicalRecord.getLastName().equalsIgnoreCase(lastName)).findFirst().orElse(null);
 	}
 
 	@Override
 	public void createMedicalRecord(MedicalRecord medicalRecord) {
-		// TODO Auto-generated method stub
 
+		List<MedicalRecord> medicalRecords = initializationListsRepository.getAllMedicalRecord();
+
+		for (MedicalRecord medRecord : medicalRecords) {
+			if (medRecord.getFirstName().equalsIgnoreCase(medicalRecord.getFirstName())
+					&& medRecord.getLastName().equalsIgnoreCase(medicalRecord.getLastName())) {
+				logger.warn("Ce dossier médical existe déjà, il ne peut pas être créé.");
+				return;
+			}
+
+		}
+		medicalRecords.add(medicalRecord);
+		logger.info("Le dossier médical a bien été créé." + medicalRecord );
 	}
 
 	@Override
@@ -53,9 +66,9 @@ public class MedicalRecordRepository implements IMedicalRecordRepository {
 	}
 
 	@Override
-	public void deleteMedicalRecord(MedicalRecord medicalRecord) {
+	public boolean deleteMedicalRecord(MedicalRecord medicalRecord) {
 		// TODO Auto-generated method stub
-
+		return true;
 	}
 
 }

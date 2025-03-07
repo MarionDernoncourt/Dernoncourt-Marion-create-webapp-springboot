@@ -29,7 +29,7 @@ public class InitializationListsRepository implements CommandLineRunner {
 
 	private List<Firestation> firestations = new ArrayList<Firestation>();
 
-	private List<MedicalRecord> medicalRecord = new ArrayList<MedicalRecord>();
+	private List<MedicalRecord> medicalRecords = new ArrayList<MedicalRecord>();
 
 	private ObjectMapper objectMapper = new ObjectMapper();
 	private File jsonFile = new File("src/main/resources/data.json");
@@ -83,8 +83,11 @@ public class InitializationListsRepository implements CommandLineRunner {
 	};
 
 	public List<MedicalRecord> getAllMedicalRecord() {
-		List<MedicalRecord> medicalrecords = null;
+		
 		try {
+			if(!medicalRecords.isEmpty()) {
+				return medicalRecords;
+			}
 
 			objectMapper.registerModule(new JavaTimeModule());
 
@@ -96,9 +99,9 @@ public class InitializationListsRepository implements CommandLineRunner {
 				return List.of();
 			}
 			logger.info("Lecture du fichier ok, nombre de dossier medical : " + medicalRecordNode.size());
-			medicalrecords = objectMapper.convertValue(medicalRecordNode, new TypeReference<List<MedicalRecord>>() {
+			medicalRecords = objectMapper.convertValue(medicalRecordNode, new TypeReference<List<MedicalRecord>>() {
 			});
-			return medicalrecords;
+			return medicalRecords;
 
 		} catch (IOException e) {
 			logger.error("Erreur lors de la lecture du fichier JSON", e);

@@ -72,7 +72,7 @@ public class PersonService {
 
 	public int calculatePersonAge(String firstName, String lastName) throws Exception {
 
-		LocalDate birthdate = medicalRecordService.getMedicalRecord_ByLastNameAndFirstName(firstName, lastName)
+		LocalDate birthdate = medicalRecordService.getMedicalRecord(firstName, lastName)
 				.getBirthdate();
 		if (birthdate == null) {
 			throw new IllegalArgumentException("Birthdate est NULL");

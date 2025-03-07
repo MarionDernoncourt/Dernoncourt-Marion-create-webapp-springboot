@@ -12,6 +12,7 @@ import com.SafetyNet.model.Person;
 
 @Repository
 public class PersonRepository implements IPersonRepository {
+	
 	private static final Logger logger = LoggerFactory.getLogger(PersonRepository.class);
 
 	private final InitializationListsRepository initializationListsRepository;
@@ -19,11 +20,15 @@ public class PersonRepository implements IPersonRepository {
 	public PersonRepository(InitializationListsRepository initializationListsRepository) {
 		this.initializationListsRepository = initializationListsRepository;
 	}
-	
 
 	@Override
-	public List<Person> getAllPersons()  {
-return		 initializationListsRepository.getAllPersons();
+	public List<Person> getAllPersons() {
+		List<Person> persons = initializationListsRepository.getAllPersons();
+		if (persons.isEmpty()) {
+			logger.warn("Aucune personne dans la liste");
+			return List.of();
+		}
+		return persons;
 	}
 
 	@Override
@@ -73,10 +78,10 @@ return		 initializationListsRepository.getAllPersons();
 
 	@Override
 	public boolean deletePerson(String firstName, String lastName) throws IOException {
-	    List<Person> persons = initializationListsRepository.getAllPersons();
-	  boolean personRemoved = 	 persons.removeIf(person -> person.getFirstName().equalsIgnoreCase(firstName) && person.getLastName().equalsIgnoreCase(lastName)); 
-return personRemoved;
+		List<Person> persons = initializationListsRepository.getAllPersons();
+		boolean personRemoved = persons.removeIf(person -> person.getFirstName().equalsIgnoreCase(firstName)
+				&& person.getLastName().equalsIgnoreCase(lastName));
+		return personRemoved;
 	}
-
 
 }
