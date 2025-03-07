@@ -16,21 +16,28 @@ public class MedicalRecordRepository implements IMedicalRecordRepository {
 
 	private static final Logger logger = LoggerFactory.getLogger(MedicalRecordRepository.class);
 
-	@Autowired
-	InitializationListsRepository initializationListsRepository;
+	private InitializationListsRepository initializationListsRepository;
 
-	private List<MedicalRecord> medicalRecords = null;
+	// Injection des listes chargées lors du lancement de l'app
+	public MedicalRecordRepository(InitializationListsRepository initializationListsRepository) {
+		this.initializationListsRepository = initializationListsRepository;
+	}
 
 	@Override
 	public List<MedicalRecord> getAllMedicalRecord() throws IOException {
-		medicalRecords = initializationListsRepository.getAllMedicalRecord();
+		List<MedicalRecord> medicalRecords = initializationListsRepository.getAllMedicalRecord();
+		if (medicalRecords.isEmpty()) {
+			logger.warn("Aucun dossier médical trouvé");
+			return List.of();
+		}
 		return medicalRecords;
 	}
 
 	@Override
 	public MedicalRecord getMedicalRecord(String firstName, String lastName) {
-		// TODO Auto-generated method stub
-		return null;
+
+		List<MedicalRecord> medicalRecords = initializationListsRepository.getAllMedicalRecord()	;
+		return medicalRecords.stream()	.filter(medicalRecord -> medicalRecord.getFirstName().equalsIgnoreCase(firstName) && medicalRecord.getLastName().equalsIgnoreCase(lastName)).findFirst().orElse(null);
 	}
 
 	@Override

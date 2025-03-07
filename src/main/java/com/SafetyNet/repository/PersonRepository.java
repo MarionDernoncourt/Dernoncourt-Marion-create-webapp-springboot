@@ -45,9 +45,11 @@ return		 initializationListsRepository.getAllPersons();
 			if (resident.getFirstName().equalsIgnoreCase(person.getFirstName())
 					&& resident.getLastName().equalsIgnoreCase(person.getLastName())) {
 				logger.warn("Cette personne existe déjà dans la liste des habitatns");
+				return;
 			}
 		}
 		persons.add(person);
+		logger.info("Personne ajouté : {} {} ", person.getFirstName(), person.getLastName());
 	}
 
 	@Override

@@ -31,3 +31,19 @@
 2025-03-07T11:07:00.562+01:00  INFO 59472 --- [SafetyNet] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2025-03-07T11:07:00.563+01:00  INFO 59472 --- [SafetyNet] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2025-03-07T11:07:00.567+01:00  INFO 59472 --- [SafetyNet] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-03-07T11:07:39.644+01:00  INFO 13480 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Starting SafetyNetApplication using Java 21.0.5 with PID 13480 (C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet\target\classes started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-07T11:07:39.647+01:00  INFO 13480 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-07T11:07:41.181+01:00  INFO 13480 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-07T11:07:41.203+01:00  INFO 13480 --- [SafetyNet] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-07T11:07:41.204+01:00  INFO 13480 --- [SafetyNet] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-07T11:07:41.295+01:00  INFO 13480 --- [SafetyNet] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-07T11:07:41.298+01:00  INFO 13480 --- [SafetyNet] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1562 ms
+2025-03-07T11:07:41.820+01:00  INFO 13480 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-07T11:07:41.833+01:00  INFO 13480 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Started SafetyNetApplication in 2.931 seconds (process running for 3.62)
+2025-03-07T11:07:41.870+01:00  INFO 13480 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-07T11:07:41.951+01:00  INFO 13480 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Taille de la liste avant retour23
+2025-03-07T11:07:41.955+01:00  INFO 13480 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-07T11:07:41.961+01:00  INFO 13480 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-07T11:07:43.645+01:00  INFO 13480 --- [SafetyNet] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-07T11:07:43.646+01:00  INFO 13480 --- [SafetyNet] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-07T11:07:43.648+01:00  INFO 13480 --- [SafetyNet] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
