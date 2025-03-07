@@ -31,7 +31,7 @@ public class PersonService {
 
 	
 
-	public List<Person> getAllPersons() throws IOException {
+	public List<Person> getAllPersons()  {
 		return personRepository.getAllPersons();
 	}
 	
@@ -39,16 +39,18 @@ public class PersonService {
 		return personRepository.getPersonByFirstNameAndLastName(firstName, lastName);
 	}
 	
-	public void createPerson(Person person) throws IOException {
+	public void createPerson(Person person) throws IOException  {
 		personRepository.createPerson(person);
 	}
 	
-	public Person updatePerson(Person person) throws IOException {
+	public Person updatePerson(Person person) throws IOException  {
 		return personRepository.updatePerson(person);
 	}
 	
-	public void deletePerson(String firstName, String lastName) throws IOException {
-		personRepository.deletePerson(firstName, lastName);
+	public boolean deletePerson(String firstName, String lastName) throws IOException {
+		if (personRepository.deletePerson(firstName, lastName)) {
+			return true;
+		} return false;
 	}
 
 	public List<Person> getPerson_ByStationNumber(int stationNumber) throws IOException {

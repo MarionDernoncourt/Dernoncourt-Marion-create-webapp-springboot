@@ -26,22 +26,19 @@ public class InitializationListsRepository implements CommandLineRunner {
 	private static final Logger logger = LoggerFactory.getLogger(InitializationListsRepository.class);
 
 	private List<Person> persons = new ArrayList<Person>();
-	
+
 	private List<Firestation> firestations = new ArrayList<Firestation>();
+
+	private List<MedicalRecord> medicalRecord = new ArrayList<MedicalRecord>();
 
 	private ObjectMapper objectMapper = new ObjectMapper();
 	private File jsonFile = new File("src/main/resources/data.json");
 
-	public List<Person> getAllPersons()  {
-
+	public List<Person> getAllPersons() {
 		try {
 			if (!persons.isEmpty()) {
 				return persons;
 			}
-
-			ObjectMapper objectMapper = new ObjectMapper();
-			File jsonFile = new File("src/main/resources/data.json");
-
 			JsonNode root = objectMapper.readTree(jsonFile);
 			JsonNode personsNode = root.get("persons");
 
@@ -53,6 +50,7 @@ public class InitializationListsRepository implements CommandLineRunner {
 
 			persons = objectMapper.convertValue(personsNode, new TypeReference<List<Person>>() {
 			});
+			logger.info("Taille de la liste avant retour" + persons.size());
 			return persons;
 		} catch (IOException e) {
 			logger.error("Erreur lors de la lecture du fichier JSON", e);
@@ -62,11 +60,10 @@ public class InitializationListsRepository implements CommandLineRunner {
 	};
 
 	public List<Firestation> getAllFirestation() {
-		
-		ObjectMapper objectMapper = new ObjectMapper();
-		File jsonFile = new File("src/main/resources/data.json");
-
 		try {
+			if (!firestations.isEmpty()) {
+				return firestations;
+			}
 			JsonNode root = objectMapper.readTree(jsonFile);
 			JsonNode firestationNode = root.get("firestations");
 
@@ -77,11 +74,12 @@ public class InitializationListsRepository implements CommandLineRunner {
 			logger.info("Lecture du fichier ok, nombre de firestation : " + firestationNode.size());
 			firestations = objectMapper.convertValue(firestationNode, new TypeReference<List<Firestation>>() {
 			});
+			return firestations;
+
 		} catch (IOException e) {
 			logger.error("Erreur lors de la lecture du fichier JSON", e);
 			return List.of();
 		}
-		return firestations;
 	};
 
 	public List<MedicalRecord> getAllMedicalRecord() {
@@ -100,11 +98,12 @@ public class InitializationListsRepository implements CommandLineRunner {
 			logger.info("Lecture du fichier ok, nombre de dossier medical : " + medicalRecordNode.size());
 			medicalrecords = objectMapper.convertValue(medicalRecordNode, new TypeReference<List<MedicalRecord>>() {
 			});
+			return medicalrecords;
+
 		} catch (IOException e) {
 			logger.error("Erreur lors de la lecture du fichier JSON", e);
 			return List.of();
 		}
-		return medicalrecords;
 
 	}
 

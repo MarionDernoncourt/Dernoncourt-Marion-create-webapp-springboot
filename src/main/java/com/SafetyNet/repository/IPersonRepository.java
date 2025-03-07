@@ -18,5 +18,5 @@ public interface IPersonRepository {
 	
 	public Person updatePerson(Person person) throws IOException;
 	
-	public void deletePerson(String firstName, String lastName) throws IOException;
+	public boolean deletePerson(String firstName, String lastName) throws IOException;
 }

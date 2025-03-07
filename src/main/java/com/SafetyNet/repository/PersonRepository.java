@@ -1,11 +1,11 @@
 package com.SafetyNet.repository;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.SafetyNet.model.Person;
@@ -19,10 +19,11 @@ public class PersonRepository implements IPersonRepository {
 	public PersonRepository(InitializationListsRepository initializationListsRepository) {
 		this.initializationListsRepository = initializationListsRepository;
 	}
+	
 
 	@Override
-	public List<Person> getAllPersons() throws IOException {
-		return initializationListsRepository.getAllPersons();
+	public List<Person> getAllPersons()  {
+return		 initializationListsRepository.getAllPersons();
 	}
 
 	@Override
@@ -44,7 +45,6 @@ public class PersonRepository implements IPersonRepository {
 			if (resident.getFirstName().equalsIgnoreCase(person.getFirstName())
 					&& resident.getLastName().equalsIgnoreCase(person.getLastName())) {
 				logger.warn("Cette personne existe déjà dans la liste des habitatns");
-				return;
 			}
 		}
 		persons.add(person);
@@ -70,11 +70,11 @@ public class PersonRepository implements IPersonRepository {
 	}
 
 	@Override
-	public void deletePerson(String firstName, String lastName) throws IOException {
-		List<Person> persons = initializationListsRepository.getAllPersons();
-
-		persons.removeIf(resident -> resident.getFirstName().equalsIgnoreCase(firstName) && resident.getLastName().equalsIgnoreCase(lastName));
-		System.out.println("après suppression : " + persons);
+	public boolean deletePerson(String firstName, String lastName) throws IOException {
+	    List<Person> persons = initializationListsRepository.getAllPersons();
+	  boolean personRemoved = 	 persons.removeIf(person -> person.getFirstName().equalsIgnoreCase(firstName) && person.getLastName().equalsIgnoreCase(lastName)); 
+return personRemoved;
 	}
+
 
 }

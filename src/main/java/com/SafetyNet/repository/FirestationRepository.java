@@ -14,38 +14,58 @@ public class FirestationRepository implements IFirestationRepository {
 
 	private static final Logger logger = LoggerFactory.getLogger(FirestationRepository.class);
 
-	@Autowired
-	InitializationListsRepository initializationListsRepository;
-	 private List<Firestation> firestations = null ;
+	private InitializationListsRepository initializationListsRepository;
+
+	public FirestationRepository(InitializationListsRepository initializationListsRepository) {
+		this.initializationListsRepository = initializationListsRepository;
+	}
 
 	@Override
 	public List<Firestation> getAllFirestation() {
-		firestations = initializationListsRepository.getAllFirestation()	;
-	return firestations;
+		return initializationListsRepository.getAllFirestation();
+
 	}
 
 	@Override
 	public Firestation getFirestation_ByAddress(String address) {
-		// TODO Auto-generated method stub
-		return null;
+
+		List<Firestation> firestations = initializationListsRepository.getAllFirestation();
+		return firestations.stream().filter(station -> station.getAddress().equalsIgnoreCase(address)).findFirst()
+				.orElse(null);
 	}
 
 	@Override
 	public void createFirestation(Firestation firestation) {
-		// TODO Auto-generated method stub
 
+		List<Firestation> firestations = initializationListsRepository.getAllFirestation();
+
+		for (Firestation station : firestations) {
+			if (station.getAddress().equalsIgnoreCase(firestation.getAddress())) {
+				logger.warn("Cette station existe déjà");
+			}
+		}
+		firestations.add(firestation);
 	}
 
 	@Override
 	public Firestation updateFirestation(Firestation firestation) {
-		// TODO Auto-generated method stub
+		List<Firestation> firestations = initializationListsRepository.getAllFirestation();
+
+		for (Firestation station : firestations) {
+			if (station.getAddress().equalsIgnoreCase(firestation.getAddress())) {
+								station.setStation(firestation.getStation());
+				return station;
+			}
+		}
 		return null;
 	}
 
 	@Override
-	public void deleteFirestation(Firestation firestation) {
-		// TODO Auto-generated method stub
-
+	public void deleteFirestation(Firestation firestation ) {
+		
+		List<Firestation> firestations = initializationListsRepository.getAllFirestation()	;
+		
+		firestations.removeIf(station -> firestation.getAddress().equalsIgnoreCase(station.getAddress()) && firestation.getStation() == station.getStation());
 	}
 
 }

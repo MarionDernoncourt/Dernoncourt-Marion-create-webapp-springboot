@@ -15,7 +15,6 @@ import com.SafetyNet.repository.PersonRepository;
 
 import lombok.Data;
 
-@Data
 @Service
 public class FirestationService {
 	
@@ -23,16 +22,29 @@ public class FirestationService {
 
 	@Autowired
 	private IFirestationRepository firestationRepository;
-	@Autowired
-	private PersonRepository personRepository;
+
 	
 	public List<Firestation> getAllFirestation() throws IOException {
 		return firestationRepository.getAllFirestation();
 	}
-
+	
 	public Firestation getFirestation_ByAddress(String address) {
 		return firestationRepository.getFirestation_ByAddress(address);
 	}
+	
+	public void createFirestation (Firestation firestation) {
+		firestationRepository.createFirestation(firestation);
+	}
+	
+	public Firestation updateFirestation(Firestation firestation) {
+		return firestationRepository.updateFirestation(firestation);
+	}
+	
+	public void deleteFirestation(Firestation firestation) {
+		firestationRepository.deleteFirestation(firestation);
+	}
+	
+
 	
 	public List<Firestation> getStation_ByStationNumber(int stationNumber) throws IOException {
 
