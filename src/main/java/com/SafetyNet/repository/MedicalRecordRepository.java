@@ -61,7 +61,17 @@ public class MedicalRecordRepository implements IMedicalRecordRepository {
 
 	@Override
 	public MedicalRecord updateMedicalRecord(MedicalRecord medicalRecord) {
-		// TODO Auto-generated method stub
+		List<MedicalRecord> medicalRecords = initializationListsRepository.getAllMedicalRecord()	;
+		
+		for (MedicalRecord medRecord : medicalRecords ) {
+			if (medRecord.getFirstName().equalsIgnoreCase(medicalRecord.getFirstName()) && medRecord.getLastName().equalsIgnoreCase(medicalRecord.getLastName())) {
+				medRecord.setBirthdate(medicalRecord.getBirthdate());
+				medRecord.setMedications(medicalRecord.getMedications());
+				medRecord.setAllergies(medicalRecord.getAllergies());
+				return medRecord;
+			}
+		}
+		
 		return null;
 	}
 

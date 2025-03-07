@@ -27,4 +27,8 @@ public class MedicalRecordService {
 	public void createMedicalRecord(MedicalRecord medicalRecord) {
 		medicalRecordRepository.createMedicalRecord(medicalRecord);
 	}
+	
+	public MedicalRecord updateMedicalRecord(MedicalRecord medicalRecord) {
+		return medicalRecordRepository.updateMedicalRecord(medicalRecord);
+	}
 }
