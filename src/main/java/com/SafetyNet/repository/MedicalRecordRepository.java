@@ -76,9 +76,10 @@ public class MedicalRecordRepository implements IMedicalRecordRepository {
 	}
 
 	@Override
-	public boolean deleteMedicalRecord(MedicalRecord medicalRecord) {
-		// TODO Auto-generated method stub
-		return true;
+	public boolean deleteMedicalRecord(String firstName, String lastName) {
+		List<MedicalRecord> medicalRecords = initializationListsRepository.getAllMedicalRecord()	;
+		boolean medRecordRemoved = medicalRecords.removeIf(medRecord-> medRecord.getFirstName().equalsIgnoreCase(firstName) && medRecord.getLastName().equalsIgnoreCase(lastName));
+		return medRecordRemoved;
 	}
 
 }

@@ -425,3 +425,21 @@ java.lang.Error: Unresolved compilation problems:
 2025-03-07T14:56:26.061+01:00  INFO 60968 --- [SafetyNet] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2025-03-07T14:56:26.063+01:00  INFO 60968 --- [SafetyNet] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2025-03-07T14:56:31.157+01:00  INFO 60968 --- [SafetyNet] [http-nio-8080-exec-1] c.S.repository.MedicalRecordRepository   : Le dossier médical a bien été créé.MedicalRecord(firstName=Jean, lastName=Peplu, birthdate=1989-07-09, medications=[tradoxidine:400mg], allergies=[poop])
+2025-03-07T15:16:05.983+01:00  INFO 66336 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Starting SafetyNetApplication using Java 21.0.5 with PID 66336 (C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet\target\classes started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-07T15:16:05.987+01:00  INFO 66336 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-07T15:16:07.377+01:00  INFO 66336 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-07T15:16:07.396+01:00  INFO 66336 --- [SafetyNet] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-07T15:16:07.397+01:00  INFO 66336 --- [SafetyNet] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-07T15:16:07.469+01:00  INFO 66336 --- [SafetyNet] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-07T15:16:07.469+01:00  INFO 66336 --- [SafetyNet] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1417 ms
+2025-03-07T15:16:07.996+01:00  INFO 66336 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-07T15:16:08.010+01:00  INFO 66336 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Started SafetyNetApplication in 2.645 seconds (process running for 3.119)
+2025-03-07T15:16:08.046+01:00  INFO 66336 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-07T15:16:08.099+01:00  INFO 66336 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Taille de la liste avant retour23
+2025-03-07T15:16:08.103+01:00  INFO 66336 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-07T15:16:08.109+01:00  INFO 66336 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-07T15:16:11.911+01:00  INFO 66336 --- [SafetyNet] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-07T15:16:11.912+01:00  INFO 66336 --- [SafetyNet] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-07T15:16:11.914+01:00  INFO 66336 --- [SafetyNet] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-03-07T15:16:16.457+01:00  INFO 66336 --- [SafetyNet] [http-nio-8080-exec-3] c.S.repository.MedicalRecordRepository   : Le dossier médical a bien été créé.MedicalRecord(firstName=Jean, lastName=Peplu, birthdate=1989-07-09, medications=[tradoxidine:400mg], allergies=[poop])
+2025-03-07T15:16:25.467+01:00  WARN 66336 --- [SafetyNet] [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String "26/01/1989": Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '26/01/1989' could not be parsed: Invalid value for MonthOfYear (valid values 1 - 12): 26]

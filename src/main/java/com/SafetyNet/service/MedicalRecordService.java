@@ -31,4 +31,8 @@ public class MedicalRecordService {
 	public MedicalRecord updateMedicalRecord(MedicalRecord medicalRecord) {
 		return medicalRecordRepository.updateMedicalRecord(medicalRecord);
 	}
+	
+	public boolean deleteMedicalRecord(String firstName, String lastName) {
+		return medicalRecordRepository.deleteMedicalRecord(firstName, lastName);
+	}
 }

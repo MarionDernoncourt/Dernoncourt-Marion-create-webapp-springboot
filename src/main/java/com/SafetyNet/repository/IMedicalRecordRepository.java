@@ -18,5 +18,5 @@ public interface IMedicalRecordRepository {
 	
 	public MedicalRecord updateMedicalRecord(MedicalRecord medicalRecord);
 	
-	public boolean deleteMedicalRecord(MedicalRecord medicalRecord);
+	public boolean deleteMedicalRecord(String firstName, String lastName);
 }
