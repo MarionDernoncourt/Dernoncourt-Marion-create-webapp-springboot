@@ -57,6 +57,7 @@ public class FirestationRepository implements IFirestationRepository {
 				return station;
 			}
 		}
+		logger.warn("Aucune caserne trouvée");
 		return null;
 	}
 

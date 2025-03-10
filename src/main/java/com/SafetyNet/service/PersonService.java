@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
 
 import com.SafetyNet.model.Firestation;
 import com.SafetyNet.model.Person;
-import com.SafetyNet.repository.InitializationListsRepository;
 import com.SafetyNet.repository.PersonRepository;
 
 @Service
@@ -35,19 +34,19 @@ public class PersonService {
 		return personRepository.getAllPersons();
 	}
 	
-	public Person getPersonByFirstNameAndLastName(String firstName, String lastName) throws IOException {
+	public Person getPersonByFirstNameAndLastName(String firstName, String lastName)  {
 		return personRepository.getPersonByFirstNameAndLastName(firstName, lastName);
 	}
 	
-	public void createPerson(Person person) throws IOException  {
+	public void createPerson(Person person)   {
 		personRepository.createPerson(person);
 	}
 	
-	public Person updatePerson(Person person) throws IOException  {
+	public Person updatePerson(Person person)   {
 		return personRepository.updatePerson(person);
 	}
 	
-	public boolean deletePerson(String firstName, String lastName) throws IOException {
+	public boolean deletePerson(String firstName, String lastName)  {
 		if (personRepository.deletePerson(firstName, lastName)) {
 			return true;
 		} return false;

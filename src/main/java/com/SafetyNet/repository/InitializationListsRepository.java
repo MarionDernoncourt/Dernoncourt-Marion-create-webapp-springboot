@@ -41,16 +41,14 @@ public class InitializationListsRepository implements CommandLineRunner {
 			}
 			JsonNode root = objectMapper.readTree(jsonFile);
 			JsonNode personsNode = root.get("persons");
-
 			if (personsNode == null || !personsNode.isArray()) {
 				logger.warn("Aucune données trouvées dans 'persons'. Retour d'une liste vide");
 				return List.of();
 			}
 			logger.info("Lecture du fichier ok, nombre d'habitants : " + personsNode.size());
-
+			System.out.println(personsNode);
 			persons = objectMapper.convertValue(personsNode, new TypeReference<List<Person>>() {
 			});
-			logger.info("Taille de la liste avant retour" + persons.size());
 			return persons;
 		} catch (IOException e) {
 			logger.error("Erreur lors de la lecture du fichier JSON", e);

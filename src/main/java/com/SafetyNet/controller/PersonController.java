@@ -1,6 +1,5 @@
 package com.SafetyNet.controller;
 
-import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.SafetyNet.model.Person;
-import com.SafetyNet.service.FireStationCoverageService;
 import com.SafetyNet.service.PersonService;
 
 @RestController
@@ -28,14 +26,15 @@ public class PersonController {
 	public ResponseEntity<String> getAllPersons() {
 		List<Person> persons = personService.getAllPersons();
 		if (persons.isEmpty()) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).build()
-;		}
-		return ResponseEntity.status(HttpStatus.OK).body("La liste a bien été récupérée, nombre d'habitants : " + persons.size());
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+		}
+		return ResponseEntity.status(HttpStatus.OK)
+				.body("La liste a bien été récupérée, nombre d'habitants : " + persons.size());
 	}
 
 	@GetMapping("/person")
-	public ResponseEntity<Person> getPersonByFirstNameAndLastName(@RequestParam String firstName, @RequestParam String lastName)
-			throws IOException {
+	public ResponseEntity<Person> getPersonByFirstNameAndLastName(@RequestParam String firstName,
+			@RequestParam String lastName) {
 		Person person = personService.getPersonByFirstNameAndLastName(firstName, lastName);
 		if (person == null) {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
@@ -44,13 +43,13 @@ public class PersonController {
 	}
 
 	@PostMapping("/person")
-	public ResponseEntity<String> createPerson(@RequestBody Person person) throws IOException {
+	public ResponseEntity<String> createPerson(@RequestBody Person person) {
 		personService.createPerson(person);
 		return ResponseEntity.status(HttpStatus.CREATED).body("Personne ajoutée");
 	}
 
 	@PutMapping("/person")
-	public ResponseEntity<String> updatePerson(@RequestBody Person person) throws IOException {
+	public ResponseEntity<String> updatePerson(@RequestBody Person person) {
 		Person updatedPerson = personService.updatePerson(person);
 
 		if (updatedPerson == null) {
@@ -62,18 +61,14 @@ public class PersonController {
 
 	@DeleteMapping("/person")
 	public ResponseEntity<String> deletePerson(@RequestParam String firstName, @RequestParam String lastName) {
-		try {
-			boolean deleted = personService.deletePerson(firstName, lastName);
 
-			if(!deleted) {
-				return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Personne non trouvée");
-			}
-			return ResponseEntity.status(HttpStatus.OK).body("Personne supprimée");
+		boolean deleted = personService.deletePerson(firstName, lastName);
 
-		} catch (IOException e) {
-			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-					.body("Erreur lors de la suppression de la personne");
+		if (!deleted) {
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Personne non trouvée");
 		}
+		return ResponseEntity.status(HttpStatus.OK).body("Personne supprimée");
+
 	}
 
 	// @GetMapping("/firestation")

@@ -42,7 +42,7 @@ public class PersonServiceTest {
 	
 	private List<Person> mockPersons;
 	private List<Firestation> mockFirestation;
-	// private MedicalRecord mockMedicalRecord;
+	private MedicalRecord mockMedicalRecord;
 
 	@BeforeEach
 	void setUp() {
@@ -52,20 +52,10 @@ public class PersonServiceTest {
 				new Person("Jane", "Doe", "456 North St", "city", 98765, "987-654-321", "jane@example.com"));
 
 		mockFirestation = List.of(new Firestation("123 Main St", 1));
-	//	mockMedicalRecord = new MedicalRecord("John", "Doe", LocalDate.of(1989, 01,
-	//	26), List.of(), List.of());
+		mockMedicalRecord = new MedicalRecord("John", "Doe", LocalDate.of(1989, 01,
+		26), List.of(), List.of());
 	}
 
-	@Test
-	public void getAllPersonsTest() throws IOException {
-		when(personRepository.getAllPersons()).thenReturn(mockPersons);
-
-		List<Person> result = personRepository.getAllPersons();
-
-		assertNotNull(result);
-		assertEquals(2, result.size());
-		assertEquals("John", result.get(0).getFirstName());
-	}
 
 	@Test
 	public void getPerson_byStationNumberTest() throws IOException {

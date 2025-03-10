@@ -1,7 +1,5 @@
 package com.SafetyNet.repository;
 
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -32,7 +30,7 @@ public class PersonRepository implements IPersonRepository {
 	}
 
 	@Override
-	public Person getPersonByFirstNameAndLastName(String firstName, String lastName) throws IOException {
+	public Person getPersonByFirstNameAndLastName(String firstName, String lastName)  {
 
 		List<Person> persons = initializationListsRepository.getAllPersons();
 
@@ -42,7 +40,7 @@ public class PersonRepository implements IPersonRepository {
 	};
 
 	@Override
-	public void createPerson(Person person) throws IOException {
+	public void createPerson(Person person)  {
 
 		List<Person> persons = initializationListsRepository.getAllPersons();
 
@@ -58,7 +56,7 @@ public class PersonRepository implements IPersonRepository {
 	}
 
 	@Override
-	public Person updatePerson(Person person) throws IOException {
+	public Person updatePerson(Person person)  {
 		List<Person> persons = initializationListsRepository.getAllPersons();
 
 		for (Person resident : persons) {
@@ -73,11 +71,12 @@ public class PersonRepository implements IPersonRepository {
 				return resident;
 			}
 		}
+		logger.info("Aucune personne trouvée");
 		return null;
 	}
 
 	@Override
-	public boolean deletePerson(String firstName, String lastName) throws IOException {
+	public boolean deletePerson(String firstName, String lastName)  {
 		List<Person> persons = initializationListsRepository.getAllPersons();
 		boolean personRemoved = persons.removeIf(person -> person.getFirstName().equalsIgnoreCase(firstName)
 				&& person.getLastName().equalsIgnoreCase(lastName));
