@@ -53,3 +53,16 @@
 2025-03-10T15:30:41.033+01:00  INFO 18520 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Personne ajouté : John Doe 
 2025-03-10T15:30:41.321+01:00  INFO 18520 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Récupération des adresses des stations 1
 2025-03-10T15:30:41.322+01:00  INFO 18520 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes rattachées à la station 1 : 1
+2025-03-10T16:15:11.445+01:00  INFO 15088 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : Starting SafetyNetApplicationTests using Java 21.0.5 with PID 15088 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-10T16:15:11.449+01:00  INFO 15088 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-03-10T16:15:13.802+01:00  INFO 15088 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : Started SafetyNetApplicationTests in 3.115 seconds (process running for 6.551)
+2025-03-10T16:15:13.850+01:00  INFO 15088 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-10T16:15:13.941+01:00  INFO 15088 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-10T16:15:13.948+01:00  INFO 15088 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-10T16:15:15.789+01:00  INFO 15088 --- [SafetyNet] [main] c.S.repository.MedicalRecordRepository   : Le dossier médical a bien été créé.MedicalRecord(firstName=Mickey, lastName=Mouse, birthdate=1995-01-01, medications=[], allergies=[nillacilan])
+2025-03-10T16:15:15.847+01:00  WARN 15088 --- [SafetyNet] [main] c.S.repository.MedicalRecordRepository   : Ce dossier médical existe déjà, il ne peut pas être créé.
+2025-03-10T16:15:15.947+01:00  INFO 15088 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Aucune personne trouvée
+2025-03-10T16:15:16.011+01:00  WARN 15088 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Cette personne existe déjà dans la liste des habitatns
+2025-03-10T16:15:16.044+01:00  INFO 15088 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Personne ajouté : John Doe 
+2025-03-10T16:15:16.382+01:00  INFO 15088 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Récupération des adresses des stations 1
+2025-03-10T16:15:16.385+01:00  INFO 15088 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes rattachées à la station 1 : 1
