@@ -23,13 +23,12 @@ public class PersonController {
 	private PersonService personService;
 
 	@GetMapping("/persons")
-	public ResponseEntity<String> getAllPersons() {
+	public ResponseEntity<List<Person>> getAllPersons() {
 		List<Person> persons = personService.getAllPersons();
 		if (persons.isEmpty()) {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
-		return ResponseEntity.status(HttpStatus.OK)
-				.body("La liste a bien été récupérée, nombre d'habitants : " + persons.size());
+		return ResponseEntity.status(HttpStatus.OK).body(persons);
 	}
 
 	@GetMapping("/person")
@@ -44,18 +43,22 @@ public class PersonController {
 
 	@PostMapping("/person")
 	public ResponseEntity<String> createPerson(@RequestBody Person person) {
-		personService.createPerson(person);
-		return ResponseEntity.status(HttpStatus.CREATED).body("Personne ajoutée");
+		try {
+			personService.createPerson(person);
+		return	ResponseEntity.status(HttpStatus.CREATED).body("La personne a bien été créée");
+		} catch (Exception e) {
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erreur interne");
+		}
 	}
 
 	@PutMapping("/person")
-	public ResponseEntity<String> updatePerson(@RequestBody Person person) {
+	public ResponseEntity<Person> updatePerson(@RequestBody Person person) {
 		Person updatedPerson = personService.updatePerson(person);
 
 		if (updatedPerson == null) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Personne non trouvée");
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		} else {
-			return ResponseEntity.status(HttpStatus.OK).body("Personne mise à jour");
+			return ResponseEntity.status(HttpStatus.OK).body(updatedPerson);
 		}
 	}
 

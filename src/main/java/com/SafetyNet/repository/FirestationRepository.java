@@ -42,6 +42,7 @@ public class FirestationRepository implements IFirestationRepository {
 		for (Firestation station : firestations) {
 			if (station.getAddress().equalsIgnoreCase(firestation.getAddress())) {
 				logger.warn("Cette station existe déjà");
+				return;
 			}
 		}
 		firestations.add(firestation);
@@ -62,11 +63,12 @@ public class FirestationRepository implements IFirestationRepository {
 	}
 
 	@Override
-	public void deleteFirestation(Firestation firestation ) {
+	public boolean deleteFirestation(Firestation firestation ) {
 		
 		List<Firestation> firestations = initializationListsRepository.getAllFirestation()	;
 		
-		firestations.removeIf(station -> firestation.getAddress().equalsIgnoreCase(station.getAddress()) && firestation.getStation() == station.getStation());
+		boolean firestationRemoved = firestations.removeIf(station -> firestation.getAddress().equalsIgnoreCase(station.getAddress()) && firestation.getStation() == station.getStation());
+		return firestationRemoved;
 	}
 
 }

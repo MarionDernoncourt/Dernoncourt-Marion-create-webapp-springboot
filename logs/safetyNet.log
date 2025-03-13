@@ -1,68 +1,321 @@
-2025-03-10T15:15:55.917+01:00  INFO 15596 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : Starting SafetyNetApplicationTests using Java 21.0.5 with PID 15596 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
-2025-03-10T15:15:55.933+01:00  INFO 15596 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : No active profile set, falling back to 1 default profile: "default"
-2025-03-10T15:15:57.975+01:00  INFO 15596 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : Started SafetyNetApplicationTests in 2.643 seconds (process running for 6.841)
-2025-03-10T15:15:58.030+01:00  INFO 15596 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre d'habitants : 23
-2025-03-10T15:15:58.124+01:00  INFO 15596 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de firestation : 13
-2025-03-10T15:15:58.130+01:00  INFO 15596 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de dossier medical : 23
-2025-03-10T15:16:00.451+01:00  INFO 15596 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Aucune personne trouvée
-2025-03-10T15:16:00.494+01:00  WARN 15596 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Cette personne existe déjà dans la liste des habitatns
-2025-03-10T15:16:00.521+01:00  INFO 15596 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Personne ajouté : John Doe 
-2025-03-10T15:16:00.712+01:00  INFO 15596 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Récupération des adresses des stations 1
-2025-03-10T15:16:00.714+01:00  INFO 15596 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes rattachées à la station 1 : 1
-2025-03-10T15:16:58.994+01:00  INFO 22068 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : Starting SafetyNetApplicationTests using Java 21.0.5 with PID 22068 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
-2025-03-10T15:16:58.997+01:00  INFO 22068 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : No active profile set, falling back to 1 default profile: "default"
-2025-03-10T15:17:00.988+01:00  INFO 22068 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : Started SafetyNetApplicationTests in 2.742 seconds (process running for 5.51)
-2025-03-10T15:17:01.024+01:00  INFO 22068 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre d'habitants : 23
-2025-03-10T15:17:01.113+01:00  INFO 22068 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de firestation : 13
-2025-03-10T15:17:01.120+01:00  INFO 22068 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de dossier medical : 23
-2025-03-10T15:17:03.430+01:00  INFO 22068 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Aucune personne trouvée
-2025-03-10T15:17:03.487+01:00  WARN 22068 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Cette personne existe déjà dans la liste des habitatns
-2025-03-10T15:17:03.508+01:00  INFO 22068 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Personne ajouté : John Doe 
-2025-03-10T15:17:03.712+01:00  INFO 22068 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Récupération des adresses des stations 1
-2025-03-10T15:17:03.713+01:00  INFO 22068 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes rattachées à la station 1 : 1
-2025-03-10T15:19:15.925+01:00  INFO 4152 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : Starting SafetyNetApplicationTests using Java 21.0.5 with PID 4152 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
-2025-03-10T15:19:15.928+01:00  INFO 4152 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : No active profile set, falling back to 1 default profile: "default"
-2025-03-10T15:19:18.144+01:00  INFO 4152 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : Started SafetyNetApplicationTests in 2.913 seconds (process running for 5.946)
-2025-03-10T15:19:18.186+01:00  INFO 4152 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre d'habitants : 23
-2025-03-10T15:19:18.293+01:00  INFO 4152 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de firestation : 13
-2025-03-10T15:19:18.300+01:00  INFO 4152 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de dossier medical : 23
-2025-03-10T15:19:20.767+01:00  INFO 4152 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Aucune personne trouvée
-2025-03-10T15:19:20.813+01:00  WARN 4152 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Cette personne existe déjà dans la liste des habitatns
-2025-03-10T15:19:20.832+01:00  INFO 4152 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Personne ajouté : John Doe 
-2025-03-10T15:19:21.062+01:00  INFO 4152 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Récupération des adresses des stations 1
-2025-03-10T15:19:21.063+01:00  INFO 4152 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes rattachées à la station 1 : 1
-2025-03-10T15:20:30.074+01:00  INFO 12996 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : Starting SafetyNetApplicationTests using Java 21.0.5 with PID 12996 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
-2025-03-10T15:20:30.079+01:00  INFO 12996 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : No active profile set, falling back to 1 default profile: "default"
-2025-03-10T15:20:32.396+01:00  INFO 12996 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : Started SafetyNetApplicationTests in 3.185 seconds (process running for 6.15)
-2025-03-10T15:20:32.440+01:00  INFO 12996 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre d'habitants : 23
-2025-03-10T15:20:32.531+01:00  INFO 12996 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de firestation : 13
-2025-03-10T15:20:32.537+01:00  INFO 12996 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de dossier medical : 23
-2025-03-10T15:20:34.198+01:00  INFO 12996 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Aucune personne trouvée
-2025-03-10T15:20:34.263+01:00  WARN 12996 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Cette personne existe déjà dans la liste des habitatns
-2025-03-10T15:20:34.294+01:00  INFO 12996 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Personne ajouté : John Doe 
-2025-03-10T15:20:34.564+01:00  INFO 12996 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Récupération des adresses des stations 1
-2025-03-10T15:20:34.566+01:00  INFO 12996 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes rattachées à la station 1 : 1
-2025-03-10T15:30:36.492+01:00  INFO 18520 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : Starting SafetyNetApplicationTests using Java 21.0.5 with PID 18520 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
-2025-03-10T15:30:36.496+01:00  INFO 18520 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : No active profile set, falling back to 1 default profile: "default"
-2025-03-10T15:30:38.987+01:00  INFO 18520 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : Started SafetyNetApplicationTests in 3.228 seconds (process running for 6.109)
-2025-03-10T15:30:39.033+01:00  INFO 18520 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre d'habitants : 23
-2025-03-10T15:30:39.136+01:00  INFO 18520 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de firestation : 13
-2025-03-10T15:30:39.143+01:00  INFO 18520 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de dossier medical : 23
-2025-03-10T15:30:40.932+01:00  INFO 18520 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Aucune personne trouvée
-2025-03-10T15:30:41.006+01:00  WARN 18520 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Cette personne existe déjà dans la liste des habitatns
-2025-03-10T15:30:41.033+01:00  INFO 18520 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Personne ajouté : John Doe 
-2025-03-10T15:30:41.321+01:00  INFO 18520 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Récupération des adresses des stations 1
-2025-03-10T15:30:41.322+01:00  INFO 18520 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes rattachées à la station 1 : 1
-2025-03-10T16:15:11.445+01:00  INFO 15088 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : Starting SafetyNetApplicationTests using Java 21.0.5 with PID 15088 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
-2025-03-10T16:15:11.449+01:00  INFO 15088 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : No active profile set, falling back to 1 default profile: "default"
-2025-03-10T16:15:13.802+01:00  INFO 15088 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : Started SafetyNetApplicationTests in 3.115 seconds (process running for 6.551)
-2025-03-10T16:15:13.850+01:00  INFO 15088 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre d'habitants : 23
-2025-03-10T16:15:13.941+01:00  INFO 15088 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de firestation : 13
-2025-03-10T16:15:13.948+01:00  INFO 15088 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de dossier medical : 23
-2025-03-10T16:15:15.789+01:00  INFO 15088 --- [SafetyNet] [main] c.S.repository.MedicalRecordRepository   : Le dossier médical a bien été créé.MedicalRecord(firstName=Mickey, lastName=Mouse, birthdate=1995-01-01, medications=[], allergies=[nillacilan])
-2025-03-10T16:15:15.847+01:00  WARN 15088 --- [SafetyNet] [main] c.S.repository.MedicalRecordRepository   : Ce dossier médical existe déjà, il ne peut pas être créé.
-2025-03-10T16:15:15.947+01:00  INFO 15088 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Aucune personne trouvée
-2025-03-10T16:15:16.011+01:00  WARN 15088 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Cette personne existe déjà dans la liste des habitatns
-2025-03-10T16:15:16.044+01:00  INFO 15088 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Personne ajouté : John Doe 
-2025-03-10T16:15:16.382+01:00  INFO 15088 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Récupération des adresses des stations 1
-2025-03-10T16:15:16.385+01:00  INFO 15088 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes rattachées à la station 1 : 1
+2025-03-13T09:13:07.104+01:00  INFO 12144 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 12144 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-13T09:13:07.176+01:00  INFO 12144 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-13T09:13:09.643+01:00  INFO 12144 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-13T09:13:09.644+01:00  INFO 12144 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-13T09:13:09.650+01:00  INFO 12144 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+2025-03-13T09:13:09.784+01:00  INFO 12144 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 3.501 seconds (process running for 6.41)
+2025-03-13T09:13:43.146+01:00  INFO 34416 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 34416 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-13T09:13:43.148+01:00  INFO 34416 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-13T09:13:45.167+01:00  INFO 34416 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-13T09:13:45.170+01:00  INFO 34416 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-13T09:13:45.174+01:00  INFO 34416 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+2025-03-13T09:13:45.278+01:00  INFO 34416 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 2.841 seconds (process running for 6.012)
+2025-03-13T09:14:14.288+01:00  INFO 29212 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 29212 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-13T09:14:14.292+01:00  INFO 29212 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-13T09:14:17.222+01:00  INFO 29212 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-13T09:14:17.223+01:00  INFO 29212 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-13T09:14:17.227+01:00  INFO 29212 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+2025-03-13T09:14:17.325+01:00  INFO 29212 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 3.77 seconds (process running for 6.834)
+2025-03-13T09:18:31.633+01:00  INFO 36424 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 36424 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-13T09:18:31.635+01:00  INFO 36424 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-13T09:18:33.361+01:00  INFO 36424 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-13T09:18:33.363+01:00  INFO 36424 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-13T09:18:33.368+01:00  INFO 36424 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+2025-03-13T09:18:33.446+01:00  INFO 36424 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 2.353 seconds (process running for 4.732)
+2025-03-13T09:36:11.184+01:00  INFO 36704 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 36704 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-13T09:36:11.187+01:00  INFO 36704 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-13T09:36:12.932+01:00  INFO 36704 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-13T09:36:12.932+01:00  INFO 36704 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-13T09:36:12.938+01:00  INFO 36704 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2025-03-13T09:36:13.017+01:00  INFO 36704 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 2.434 seconds (process running for 6.92)
+2025-03-13T09:37:15.857+01:00  INFO 28420 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 28420 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-13T09:37:15.860+01:00  INFO 28420 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-13T09:37:17.497+01:00  INFO 28420 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-13T09:37:17.498+01:00  INFO 28420 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-13T09:37:17.501+01:00  INFO 28420 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-03-13T09:37:17.581+01:00  INFO 28420 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 2.269 seconds (process running for 4.673)
+2025-03-13T09:38:39.117+01:00  INFO 33600 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 33600 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-13T09:38:39.119+01:00  INFO 33600 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-13T09:38:40.709+01:00  INFO 33600 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-13T09:38:40.710+01:00  INFO 33600 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-13T09:38:40.714+01:00  INFO 33600 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2025-03-13T09:38:40.792+01:00  INFO 33600 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 2.18 seconds (process running for 4.505)
+2025-03-13T10:03:13.905+01:00  INFO 31400 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 31400 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-13T10:03:13.910+01:00  INFO 31400 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-13T10:03:16.472+01:00  INFO 31400 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-13T10:03:16.473+01:00  INFO 31400 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-13T10:03:16.476+01:00  INFO 31400 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-03-13T10:03:16.566+01:00  INFO 31400 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 3.474 seconds (process running for 8.008)
+2025-03-13T10:04:36.372+01:00  INFO 35784 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 35784 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-13T10:04:36.376+01:00  INFO 35784 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-13T10:04:38.659+01:00  INFO 35784 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-13T10:04:38.661+01:00  INFO 35784 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-13T10:04:38.666+01:00  INFO 35784 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+2025-03-13T10:04:38.751+01:00  INFO 35784 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 3.143 seconds (process running for 7.155)
+2025-03-13T10:05:00.700+01:00  INFO 34208 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 34208 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-13T10:05:00.704+01:00  INFO 34208 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-13T10:05:02.991+01:00  INFO 34208 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-13T10:05:02.991+01:00  INFO 34208 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-13T10:05:02.995+01:00  INFO 34208 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2025-03-13T10:05:03.070+01:00  INFO 34208 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 3.096 seconds (process running for 7.215)
+2025-03-13T10:06:59.255+01:00  INFO 38888 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 38888 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-13T10:06:59.259+01:00  INFO 38888 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-13T10:07:01.638+01:00  INFO 38888 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-13T10:07:01.638+01:00  INFO 38888 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-13T10:07:01.642+01:00  INFO 38888 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-03-13T10:07:01.730+01:00  INFO 38888 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 3.252 seconds (process running for 7.456)
+2025-03-13T10:09:04.829+01:00  INFO 33580 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 33580 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-13T10:09:04.835+01:00  INFO 33580 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-13T10:09:07.141+01:00  INFO 33580 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-13T10:09:07.142+01:00  INFO 33580 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-13T10:09:07.148+01:00  INFO 33580 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 5 ms
+2025-03-13T10:09:07.225+01:00  INFO 33580 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 3.303 seconds (process running for 7.549)
+2025-03-13T10:10:14.247+01:00  INFO 37628 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 37628 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-13T10:10:14.250+01:00  INFO 37628 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-13T10:10:16.410+01:00  INFO 37628 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-13T10:10:16.411+01:00  INFO 37628 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-13T10:10:16.417+01:00  INFO 37628 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 5 ms
+2025-03-13T10:10:16.496+01:00  INFO 37628 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 2.934 seconds (process running for 7.058)
+2025-03-13T10:13:53.504+01:00  INFO 26664 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 26664 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-13T10:13:53.509+01:00  INFO 26664 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-13T10:13:56.088+01:00  INFO 26664 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-13T10:13:56.088+01:00  INFO 26664 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-13T10:13:56.094+01:00  INFO 26664 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+2025-03-13T10:13:56.189+01:00  INFO 26664 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 3.361 seconds (process running for 8.095)
+2025-03-13T10:14:01.812+01:00  INFO 30580 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 30580 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-13T10:14:01.814+01:00  INFO 30580 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-13T10:14:03.445+01:00  INFO 30580 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-13T10:14:03.446+01:00  INFO 30580 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-13T10:14:03.450+01:00  INFO 30580 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+2025-03-13T10:14:03.516+01:00  INFO 30580 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 2.213 seconds (process running for 4.668)
+2025-03-13T10:14:38.118+01:00  INFO 9468 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 9468 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-13T10:14:38.121+01:00  INFO 9468 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-13T10:14:39.727+01:00  INFO 9468 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-13T10:14:39.728+01:00  INFO 9468 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-13T10:14:39.732+01:00  INFO 9468 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2025-03-13T10:14:39.807+01:00  INFO 9468 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 2.172 seconds (process running for 4.745)
+2025-03-13T10:15:18.307+01:00  INFO 2488 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 2488 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-13T10:15:18.309+01:00  INFO 2488 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-13T10:15:19.944+01:00  INFO 2488 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-13T10:15:19.945+01:00  INFO 2488 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-13T10:15:19.949+01:00  INFO 2488 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2025-03-13T10:15:20.021+01:00  INFO 2488 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 2.224 seconds (process running for 4.705)
+2025-03-13T10:15:48.285+01:00  INFO 35996 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 35996 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-13T10:15:48.289+01:00  INFO 35996 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-13T10:15:50.557+01:00  INFO 35996 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-13T10:15:50.558+01:00  INFO 35996 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-13T10:15:50.561+01:00  INFO 35996 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2025-03-13T10:15:50.633+01:00  INFO 35996 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 3.129 seconds (process running for 7.486)
+2025-03-13T10:19:07.633+01:00  INFO 30752 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 30752 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-13T10:19:07.635+01:00  INFO 30752 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-13T10:19:09.297+01:00  INFO 30752 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-13T10:19:09.298+01:00  INFO 30752 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-13T10:19:09.301+01:00  INFO 30752 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2025-03-13T10:19:09.372+01:00  INFO 30752 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 2.303 seconds (process running for 4.761)
+2025-03-13T10:19:09.613+01:00  WARN 30752 --- [SafetyNet] [main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'firstName' for method parameter type String is not present]
+2025-03-13T10:23:01.145+01:00  INFO 37032 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 37032 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-13T10:23:01.148+01:00  INFO 37032 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-13T10:23:02.717+01:00  INFO 37032 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-13T10:23:02.718+01:00  INFO 37032 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-13T10:23:02.722+01:00  INFO 37032 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2025-03-13T10:23:02.788+01:00  INFO 37032 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 2.153 seconds (process running for 4.483)
+2025-03-13T10:24:56.658+01:00  INFO 38744 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 38744 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-13T10:24:56.661+01:00  INFO 38744 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-13T10:24:58.329+01:00  INFO 38744 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-13T10:24:58.330+01:00  INFO 38744 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-13T10:24:58.336+01:00  INFO 38744 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 5 ms
+2025-03-13T10:24:58.412+01:00  INFO 38744 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 2.287 seconds (process running for 4.616)
+2025-03-13T10:25:50.796+01:00  INFO 37640 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 37640 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-13T10:25:50.799+01:00  INFO 37640 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-13T10:25:52.397+01:00  INFO 37640 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-13T10:25:52.397+01:00  INFO 37640 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-13T10:25:52.401+01:00  INFO 37640 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2025-03-13T10:25:52.470+01:00  INFO 37640 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 2.186 seconds (process running for 4.58)
+2025-03-13T10:26:09.717+01:00  INFO 36640 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 36640 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-13T10:26:09.721+01:00  INFO 36640 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-13T10:26:12.027+01:00  INFO 36640 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-13T10:26:12.027+01:00  INFO 36640 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-13T10:26:12.031+01:00  INFO 36640 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2025-03-13T10:26:12.114+01:00  INFO 36640 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 3.16 seconds (process running for 7.669)
+2025-03-13T10:34:31.690+01:00  INFO 24588 --- [SafetyNet] [main] c.S.c.FirestationControllerTest          : Starting FirestationControllerTest using Java 21.0.5 with PID 24588 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-13T10:34:31.692+01:00  INFO 24588 --- [SafetyNet] [main] c.S.c.FirestationControllerTest          : No active profile set, falling back to 1 default profile: "default"
+2025-03-13T10:34:32.548+01:00  WARN 24588 --- [SafetyNet] [main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'medicalRecordController': Unsatisfied dependency expressed through field 'medicalRecordService': No qualifying bean of type 'com.SafetyNet.service.MedicalRecordService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2025-03-13T10:34:32.578+01:00  INFO 24588 --- [SafetyNet] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-13T10:34:32.661+01:00 ERROR 24588 --- [SafetyNet] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field medicalRecordService in com.SafetyNet.controller.MedicalRecordController required a bean of type 'com.SafetyNet.service.MedicalRecordService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.SafetyNet.service.MedicalRecordService' in your configuration.
+
+2025-03-13T10:34:32.674+01:00  WARN 24588 --- [SafetyNet] [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener] to prepare test instance [com.SafetyNet.controller.FirestationControllerTest@2589d787]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@6a567f7b testClass = com.SafetyNet.controller.FirestationControllerTest, locations = [], classes = [com.SafetyNet.SafetyNetApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@28be7fec key = [org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration, org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration, org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration, org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration, org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration, org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration, org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration, org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration, org.springframework.boot.autoconfigure.jsonb.JsonbAutoConfiguration, org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration, org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6c4906d3, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@4f32a3ad, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@2573ce57, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@69c81773, org.springframework.boot.test.autoconfigure.OnFailureConditionReportContextCustomizerFactory$OnFailureConditionReportContextCustomizer@c05fddc, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@50378a4, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@848e1042, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@3c02b7d9, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@4f49f6af, org.springframework.test.context.support.DynamicPropertiesContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestAnnotation@d0b9eef1], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180) ~[spring-test-6.2.3.jar:6.2.3]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.2.3.jar:6.2.3]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.postProcessFields(MockitoTestExecutionListener.java:128) ~[spring-boot-test-3.4.3.jar:3.4.3]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.injectFields(MockitoTestExecutionListener.java:112) ~[spring-boot-test-3.4.3.jar:3.4.3]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:69) ~[spring-boot-test-3.4.3.jar:3.4.3]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.2.3.jar:6.2.3]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:160) ~[spring-test-6.2.3.jar:6.2.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$12(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$7(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$6(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$1(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:94) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:52) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:70) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:100) ~[.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40) ~[.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:530) ~[.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:758) ~[.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:453) ~[.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:211) ~[.cp/:na]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'medicalRecordController': Unsatisfied dependency expressed through field 'medicalRecordService': No qualifying bean of type 'com.SafetyNet.service.MedicalRecordService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1445) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:346) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1155) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1121) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1056) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.3.jar:6.2.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.3.jar:6.2.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.3.jar:3.4.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.3.jar:3.4.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.3.jar:3.4.3]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.4.3.jar:3.4.3]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.2.3.jar:6.2.3]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.2.3.jar:6.2.3]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461) ~[spring-boot-3.4.3.jar:3.4.3]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553) ~[spring-boot-test-3.4.3.jar:3.4.3]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.4.3.jar:3.4.3]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.4.3.jar:3.4.3]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.2.3.jar:6.2.3]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.2.3.jar:6.2.3]
+	... 75 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.SafetyNet.service.MedicalRecordService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:2177) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1627) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1552) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785) ~[spring-beans-6.2.3.jar:6.2.3]
+	... 102 common frames omitted
+
+2025-03-13T10:35:01.255+01:00  INFO 25488 --- [SafetyNet] [main] c.S.c.FirestationControllerTest          : Starting FirestationControllerTest using Java 21.0.5 with PID 25488 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-13T10:35:01.259+01:00  INFO 25488 --- [SafetyNet] [main] c.S.c.FirestationControllerTest          : No active profile set, falling back to 1 default profile: "default"
+2025-03-13T10:35:02.760+01:00  INFO 25488 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-13T10:35:02.760+01:00  INFO 25488 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-13T10:35:02.764+01:00  INFO 25488 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2025-03-13T10:35:02.835+01:00  INFO 25488 --- [SafetyNet] [main] c.S.c.FirestationControllerTest          : Started FirestationControllerTest in 2.103 seconds (process running for 4.387)
+2025-03-13T10:42:03.663+01:00  INFO 20896 --- [SafetyNet] [main] c.S.c.FirestationControllerTest          : Starting FirestationControllerTest using Java 21.0.5 with PID 20896 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-13T10:42:03.666+01:00  INFO 20896 --- [SafetyNet] [main] c.S.c.FirestationControllerTest          : No active profile set, falling back to 1 default profile: "default"
+2025-03-13T10:42:05.313+01:00  INFO 20896 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-13T10:42:05.314+01:00  INFO 20896 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-13T10:42:05.323+01:00  INFO 20896 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 7 ms
+2025-03-13T10:42:05.387+01:00  INFO 20896 --- [SafetyNet] [main] c.S.c.FirestationControllerTest          : Started FirestationControllerTest in 2.258 seconds (process running for 4.703)
+2025-03-13T10:43:15.039+01:00  INFO 1424 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 1424 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-13T10:43:15.041+01:00  INFO 1424 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-13T10:43:16.767+01:00  INFO 1424 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-13T10:43:16.768+01:00  INFO 1424 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-13T10:43:16.773+01:00  INFO 1424 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2025-03-13T10:43:16.861+01:00  INFO 1424 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 2.306 seconds (process running for 4.932)
+2025-03-13T10:44:03.097+01:00  INFO 31208 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 31208 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-13T10:44:03.100+01:00  INFO 31208 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-13T10:44:04.693+01:00  INFO 31208 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-13T10:44:04.694+01:00  INFO 31208 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-13T10:44:04.699+01:00  INFO 31208 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+2025-03-13T10:44:04.769+01:00  INFO 31208 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 2.196 seconds (process running for 4.724)
+2025-03-13T10:45:19.025+01:00  INFO 17452 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 17452 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-13T10:45:19.027+01:00  INFO 17452 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-13T10:45:20.584+01:00  INFO 17452 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-13T10:45:20.585+01:00  INFO 17452 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-13T10:45:20.589+01:00  INFO 17452 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-03-13T10:45:20.669+01:00  INFO 17452 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 2.141 seconds (process running for 4.637)
+2025-03-13T10:46:12.971+01:00  INFO 37924 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 37924 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-13T10:46:12.973+01:00  INFO 37924 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-13T10:46:14.809+01:00  INFO 37924 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-13T10:46:14.810+01:00  INFO 37924 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-13T10:46:14.813+01:00  INFO 37924 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2025-03-13T10:46:14.894+01:00  INFO 37924 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 2.473 seconds (process running for 4.929)
+2025-03-13T10:47:26.569+01:00  INFO 37756 --- [SafetyNet] [main] c.S.c.FirestationControllerTest          : Starting FirestationControllerTest using Java 21.0.5 with PID 37756 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-13T10:47:26.573+01:00  INFO 37756 --- [SafetyNet] [main] c.S.c.FirestationControllerTest          : No active profile set, falling back to 1 default profile: "default"
+2025-03-13T10:47:28.211+01:00  INFO 37756 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-13T10:47:28.212+01:00  INFO 37756 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-13T10:47:28.215+01:00  INFO 37756 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-03-13T10:47:28.288+01:00  INFO 37756 --- [SafetyNet] [main] c.S.c.FirestationControllerTest          : Started FirestationControllerTest in 2.274 seconds (process running for 4.607)
