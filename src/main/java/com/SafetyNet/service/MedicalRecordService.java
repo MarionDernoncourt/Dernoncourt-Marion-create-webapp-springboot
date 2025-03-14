@@ -12,7 +12,6 @@ import com.SafetyNet.repository.MedicalRecordRepository;
 @Service
 public class MedicalRecordService {
 
-
 	@Autowired
 	private MedicalRecordRepository medicalRecordRepository;
 
@@ -23,15 +22,15 @@ public class MedicalRecordService {
 	public MedicalRecord getMedicalRecord(String firstName, String lastName) throws IOException {
 		return medicalRecordRepository.getMedicalRecord(firstName, lastName);
 	}
-	
-	public void createMedicalRecord(MedicalRecord medicalRecord) {
-		medicalRecordRepository.createMedicalRecord(medicalRecord);
+
+	public MedicalRecord createMedicalRecord(MedicalRecord medicalRecord) {
+		return medicalRecordRepository.createMedicalRecord(medicalRecord);
 	}
-	
+
 	public MedicalRecord updateMedicalRecord(MedicalRecord medicalRecord) {
 		return medicalRecordRepository.updateMedicalRecord(medicalRecord);
 	}
-	
+
 	public boolean deleteMedicalRecord(String firstName, String lastName) {
 		return medicalRecordRepository.deleteMedicalRecord(firstName, lastName);
 	}

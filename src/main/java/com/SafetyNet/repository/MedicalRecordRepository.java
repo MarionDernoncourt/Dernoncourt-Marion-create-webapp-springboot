@@ -43,7 +43,7 @@ public class MedicalRecordRepository implements IMedicalRecordRepository {
 	}
 
 	@Override
-	public void createMedicalRecord(MedicalRecord medicalRecord) {
+	public MedicalRecord createMedicalRecord(MedicalRecord medicalRecord) {
 
 		List<MedicalRecord> medicalRecords = initializationListsRepository.getAllMedicalRecord();
 
@@ -51,12 +51,13 @@ public class MedicalRecordRepository implements IMedicalRecordRepository {
 			if (medRecord.getFirstName().equalsIgnoreCase(medicalRecord.getFirstName())
 					&& medRecord.getLastName().equalsIgnoreCase(medicalRecord.getLastName())) {
 				logger.warn("Ce dossier médical existe déjà, il ne peut pas être créé.");
-				return;
+				return null;
 			}
 
 		}
 		medicalRecords.add(medicalRecord);
-		logger.info("Le dossier médical a bien été créé." + medicalRecord );
+		return medicalRecord;
+		
 	}
 
 	@Override

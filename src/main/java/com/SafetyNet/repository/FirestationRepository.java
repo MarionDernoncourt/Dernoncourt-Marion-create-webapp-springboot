@@ -35,17 +35,18 @@ public class FirestationRepository implements IFirestationRepository {
 	}
 
 	@Override
-	public void createFirestation(Firestation firestation) {
+	public Firestation createFirestation(Firestation firestation) {
 
 		List<Firestation> firestations = initializationListsRepository.getAllFirestation();
 
 		for (Firestation station : firestations) {
 			if (station.getAddress().equalsIgnoreCase(firestation.getAddress())) {
 				logger.warn("Cette station existe déjà");
-				return;
+				return null;
 			}
 		}
 		firestations.add(firestation);
+		return firestation ;
 	}
 
 	@Override

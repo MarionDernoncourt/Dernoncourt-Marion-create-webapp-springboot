@@ -1,6 +1,7 @@
 package com.SafetyNet.controller;
 
 import java.io.IOException;
+import java.lang.module.ModuleDescriptor.Builder;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,11 +46,10 @@ public class MedicalRecordController {
 	}
 
 	@PostMapping("/medicalrecord")
-	public ResponseEntity<String> createdMedicalRecord(@RequestBody MedicalRecord medicalRecord) {
+	public ResponseEntity<MedicalRecord> createdMedicalRecord(@RequestBody MedicalRecord medicalRecord) {
 		try {
-			medicalRecordService.createMedicalRecord(medicalRecord);
-			return ResponseEntity.status(HttpStatus.CREATED).body("Le dossier médical a bien été créé pour "
-					+ medicalRecord.getFirstName() + " " + medicalRecord.getLastName());
+			MedicalRecord newMedicaRecord = medicalRecordService.createMedicalRecord(medicalRecord);
+			return ResponseEntity.status(HttpStatus.CREATED).body(newMedicaRecord);
 		} catch (Exception e) {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
@@ -67,12 +67,12 @@ public class MedicalRecordController {
 	}
 
 	@DeleteMapping("/medicalrecord")
-	public ResponseEntity<String> deleteMedicalRecord(@RequestParam String firstName, @RequestParam String lastName) {
+	public ResponseEntity<Void> deleteMedicalRecord(@RequestParam String firstName, @RequestParam String lastName) {
 		boolean deletedMedRecord = medicalRecordService.deleteMedicalRecord(firstName, lastName);
 		if (!deletedMedRecord) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Dossier médical non trouvé");
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
-		return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Le dossier médical a bien été supprimé");
+		return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
 	}
 
 }

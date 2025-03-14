@@ -136,7 +136,7 @@ public class PersonControllerTest {
 	@Test
 	public void testDeletePerson() throws Exception {
 		when(personService.deletePerson("John", "Doe")).thenReturn(true);
-		mockMvc.perform(delete("/person").param("firstName", "John").param("lastName", "Doe")).andExpect(status().isOk());
+		mockMvc.perform(delete("/person").param("firstName", "John").param("lastName", "Doe")).andExpect(status().isNoContent());
 	}
 	@Test
 	public void testDeletePerson_withWrongArgument() throws Exception {

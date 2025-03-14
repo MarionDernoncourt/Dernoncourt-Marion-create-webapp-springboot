@@ -14,7 +14,7 @@ public interface IMedicalRecordRepository {
 
 	public MedicalRecord getMedicalRecord (String firstName, String lastName);
 	
-	public void createMedicalRecord (MedicalRecord medicalRecord);
+	public MedicalRecord createMedicalRecord (MedicalRecord medicalRecord);
 	
 	public MedicalRecord updateMedicalRecord(MedicalRecord medicalRecord);
 	

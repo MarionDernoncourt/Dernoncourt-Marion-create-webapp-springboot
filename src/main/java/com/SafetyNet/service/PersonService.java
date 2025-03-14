@@ -38,8 +38,8 @@ public class PersonService {
 		return personRepository.getPersonByFirstNameAndLastName(firstName, lastName);
 	}
 	
-	public void createPerson(Person person)   {
-		personRepository.createPerson(person);
+	public Person createPerson(Person person)   {
+		return personRepository.createPerson(person);
 	}
 	
 	public Person updatePerson(Person person)   {

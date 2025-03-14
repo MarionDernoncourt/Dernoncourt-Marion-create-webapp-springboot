@@ -42,12 +42,12 @@ public class PersonController {
 	}
 
 	@PostMapping("/person")
-	public ResponseEntity<String> createPerson(@RequestBody Person person) {
+	public ResponseEntity<Person> createPerson(@RequestBody Person person) {
 		try {
-			personService.createPerson(person);
-		return	ResponseEntity.status(HttpStatus.CREATED).body("La personne a bien été créée");
+			Person personCreated = personService.createPerson(person);
+		return	ResponseEntity.status(HttpStatus.CREATED).body(personCreated);
 		} catch (Exception e) {
-			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erreur interne");
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
 		}
 	}
 
@@ -63,14 +63,14 @@ public class PersonController {
 	}
 
 	@DeleteMapping("/person")
-	public ResponseEntity<String> deletePerson(@RequestParam String firstName, @RequestParam String lastName) {
+	public ResponseEntity<Void> deletePerson(@RequestParam String firstName, @RequestParam String lastName) {
 
 		boolean deleted = personService.deletePerson(firstName, lastName);
 
 		if (!deleted) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Personne non trouvée");
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
-		return ResponseEntity.status(HttpStatus.OK).body("Personne supprimée");
+		return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
 
 	}
 

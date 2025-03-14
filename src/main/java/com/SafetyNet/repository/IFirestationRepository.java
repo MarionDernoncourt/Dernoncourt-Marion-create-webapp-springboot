@@ -14,7 +14,7 @@ public interface IFirestationRepository {
 	
 	public Firestation getFirestation_ByAddress(String address);
 	
-	public void createFirestation(Firestation firestation);
+	public Firestation createFirestation(Firestation firestation);
 	
 	public Firestation updateFirestation(Firestation firestation);
 	

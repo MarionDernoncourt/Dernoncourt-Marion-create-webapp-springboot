@@ -14,7 +14,7 @@ public interface IPersonRepository {
 	
 	public Person getPersonByFirstNameAndLastName(String firstName, String lastName) throws IOException;
 	
-	public void createPerson(Person person) throws IOException ;
+	public Person createPerson(Person person) throws IOException ;
 	
 	public Person updatePerson(Person person) throws IOException;
 	

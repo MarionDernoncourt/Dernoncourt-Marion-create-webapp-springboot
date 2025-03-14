@@ -10,7 +10,7 @@ import com.SafetyNet.model.Person;
 
 @Repository
 public class PersonRepository implements IPersonRepository {
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(PersonRepository.class);
 
 	private final InitializationListsRepository initializationListsRepository;
@@ -30,7 +30,7 @@ public class PersonRepository implements IPersonRepository {
 	}
 
 	@Override
-	public Person getPersonByFirstNameAndLastName(String firstName, String lastName)  {
+	public Person getPersonByFirstNameAndLastName(String firstName, String lastName) {
 
 		List<Person> persons = initializationListsRepository.getAllPersons();
 
@@ -40,7 +40,7 @@ public class PersonRepository implements IPersonRepository {
 	};
 
 	@Override
-	public void createPerson(Person person)  {
+	public Person createPerson(Person person) {
 
 		List<Person> persons = initializationListsRepository.getAllPersons();
 
@@ -48,15 +48,15 @@ public class PersonRepository implements IPersonRepository {
 			if (resident.getFirstName().equalsIgnoreCase(person.getFirstName())
 					&& resident.getLastName().equalsIgnoreCase(person.getLastName())) {
 				logger.warn("Cette personne existe déjà dans la liste des habitatns");
-				return;
+				return null;
 			}
 		}
 		persons.add(person);
-		logger.info("Personne ajouté : {} {} ", person.getFirstName(), person.getLastName());
+		return person;
 	}
 
 	@Override
-	public Person updatePerson(Person person)  {
+	public Person updatePerson(Person person) {
 		List<Person> persons = initializationListsRepository.getAllPersons();
 
 		for (Person resident : persons) {
@@ -76,7 +76,7 @@ public class PersonRepository implements IPersonRepository {
 	}
 
 	@Override
-	public boolean deletePerson(String firstName, String lastName)  {
+	public boolean deletePerson(String firstName, String lastName) {
 		List<Person> persons = initializationListsRepository.getAllPersons();
 		boolean personRemoved = persons.removeIf(person -> person.getFirstName().equalsIgnoreCase(firstName)
 				&& person.getLastName().equalsIgnoreCase(lastName));

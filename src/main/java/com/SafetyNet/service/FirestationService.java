@@ -33,8 +33,8 @@ public class FirestationService {
 		return firestationRepository.getFirestation_ByAddress(address);
 	}
 	
-	public void createFirestation (Firestation firestation) {
-		firestationRepository.createFirestation(firestation);
+	public Firestation createFirestation (Firestation firestation) {
+		return firestationRepository.createFirestation(firestation);
 	}
 	
 	public Firestation updateFirestation(Firestation firestation) {

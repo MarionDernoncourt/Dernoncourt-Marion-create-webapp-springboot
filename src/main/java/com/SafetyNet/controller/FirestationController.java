@@ -42,9 +42,13 @@ public class FirestationController {
 	}
 	
 	@PostMapping("/firestation")
-	public ResponseEntity<String> createFirestation(@RequestBody Firestation firestation) {
-		firestationService.createFirestation(firestation);
-		return ResponseEntity.status(HttpStatus.CREATED).body("La caserne a bien été créée");
+	public ResponseEntity<Firestation> createFirestation(@RequestBody Firestation firestation) {
+		Firestation firestationCreated = firestationService.createFirestation(firestation);
+		if (firestationCreated == null ) {
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build()	;
+		}
+		return ResponseEntity.status(HttpStatus.CREATED).body(firestationCreated);
+		
 	}
 	
 	@PutMapping("/firestation")
@@ -57,13 +61,13 @@ public class FirestationController {
 	}
 	
 	@DeleteMapping("/firestation")
-	public ResponseEntity<String> deleteFirestation(@RequestBody Firestation firestation) {
+	public ResponseEntity<Void> deleteFirestation(@RequestBody Firestation firestation) {
 		boolean deleted = firestationService.deleteFirestation(firestation);
 		if(!deleted) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Personne supprimée");
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 		
-		return ResponseEntity.status(HttpStatus.OK).body("La caserne a été suprrimée");
+		return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
 	}
 	
 	
