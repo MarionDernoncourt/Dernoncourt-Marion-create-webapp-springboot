@@ -7,14 +7,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.SafetyNet.model.MedicalRecord;
-import com.SafetyNet.repository.IMedicalRecordRepository;
+import com.SafetyNet.repository.MedicalRecordRepository;
 
 @Service
 public class MedicalRecordService {
 
 
 	@Autowired
-	IMedicalRecordRepository medicalRecordRepository;
+	private MedicalRecordRepository medicalRecordRepository;
 
 	public List<MedicalRecord> getAllMedicalRecord() throws IOException {
 		return medicalRecordRepository.getAllMedicalRecord();

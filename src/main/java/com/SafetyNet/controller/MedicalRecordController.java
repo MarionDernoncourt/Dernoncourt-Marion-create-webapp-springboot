@@ -25,12 +25,12 @@ public class MedicalRecordController {
 	MedicalRecordService medicalRecordService;
 
 	@GetMapping("/medicalrecords")
-	public ResponseEntity<String> getAllMedicalRecord() throws IOException {
+	public ResponseEntity<List<MedicalRecord>> getAllMedicalRecord() throws IOException {
 		List<MedicalRecord> medicalRecords = medicalRecordService.getAllMedicalRecord();
 		if (medicalRecords.isEmpty()) {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
-		return ResponseEntity.status(HttpStatus.OK).body("Dossiers médicaux trouvés : " + medicalRecords.size());
+		return ResponseEntity.status(HttpStatus.OK).body(medicalRecords);
 	}
 
 	@GetMapping("/medicalrecord")

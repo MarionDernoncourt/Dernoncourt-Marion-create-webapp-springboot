@@ -26,12 +26,18 @@ public class FirestationController {
 	@GetMapping("/firestations")
 	public ResponseEntity<List<Firestation>> getAllFirestation() throws IOException {
 		List<Firestation> firestations = firestationService.getAllFirestation();
+		if(firestations.isEmpty()) {
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build()
+;		}
 		return ResponseEntity.status(HttpStatus.OK).body(firestations);
 	}
 	
 	@GetMapping("/firestation")
 	public ResponseEntity<Firestation> getFirestation_ByAddress(@RequestParam String address) {
 		Firestation firestation = firestationService.getFirestation_ByAddress(address);
+		if(firestation == null) {
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+		}
 		return ResponseEntity.status(HttpStatus.OK).body(firestation);
 	}
 	
@@ -44,12 +50,19 @@ public class FirestationController {
 	@PutMapping("/firestation")
 	public ResponseEntity<Firestation> updateFirestation(@RequestBody Firestation firestation) {
 		Firestation updatedFirestation = firestationService.updateFirestation(firestation);
+		if (updatedFirestation == null) {
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+		}
 		return ResponseEntity.status(HttpStatus.OK).body(updatedFirestation);
 	}
 	
 	@DeleteMapping("/firestation")
 	public ResponseEntity<String> deleteFirestation(@RequestBody Firestation firestation) {
-		firestationService.deleteFirestation(firestation);
+		boolean deleted = firestationService.deleteFirestation(firestation);
+		if(!deleted) {
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Personne supprimée");
+		}
+		
 		return ResponseEntity.status(HttpStatus.OK).body("La caserne a été suprrimée");
 	}
 	

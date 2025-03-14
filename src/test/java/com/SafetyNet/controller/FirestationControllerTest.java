@@ -1,9 +1,14 @@
 package com.SafetyNet.controller;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import java.util.ArrayList;
@@ -17,6 +22,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
@@ -58,5 +64,58 @@ public class FirestationControllerTest {
 		when(firestationService.getFirestation_ByAddress(anyString())).thenReturn(mockFirestation.get(0));
 		MvcResult result = mockMvc.perform(get("/firestation").param("address", "1509 Culver St")).andReturn();
 		assertEquals(foundedFirestationInJson, result.getResponse().getContentAsString());
+	}
+
+	@Test
+	public void testGetFirestation_withWrongAddress() throws Exception {
+		when(firestationService.getFirestation_ByAddress(anyString())).thenReturn(null);
+		mockMvc.perform(get("/firestation").param("address", "123 North St")).andExpect(status().isNotFound());
+	}
+
+	@Test
+	public void testCreateFirestation() throws Exception {
+		Firestation newStation = new Firestation("123 North St", 3);
+		String newStationJson = objectMapper.writeValueAsString(newStation);
+		doNothing().when(firestationService).createFirestation(any(Firestation.class));
+		mockMvc.perform(post("/firestation")
+	            .contentType(MediaType.APPLICATION_JSON)  
+	            .content(newStationJson))  
+	            .andExpect(status().isCreated());
+	}
+	
+	@Test
+	public void testUpdateFirestation() throws Exception {
+		Firestation updatedFirestation = new Firestation("18 Bomberos St", 1);
+		String updatedFirestationJson = objectMapper.writeValueAsString(updatedFirestation);
+		when(firestationService.updateFirestation(any(Firestation.class))).thenReturn(updatedFirestation);
+		mockMvc.perform(put("/firestation")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content(updatedFirestationJson))
+			.andExpect(status().isOk());
+	}
+	
+	@Test
+	public void testUpdateFirestation_withWrongArgument() throws Exception {
+		Firestation updatedFirestation = new Firestation("18 Bomberos St", 1);
+		String updatedFirestationJson = objectMapper.writeValueAsString(updatedFirestation);
+		when(firestationService.updateFirestation(any(Firestation.class))).thenReturn(null);
+		mockMvc.perform(put("/firestation").contentType(MediaType.APPLICATION_JSON).content(updatedFirestationJson)).andExpect(status().isNotFound());
+	}
+	
+	@Test
+	public void testDeleteFirestation() throws Exception {
+		Firestation stationToDelete = mockFirestation.get(0);
+		String stationToDeleteJson = objectMapper.writeValueAsString(stationToDelete);
+		when(firestationService.deleteFirestation(any(Firestation.class))).thenReturn(true);
+		mockMvc.perform(delete("/firestation").contentType(MediaType.APPLICATION_JSON).content(stationToDeleteJson)).andExpect(status().isOk());
+	}
+	
+	@Test
+	public void testDeleteFirestation_withWrongArgument() throws Exception {
+		Firestation stationToDelete = mockFirestation.get(0);
+		String stationToDeleteJson = objectMapper.writeValueAsString(stationToDelete);
+		when(firestationService.deleteFirestation(any(Firestation.class))).thenReturn(false);
+		mockMvc.perform(delete("/firestation").contentType(MediaType.APPLICATION_JSON).content(stationToDeleteJson)).andExpect(status().isNotFound());
+	
 	}
 }
