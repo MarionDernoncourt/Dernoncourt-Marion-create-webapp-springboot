@@ -34,30 +34,36 @@ public class MedicalRecordController {
 	}
 
 	@GetMapping("/medicalrecord")
-	public ResponseEntity<String> getMedicalRecord_ByLastNameAndFirstName(@RequestParam String firstName,
+	public ResponseEntity<MedicalRecord> getMedicalRecord_ByLastNameAndFirstName(@RequestParam String firstName,
 			@RequestParam String lastName) throws IOException {
 
 		MedicalRecord medicalRecord = medicalRecordService.getMedicalRecord(firstName, lastName);
-		return ResponseEntity.status(HttpStatus.OK)
-				.body("Le dossier a bien été trouvé pour " + firstName + " " + lastName + " : " + medicalRecord);
+		if (medicalRecord == null) {
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+		}
+		return ResponseEntity.status(HttpStatus.OK).body(medicalRecord);
 	}
 
 	@PostMapping("/medicalrecord")
 	public ResponseEntity<String> createdMedicalRecord(@RequestBody MedicalRecord medicalRecord) {
-		medicalRecordService.createMedicalRecord(medicalRecord);
-		return ResponseEntity.status(HttpStatus.ACCEPTED).body("Le dossier médical a bien été créé pour "
-				+ medicalRecord.getFirstName() + " " + medicalRecord.getLastName());
+		try {
+			medicalRecordService.createMedicalRecord(medicalRecord);
+			return ResponseEntity.status(HttpStatus.CREATED).body("Le dossier médical a bien été créé pour "
+					+ medicalRecord.getFirstName() + " " + medicalRecord.getLastName());
+		} catch (Exception e) {
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+		}
 
 	}
 
 	@PutMapping("/medicalrecord")
-	public ResponseEntity<String> updateMedicalRecord(@RequestBody MedicalRecord medicalRecord) {
+	public ResponseEntity<MedicalRecord> updateMedicalRecord(@RequestBody MedicalRecord medicalRecord) {
 		MedicalRecord updatedMedRecord = medicalRecordService.updateMedicalRecord(medicalRecord);
 		if (updatedMedRecord == null) {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND)
-					.body("Ce dossier médical n'existe pas, il ne peut pas être mis à jour");
+					.build();
 		}
-		return ResponseEntity.status(HttpStatus.OK).body("Le dossier médical a bien été mis à jour");
+		return ResponseEntity.status(HttpStatus.OK).body(updatedMedRecord);
 	}
 
 	@DeleteMapping("/medicalrecord")
@@ -66,7 +72,7 @@ public class MedicalRecordController {
 		if (!deletedMedRecord) {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Dossier médical non trouvé");
 		}
-		return ResponseEntity.status(HttpStatus.OK).body("Le dossier médical a bien été supprimé");
+		return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Le dossier médical a bien été supprimé");
 	}
 
 }
