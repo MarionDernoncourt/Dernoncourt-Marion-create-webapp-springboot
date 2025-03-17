@@ -36,18 +36,18 @@ public class InitializationListsRepository implements CommandLineRunner, IDataLo
 	private File jsonFile = new File("src/main/resources/data.json");
 
 	public List<Person> getAllPersons() {
-		try {
+			try {
 			if (!persons.isEmpty()) {
+				logger.debug("Liste de personne déjà chargée en mémoire");
 				return persons;
 			}
 			JsonNode root = objectMapper.readTree(jsonFile);
 			JsonNode personsNode = root.get("persons");
 			if (personsNode == null || !personsNode.isArray()) {
-				logger.warn("Aucune données trouvées dans 'persons'. Retour d'une liste vide");
+				logger.error("Aucune données trouvées dans 'persons'. Retour d'une liste vide");
 				return List.of();
 			}
 			logger.info("Lecture du fichier ok, nombre d'habitants : " + personsNode.size());
-			System.out.println(personsNode);
 			persons = objectMapper.convertValue(personsNode, new TypeReference<List<Person>>() {
 			});
 			return persons;
@@ -61,13 +61,14 @@ public class InitializationListsRepository implements CommandLineRunner, IDataLo
 	public List<Firestation> getAllFirestation() {
 		try {
 			if (!firestations.isEmpty()) {
+				logger.debug("Liste de casernes déjà chargée en mémoire");
 				return firestations;
 			}
 			JsonNode root = objectMapper.readTree(jsonFile);
 			JsonNode firestationNode = root.get("firestations");
 
 			if (firestationNode == null || !firestationNode.isArray()) {
-				logger.warn("Aucune donnée trouvée");
+				logger.error("Aucune donnée trouvée");
 				return List.of();
 			}
 			logger.info("Lecture du fichier ok, nombre de firestation : " + firestationNode.size());
@@ -85,6 +86,8 @@ public class InitializationListsRepository implements CommandLineRunner, IDataLo
 
 		try {
 			if (!medicalRecords.isEmpty()) {
+				logger.debug("Liste de dossier médical déjà chargée en mémoire");
+
 				return medicalRecords;
 			}
 
@@ -94,7 +97,7 @@ public class InitializationListsRepository implements CommandLineRunner, IDataLo
 			JsonNode medicalRecordNode = root.get("medicalrecords");
 
 			if (medicalRecordNode == null || !medicalRecordNode.isArray()) {
-				logger.warn("Aucune donnée trouvées / Retour d'une liste vide");
+				logger.error("Aucune donnée trouvées / Retour d'une liste vide");
 				return List.of();
 			}
 			logger.info("Lecture du fichier ok, nombre de dossier medical : " + medicalRecordNode.size());

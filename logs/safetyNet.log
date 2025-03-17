@@ -392,3 +392,24 @@
 2025-03-17T14:57:38.380+01:00  INFO 34848 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
 2025-03-17T14:57:38.383+01:00  INFO 34848 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
 2025-03-17T14:57:38.456+01:00  INFO 34848 --- [SafetyNet] [main] c.S.c.MedicalRecordControllerTest        : Started MedicalRecordControllerTest in 3.152 seconds (process running for 4.725)
+2025-03-17T16:12:01.195+01:00  INFO 33564 --- [SafetyNet] [RMI TCP Connection(112)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-03-17T16:12:01.260+01:00  INFO 33564 --- [SafetyNet] [RMI TCP Connection(112)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-17T16:12:01.299+01:00  INFO 33564 --- [SafetyNet] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-17T16:12:07.980+01:00  INFO 38908 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Starting SafetyNetApplication using Java 21.0.5 with PID 38908 (C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet\target\classes started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-17T16:12:07.982+01:00  INFO 38908 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-17T16:12:08.925+01:00  INFO 38908 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-17T16:12:08.941+01:00  INFO 38908 --- [SafetyNet] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-17T16:12:08.942+01:00  INFO 38908 --- [SafetyNet] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-17T16:12:09.005+01:00  INFO 38908 --- [SafetyNet] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-17T16:12:09.005+01:00  INFO 38908 --- [SafetyNet] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 963 ms
+2025-03-17T16:12:09.391+01:00  INFO 38908 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-17T16:12:09.400+01:00  INFO 38908 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Started SafetyNetApplication in 1.882 seconds (process running for 2.589)
+2025-03-17T16:12:09.421+01:00  INFO 38908 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-17T16:12:09.488+01:00  INFO 38908 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-17T16:12:09.495+01:00  INFO 38908 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-17T16:12:44.101+01:00  INFO 38908 --- [SafetyNet] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-17T16:12:44.101+01:00  INFO 38908 --- [SafetyNet] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-17T16:12:44.103+01:00  INFO 38908 --- [SafetyNet] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-03-17T16:12:44.161+01:00  WARN 38908 --- [SafetyNet] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'firstName' for method parameter type String is not present]
+2025-03-17T16:12:48.161+01:00  INFO 38908 --- [SafetyNet] [http-nio-8080-exec-3] c.SafetyNet.repository.PersonRepository  : ombre de personne récupérées : 23
+2025-03-17T16:12:48.166+01:00  INFO 38908 --- [SafetyNet] [http-nio-8080-exec-3] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23

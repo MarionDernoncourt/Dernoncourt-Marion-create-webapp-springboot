@@ -28,32 +28,58 @@ public class PersonService {
 	@Autowired
 	private AgeCalculatorService ageCalculatorService;
 
-	
-
-	public List<Person> getAllPersons()  {
-		return personRepository.getAllPersons();
-	}
-	
-	public Person getPersonByFirstNameAndLastName(String firstName, String lastName)  {
-		return personRepository.getPersonByFirstNameAndLastName(firstName, lastName);
-	}
-	
-	public Person createPerson(Person person)   {
-		return personRepository.createPerson(person);
-	}
-	
-	public Person updatePerson(Person person)   {
-		return personRepository.updatePerson(person);
-	}
-	
-	public boolean deletePerson(String firstName, String lastName)  {
-		if (personRepository.deletePerson(firstName, lastName)) {
-			return true;
-		} return false;
+	public List<Person> getAllPersons() {
+		logger.debug("Récupération de toutes les personnes");
+		List<Person> persons = personRepository.getAllPersons();
+		logger.info("Nombre de personnes récupérées : {}", persons.size());
+		return persons;
 	}
 
+	public Person getPersonByFirstNameAndLastName(String firstName, String lastName) {
+		logger.debug("Recherche d'une personne avec son nom et prénom : {} {}", firstName, lastName);
+		Person person = personRepository.getPersonByFirstNameAndLastName(firstName, lastName);
+		if (person == null) {
+			logger.error("Aucune personne trouvée avec ces informations");
+		}
+		return person;
+	}
+
+	public Person createPerson(Person person) {
+		logger.debug("Tentative de la création de la personne : {}", person);
+		Person created = personRepository.createPerson(person);
+		if (created == null ) {
+			logger.error("La personne existe déjà");
+		}
+		return created;
+	}
+
+	public Person updatePerson(Person person) {
+		logger.debug("Tentative de mise à jour de la personne : {} {}", person.getFirstName(), person.getLastName());
+		Person updated = personRepository.updatePerson(person);
+		if (updated == null ) {
+			logger.error("Mise à jour impossible, personne introuvable");
+		}
+		return updated;
+	}
+
+	public boolean deletePerson(String firstName, String lastName) {
+		logger.debug("Tentative de suppression de la personne : {} {}", firstName, lastName);
+		boolean deleted = personRepository.deletePerson(firstName, lastName);
+		if (deleted ) {
+			logger.info("Personne supprimée avec succès");
+		}else {
+			logger.error("Echec de la suppression: personne non trouvée");
+		}
+		return deleted;
+				
+		
+	}
 	
 	
+	
+	
+	
+
 	public List<Person> getPerson_ByStationNumber(int stationNumber) throws IOException {
 
 		List<Firestation> stations = firestationService.getStation_ByStationNumber(stationNumber);
@@ -73,13 +99,12 @@ public class PersonService {
 
 	public int calculatePersonAge(String firstName, String lastName) throws Exception {
 
-		LocalDate birthdate = medicalRecordService.getMedicalRecord(firstName, lastName)
-				.getBirthdate();
+		LocalDate birthdate = medicalRecordService.getMedicalRecord(firstName, lastName).getBirthdate();
 		if (birthdate == null) {
 			throw new IllegalArgumentException("Birthdate est NULL");
 		}
-		return  ageCalculatorService.calculateAge(birthdate);
-		
+		return ageCalculatorService.calculateAge(birthdate);
+
 	}
 
 }
