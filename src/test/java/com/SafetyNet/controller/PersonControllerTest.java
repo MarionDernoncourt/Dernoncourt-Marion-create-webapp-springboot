@@ -3,7 +3,6 @@ package com.SafetyNet.controller;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -18,7 +17,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -75,20 +73,19 @@ public class PersonControllerTest {
 
 	@Test
 	public void testGetPerson_ByFirstNameAndLastName() throws Exception {
-		String foundPersonJson = objectMapper.writeValueAsString( mockPersons.get(0));
+		String foundPersonJson = objectMapper.writeValueAsString(mockPersons.get(0));
 		when(personService.getPersonByFirstNameAndLastName("John", "Doe")).thenReturn(mockPersons.get(0));
 
-		MvcResult result = mockMvc.perform(get("/person").param("firstName", "John").param("lastName", "Doe")).andExpect(status().isOk())
-				.andReturn();
+		MvcResult result = mockMvc.perform(get("/person").param("firstName", "John").param("lastName", "Doe"))
+				.andExpect(status().isOk()).andReturn();
 		assertEquals(foundPersonJson, result.getResponse().getContentAsString());
-		
-			
+
 	}
 
 	@Test
 	public void testGetPerson_ByNameWithWrongArgument() throws Exception {
 		when(personService.getPersonByFirstNameAndLastName("John", "Nobody")).thenReturn(null);
-		MvcResult result = mockMvc.perform(get("/person").param("firstName","John").param("lastName", "Doe"))
+		MvcResult result = mockMvc.perform(get("/person").param("firstName", "John").param("lastName", "Doe"))
 				.andExpect(status().isNotFound()).andReturn();
 		assertEquals(404, result.getResponse().getStatus());
 	}
@@ -97,9 +94,9 @@ public class PersonControllerTest {
 	public void testCreatePerson() throws Exception {
 		Person person = new Person("Harry", "Potter", "12 Pourdlard St", "London", 12345, "123-456-987",
 				"potter@email.com");
-
 		String personJson = objectMapper.writeValueAsString(person);
-		doNothing().when(personService).createPerson(any(Person.class));
+		
+		when(personService.createPerson(any(Person.class))).thenReturn(person);
 
 		mockMvc.perform(post("/person").contentType(MediaType.APPLICATION_JSON).content(personJson))
 				.andExpect(status().isCreated());
@@ -128,20 +125,23 @@ public class PersonControllerTest {
 
 		MvcResult result = mockMvc
 				.perform(put("/person").contentType(MediaType.APPLICATION_JSON).content(updatedPersonJson)).andReturn();
-		
+
 		assertEquals(404, result.getResponse().getStatus());
 		assertFalse(mockPersons.contains(updatedPerson));
-		}
-	
+	}
+
 	@Test
 	public void testDeletePerson() throws Exception {
 		when(personService.deletePerson("John", "Doe")).thenReturn(true);
-		mockMvc.perform(delete("/person").param("firstName", "John").param("lastName", "Doe")).andExpect(status().isNoContent());
+		mockMvc.perform(delete("/person").param("firstName", "John").param("lastName", "Doe"))
+				.andExpect(status().isNoContent());
 	}
+
 	@Test
 	public void testDeletePerson_withWrongArgument() throws Exception {
 		when(personService.deletePerson("John", "Doe")).thenReturn(false);
-		mockMvc.perform(delete("/person").param("firstName", "John").param("lastName", "Doe")).andExpect(status().isNotFound());
+		mockMvc.perform(delete("/person").param("firstName", "John").param("lastName", "Doe"))
+				.andExpect(status().isNotFound());
 	}
-	
+
 }

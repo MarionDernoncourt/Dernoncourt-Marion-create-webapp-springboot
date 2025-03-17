@@ -61,8 +61,8 @@ public class FirestationController {
 	}
 	
 	@DeleteMapping("/firestation")
-	public ResponseEntity<Void> deleteFirestation(@RequestBody Firestation firestation) {
-		boolean deleted = firestationService.deleteFirestation(firestation);
+	public ResponseEntity<Void> deleteFirestation(@RequestParam String address) {
+		boolean deleted = firestationService.deleteFirestation(address);
 		if(!deleted) {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}

@@ -76,7 +76,7 @@ public class FirestationControllerTest {
 	public void testCreateFirestation() throws Exception {
 		Firestation newStation = new Firestation("123 North St", 3);
 		String newStationJson = objectMapper.writeValueAsString(newStation);
-		doNothing().when(firestationService).createFirestation(any(Firestation.class));
+		when(firestationService.createFirestation(any(Firestation.class))).thenReturn(newStation);
 		mockMvc.perform(post("/firestation")
 	            .contentType(MediaType.APPLICATION_JSON)  
 	            .content(newStationJson))  
@@ -105,17 +105,15 @@ public class FirestationControllerTest {
 	@Test
 	public void testDeleteFirestation() throws Exception {
 		Firestation stationToDelete = mockFirestation.get(0);
-		String stationToDeleteJson = objectMapper.writeValueAsString(stationToDelete);
-		when(firestationService.deleteFirestation(any(Firestation.class))).thenReturn(true);
-		mockMvc.perform(delete("/firestation").contentType(MediaType.APPLICATION_JSON).content(stationToDeleteJson)).andExpect(status().isOk());
+		when(firestationService.deleteFirestation(anyString())).thenReturn(true);
+		mockMvc.perform(delete("/firestation").param("address", stationToDelete.getAddress())).andExpect(status().isNoContent());
 	}
 	
 	@Test
 	public void testDeleteFirestation_withWrongArgument() throws Exception {
 		Firestation stationToDelete = mockFirestation.get(0);
-		String stationToDeleteJson = objectMapper.writeValueAsString(stationToDelete);
-		when(firestationService.deleteFirestation(any(Firestation.class))).thenReturn(false);
-		mockMvc.perform(delete("/firestation").contentType(MediaType.APPLICATION_JSON).content(stationToDeleteJson)).andExpect(status().isNotFound());
+		when(firestationService.deleteFirestation(anyString())).thenReturn(false);
+		mockMvc.perform(delete("/firestation").param("address", stationToDelete.getAddress())).andExpect(status().isNotFound());
 	
 	}
 }

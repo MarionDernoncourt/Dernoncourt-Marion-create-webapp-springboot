@@ -95,7 +95,7 @@ public class MedicalRecordControllerTest {
 				LocalDate.parse("03/06/1984", DateTimeFormatter.ofPattern("MM/dd/yyyy")),
 				List.of("hydrapermazol:100mg"), List.of("nillacilan"));
 		String newMedRecordJson = objectMapper.writeValueAsString(newMedRecord);
-		doNothing().when(medicalRecordService).createMedicalRecord(newMedRecord);
+		when(medicalRecordService.createMedicalRecord(newMedRecord)).thenReturn(newMedRecord);
 		mockMvc.perform(post("/medicalrecord").contentType(MediaType.APPLICATION_JSON).content(newMedRecordJson))
 				.andExpect(status().isCreated());
 	}

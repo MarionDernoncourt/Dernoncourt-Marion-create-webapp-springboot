@@ -41,8 +41,8 @@ public class FirestationService {
 		return firestationRepository.updateFirestation(firestation);
 	}
 	
-	public boolean deleteFirestation(Firestation firestation) {
-		return firestationRepository.deleteFirestation(firestation);
+	public boolean deleteFirestation(String address) {
+		return firestationRepository.deleteFirestation(address);
 	}
 	
 

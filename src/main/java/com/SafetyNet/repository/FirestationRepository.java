@@ -64,11 +64,11 @@ public class FirestationRepository implements IFirestationRepository {
 	}
 
 	@Override
-	public boolean deleteFirestation(Firestation firestation ) {
+	public boolean deleteFirestation(String address ) {
 		
 		List<Firestation> firestations = initializationListsRepository.getAllFirestation()	;
 		
-		boolean firestationRemoved = firestations.removeIf(station -> firestation.getAddress().equalsIgnoreCase(station.getAddress()) && firestation.getStation() == station.getStation());
+		boolean firestationRemoved = firestations.removeIf(station -> address.equalsIgnoreCase(station.getAddress()) );
 		return firestationRemoved;
 	}
 
