@@ -35,7 +35,7 @@ public class MedicalRecordController {
 	}
 
 	@GetMapping("/medicalrecord")
-	public ResponseEntity<MedicalRecord> getMedicalRecord_ByLastNameAndFirstName(@RequestParam String firstName,
+	public ResponseEntity<MedicalRecord> getMedicalRecordByLastNameAndFirstName(@RequestParam String firstName,
 			@RequestParam String lastName) throws IOException {
 
 		MedicalRecord medicalRecord = medicalRecordService.getMedicalRecord(firstName, lastName);

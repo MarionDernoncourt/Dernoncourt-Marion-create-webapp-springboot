@@ -61,14 +61,14 @@ public class FirestationControllerTest {
 	@Test
 	public void testGetFirestationByAddress() throws Exception {
 		String foundedFirestationInJson = objectMapper.writeValueAsString(mockFirestation.get(0));
-		when(firestationService.getFirestation_ByAddress(anyString())).thenReturn(mockFirestation.get(0));
+		when(firestationService.getFirestationByAddress(anyString())).thenReturn(mockFirestation.get(0));
 		MvcResult result = mockMvc.perform(get("/firestation").param("address", "1509 Culver St")).andReturn();
 		assertEquals(foundedFirestationInJson, result.getResponse().getContentAsString());
 	}
 
 	@Test
 	public void testGetFirestation_withWrongAddress() throws Exception {
-		when(firestationService.getFirestation_ByAddress(anyString())).thenReturn(null);
+		when(firestationService.getFirestationByAddress(anyString())).thenReturn(null);
 		mockMvc.perform(get("/firestation").param("address", "123 North St")).andExpect(status().isNotFound());
 	}
 
@@ -95,7 +95,7 @@ public class FirestationControllerTest {
 	}
 	
 	@Test
-	public void testUpdateFirestation_withWrongArgument() throws Exception {
+	public void testUpdateFirestationwithWrongArgument() throws Exception {
 		Firestation updatedFirestation = new Firestation("18 Bomberos St", 1);
 		String updatedFirestationJson = objectMapper.writeValueAsString(updatedFirestation);
 		when(firestationService.updateFirestation(any(Firestation.class))).thenReturn(null);

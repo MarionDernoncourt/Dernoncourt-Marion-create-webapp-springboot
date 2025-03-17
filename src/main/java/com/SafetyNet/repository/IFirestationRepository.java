@@ -12,13 +12,14 @@ public interface IFirestationRepository {
 
 	public List<Firestation> getAllFirestation() throws IOException;
 	
-	public Firestation getFirestation_ByAddress(String address);
+	public Firestation getFirestationByAddress(String address);
 	
 	public Firestation createFirestation(Firestation firestation);
 	
 	public Firestation updateFirestation(Firestation firestation);
 	
 	boolean deleteFirestation(String address);
+
 
 	
 }

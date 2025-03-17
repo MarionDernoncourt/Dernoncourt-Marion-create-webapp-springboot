@@ -39,7 +39,7 @@ public class PersonControllerIT {
 	}
 
 	@Test
-	public void testGetPersonByFirstNameAndLastName_withWrongArgument() throws Exception {
+	public void testGetPersonByFirstNameAndLastNamewithWrongArgument() throws Exception {
 		mockMvc.perform(get("/person").param("firstName", "Harry").param("lastName", "Potter"))
 				.andExpect(status().isNotFound());
 	}
@@ -62,7 +62,7 @@ public class PersonControllerIT {
 	}
 
 	@Test
-	public void testUpdatePerson_withNonExistantPerson() throws Exception {
+	public void testUpdatePersonwithNonExistantPerson() throws Exception {
 		Person updatedPerson = new Person("Hermione", "Granger", "123 Main St", "city", 12345, "123-456-789",
 				"boyd@example.com");
 		String updatedPersonJson = objectMapper.writeValueAsString(updatedPerson);
@@ -77,7 +77,7 @@ public class PersonControllerIT {
 	}
 
 	@Test
-	public void testDeletePerson_witNonExitantPerson() throws Exception {
+	public void testDeletePersonwitNonExitantPerson() throws Exception {
 		mockMvc.perform(delete("/person").param("firstName", "Ron").param("lastName", "Weasley"))
 				.andExpect(status().isNotFound());
 	}

@@ -22,7 +22,8 @@ import lombok.Data;
 
 @Data
 @Repository
-public class InitializationListsRepository implements CommandLineRunner {
+public class InitializationListsRepository implements CommandLineRunner, IDataLoaderRepository {
+	
 	private static final Logger logger = LoggerFactory.getLogger(InitializationListsRepository.class);
 
 	private List<Person> persons = new ArrayList<Person>();
@@ -81,9 +82,9 @@ public class InitializationListsRepository implements CommandLineRunner {
 	};
 
 	public List<MedicalRecord> getAllMedicalRecord() {
-		
+
 		try {
-			if(!medicalRecords.isEmpty()) {
+			if (!medicalRecords.isEmpty()) {
 				return medicalRecords;
 			}
 

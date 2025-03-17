@@ -13,15 +13,15 @@ public class PersonRepository implements IPersonRepository {
 
 	private static final Logger logger = LoggerFactory.getLogger(PersonRepository.class);
 
-	private final InitializationListsRepository initializationListsRepository;
+	private final IDataLoaderRepository dataLoaderRepository;
 
-	public PersonRepository(InitializationListsRepository initializationListsRepository) {
-		this.initializationListsRepository = initializationListsRepository;
+	public PersonRepository(IDataLoaderRepository dataLoaderRepository) {
+		this.dataLoaderRepository = dataLoaderRepository;
 	}
 
 	@Override
 	public List<Person> getAllPersons() {
-		List<Person> persons = initializationListsRepository.getAllPersons();
+		List<Person> persons = dataLoaderRepository.getAllPersons();
 		if (persons.isEmpty()) {
 			logger.warn("Aucune personne dans la liste");
 			return List.of();
@@ -32,7 +32,7 @@ public class PersonRepository implements IPersonRepository {
 	@Override
 	public Person getPersonByFirstNameAndLastName(String firstName, String lastName) {
 
-		List<Person> persons = initializationListsRepository.getAllPersons();
+		List<Person> persons = dataLoaderRepository.getAllPersons();
 
 		return persons.stream().filter(resident -> resident.getFirstName().equalsIgnoreCase(firstName)
 				&& resident.getLastName().equalsIgnoreCase(lastName)).findFirst().orElse(null);
@@ -42,7 +42,7 @@ public class PersonRepository implements IPersonRepository {
 	@Override
 	public Person createPerson(Person person) {
 
-		List<Person> persons = initializationListsRepository.getAllPersons();
+		List<Person> persons = dataLoaderRepository.getAllPersons();
 
 		for (Person resident : persons) {
 			if (resident.getFirstName().equalsIgnoreCase(person.getFirstName())
@@ -57,7 +57,7 @@ public class PersonRepository implements IPersonRepository {
 
 	@Override
 	public Person updatePerson(Person person) {
-		List<Person> persons = initializationListsRepository.getAllPersons();
+		List<Person> persons = dataLoaderRepository.getAllPersons();
 
 		for (Person resident : persons) {
 			if (resident.getFirstName().equalsIgnoreCase(person.getFirstName())
@@ -77,7 +77,7 @@ public class PersonRepository implements IPersonRepository {
 
 	@Override
 	public boolean deletePerson(String firstName, String lastName) {
-		List<Person> persons = initializationListsRepository.getAllPersons();
+		List<Person> persons = dataLoaderRepository.getAllPersons();
 		boolean personRemoved = persons.removeIf(person -> person.getFirstName().equalsIgnoreCase(firstName)
 				&& person.getLastName().equalsIgnoreCase(lastName));
 		return personRemoved;

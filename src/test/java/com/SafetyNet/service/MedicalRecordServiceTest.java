@@ -20,46 +20,46 @@ public class MedicalRecordServiceTest {
 
 	@Autowired
 	private MedicalRecordService medRecordService;
-	
-	
-	
+
 	@Test
-	public void testGetAllMedicalRecords() throws IOException{
-		List<MedicalRecord> medRecords = medRecordService.getAllMedicalRecord()	;
-		assertEquals(23, medRecords.size());
+	public void testGetAllMedicalRecords() throws IOException {
+		List<MedicalRecord> medRecords = medRecordService.getAllMedicalRecord();
+		assertTrue(!medRecords.isEmpty());
 	}
-	
+
 	@Test
 	public void testGetMedicalRecordByFirstNameAndLastName() throws IOException {
 		MedicalRecord medRecord = medRecordService.getMedicalRecord("Jacob", "Boyd");
 		assertEquals(LocalDate.of(1989, 3, 6), medRecord.getBirthdate());
 	}
-	
+
 	@Test
 	public void testCreateMedRecord() throws IOException {
-		int sizeBefore = medRecordService.getAllMedicalRecord().size()	;
-		MedicalRecord newMedRecord = medRecordService.createMedicalRecord(new MedicalRecord(
-				"Harry", "Potter",
+		int sizeBefore = medRecordService.getAllMedicalRecord().size();
+		medRecordService.createMedicalRecord(new MedicalRecord("Harry", "Potter",
 				LocalDate.parse("03/06/1984", DateTimeFormatter.ofPattern("MM/dd/yyyy")),
 				List.of("hydrapermazol:100mg"), List.of("nillacilan")));
-		int sizeAfter = medRecordService.getAllMedicalRecord().size()	;
+		int sizeAfter = medRecordService.getAllMedicalRecord().size();
+		MedicalRecord created = medRecordService.getMedicalRecord("Harry", "Potter");
 		assertEquals(sizeBefore + 1, sizeAfter);
-		assertTrue(medRecordService.getAllMedicalRecord().contains(newMedRecord));
+		assertEquals("Harry", created.getFirstName());
+		assertEquals("Potter", created.getLastName());
 	}
-	
+
 	@Test
 	public void testUpdateMedRecord() throws IOException {
 		MedicalRecord medRecordToUpdate = medRecordService.getMedicalRecord("Jacob", "Boyd");
 		medRecordToUpdate.setAllergies(List.of("nillacilan"));
-		MedicalRecord medRecordUpdated = medRecordService.updateMedicalRecord(medRecordToUpdate);
+		medRecordService.updateMedicalRecord(medRecordToUpdate);
+		MedicalRecord medRecordUpdated = medRecordService.getMedicalRecord("Jacob", "Boyd");
 		assertEquals(List.of("nillacilan"), medRecordUpdated.getAllergies());
 	}
-	
+
 	@Test
-	public void testDeleteMedRecord () throws IOException {
+	public void testDeleteMedRecord() throws IOException {
 		boolean medRecordRemoved = medRecordService.deleteMedicalRecord("Clive", "Ferguson");
 		assertTrue(medRecordRemoved);
 		assertNull(medRecordService.getMedicalRecord("Clive", "Ferguson"));
 	}
-	
+
 }

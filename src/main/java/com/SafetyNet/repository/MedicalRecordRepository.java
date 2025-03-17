@@ -16,16 +16,16 @@ public class MedicalRecordRepository implements IMedicalRecordRepository {
 
 	private static final Logger logger = LoggerFactory.getLogger(MedicalRecordRepository.class);
 
-	private InitializationListsRepository initializationListsRepository;
+	private IDataLoaderRepository dataLoaderRepository;
 
 	// Injection des listes chargées lors du lancement de l'app
-	public MedicalRecordRepository(InitializationListsRepository initializationListsRepository) {
-		this.initializationListsRepository = initializationListsRepository;
+	public MedicalRecordRepository(IDataLoaderRepository dataLoaderRepository) {
+		this.dataLoaderRepository = dataLoaderRepository;
 	}
 
 	@Override
 	public List<MedicalRecord> getAllMedicalRecord() throws IOException {
-		List<MedicalRecord> medicalRecords = initializationListsRepository.getAllMedicalRecord();
+		List<MedicalRecord> medicalRecords = dataLoaderRepository.getAllMedicalRecord();
 		if (medicalRecords.isEmpty()) {
 			logger.warn("Aucun dossier médical trouvé");
 			return List.of();
@@ -36,7 +36,7 @@ public class MedicalRecordRepository implements IMedicalRecordRepository {
 	@Override
 	public MedicalRecord getMedicalRecord(String firstName, String lastName) {
 
-		List<MedicalRecord> medicalRecords = initializationListsRepository.getAllMedicalRecord();
+		List<MedicalRecord> medicalRecords = dataLoaderRepository.getAllMedicalRecord();
 		
 		return medicalRecords.stream().filter(medicalRecord -> medicalRecord.getFirstName().equalsIgnoreCase(firstName)
 				&& medicalRecord.getLastName().equalsIgnoreCase(lastName)).findFirst().orElse(null);
@@ -45,7 +45,7 @@ public class MedicalRecordRepository implements IMedicalRecordRepository {
 	@Override
 	public MedicalRecord createMedicalRecord(MedicalRecord medicalRecord) {
 
-		List<MedicalRecord> medicalRecords = initializationListsRepository.getAllMedicalRecord();
+		List<MedicalRecord> medicalRecords = dataLoaderRepository.getAllMedicalRecord();
 
 		for (MedicalRecord medRecord : medicalRecords) {
 			if (medRecord.getFirstName().equalsIgnoreCase(medicalRecord.getFirstName())
@@ -62,7 +62,7 @@ public class MedicalRecordRepository implements IMedicalRecordRepository {
 
 	@Override
 	public MedicalRecord updateMedicalRecord(MedicalRecord medicalRecord) {
-		List<MedicalRecord> medicalRecords = initializationListsRepository.getAllMedicalRecord()	;
+		List<MedicalRecord> medicalRecords = dataLoaderRepository.getAllMedicalRecord()	;
 		
 		for (MedicalRecord medRecord : medicalRecords ) {
 			if (medRecord.getFirstName().equalsIgnoreCase(medicalRecord.getFirstName()) && medRecord.getLastName().equalsIgnoreCase(medicalRecord.getLastName())) {
@@ -78,7 +78,7 @@ public class MedicalRecordRepository implements IMedicalRecordRepository {
 
 	@Override
 	public boolean deleteMedicalRecord(String firstName, String lastName) {
-		List<MedicalRecord> medicalRecords = initializationListsRepository.getAllMedicalRecord()	;
+		List<MedicalRecord> medicalRecords = dataLoaderRepository.getAllMedicalRecord()	;
 		boolean medRecordRemoved = medicalRecords.removeIf(medRecord-> medRecord.getFirstName().equalsIgnoreCase(firstName) && medRecord.getLastName().equalsIgnoreCase(lastName));
 		return medRecordRemoved;
 	}

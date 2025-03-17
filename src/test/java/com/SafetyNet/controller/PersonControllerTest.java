@@ -29,7 +29,6 @@ import com.SafetyNet.model.Person;
 import com.SafetyNet.service.PersonService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-@ExtendWith(MockitoExtension.class)
 @WebMvcTest(PersonController.class)
 public class PersonControllerTest {
 
@@ -39,9 +38,7 @@ public class PersonControllerTest {
 	@MockBean
 	private PersonService personService;
 
-	@InjectMocks
-	private PersonController personController;
-
+	
 	List<Person> mockPersons = new ArrayList<Person>();
 
 	private ObjectMapper objectMapper = new ObjectMapper();
@@ -64,7 +61,7 @@ public class PersonControllerTest {
 	}
 
 	@Test
-	public void testGetAllPersons_Empty() throws Exception {
+	public void testGetAllPersonsEmpty() throws Exception {
 		when(personService.getAllPersons()).thenReturn(List.of());
 		MvcResult result = mockMvc.perform(get("/persons")).andExpect(status().isNotFound()).andReturn();
 		String content = result.getResponse().getContentAsString();
@@ -72,7 +69,7 @@ public class PersonControllerTest {
 	}
 
 	@Test
-	public void testGetPerson_ByFirstNameAndLastName() throws Exception {
+	public void testGetPersonByFirstNameAndLastName() throws Exception {
 		String foundPersonJson = objectMapper.writeValueAsString(mockPersons.get(0));
 		when(personService.getPersonByFirstNameAndLastName("John", "Doe")).thenReturn(mockPersons.get(0));
 
@@ -83,9 +80,9 @@ public class PersonControllerTest {
 	}
 
 	@Test
-	public void testGetPerson_ByNameWithWrongArgument() throws Exception {
+	public void testGetPersonByNameWithWrongArgument() throws Exception {
 		when(personService.getPersonByFirstNameAndLastName("John", "Nobody")).thenReturn(null);
-		MvcResult result = mockMvc.perform(get("/person").param("firstName", "John").param("lastName", "Doe"))
+		MvcResult result = mockMvc.perform(get("/person").param("firstName", "John").param("lastName", "Nobody"))
 				.andExpect(status().isNotFound()).andReturn();
 		assertEquals(404, result.getResponse().getStatus());
 	}
@@ -117,7 +114,7 @@ public class PersonControllerTest {
 	}
 
 	@Test
-	public void testUpdatePerson_withWrongArgument() throws Exception {
+	public void testUpdatePersonwithWrongArgument() throws Exception {
 		Person updatedPerson = new Person("John", "Wayne", "321 Updated St", "city", 12345, "123-456-789",
 				"john@example.com");
 		String updatedPersonJson = objectMapper.writeValueAsString(updatedPerson);
@@ -127,7 +124,6 @@ public class PersonControllerTest {
 				.perform(put("/person").contentType(MediaType.APPLICATION_JSON).content(updatedPersonJson)).andReturn();
 
 		assertEquals(404, result.getResponse().getStatus());
-		assertFalse(mockPersons.contains(updatedPerson));
 	}
 
 	@Test
@@ -138,7 +134,7 @@ public class PersonControllerTest {
 	}
 
 	@Test
-	public void testDeletePerson_withWrongArgument() throws Exception {
+	public void testDeletePersonwithWrongArgument() throws Exception {
 		when(personService.deletePerson("John", "Doe")).thenReturn(false);
 		mockMvc.perform(delete("/person").param("firstName", "John").param("lastName", "Doe"))
 				.andExpect(status().isNotFound());

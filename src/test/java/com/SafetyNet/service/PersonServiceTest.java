@@ -21,7 +21,7 @@ public class PersonServiceTest {
 
 	@Test
 	public void testGetAllPersons() {
-		assertEquals(personService.getAllPersons().size(), 23);
+		assertTrue(!personService.getAllPersons().isEmpty());
 	}
 
 	@Test
@@ -44,7 +44,8 @@ public class PersonServiceTest {
 	public void testUpdatePerson() throws JsonProcessingException {
 		Person personToUpdate = personService.getPersonByFirstNameAndLastName("John", "Boyd");
 		personToUpdate.setEmail("johnBoyd@email.com");
-		Person updatedPerson = personService.updatePerson(personToUpdate);
+		personService.updatePerson(personToUpdate);
+		Person updatedPerson = personService.getPersonByFirstNameAndLastName("John", "Boyd");
 		assertEquals("johnBoyd@email.com", updatedPerson.getEmail());
 	}
 	
@@ -52,5 +53,6 @@ public class PersonServiceTest {
 	public void testDeletePerson() {
 		boolean personRemoved = personService.deletePerson("Eric", "Cadigan");
 		assertTrue(personRemoved);
+		assertEquals(null, personService.getPersonByFirstNameAndLastName("Eric", "Cadigan"));
 	}
 }

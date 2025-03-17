@@ -278,3 +278,117 @@
 2025-03-17T11:00:04.861+01:00  INFO 31984 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.service.MedicalRecordServiceTest
 2025-03-17T11:00:04.906+01:00  INFO 31984 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.service.PersonServiceTest]: PersonServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
 2025-03-17T11:00:04.908+01:00  INFO 31984 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.service.PersonServiceTest
+2025-03-17T14:20:12.377+01:00  INFO 29996 --- [SafetyNet] [main] c.S.service.MedicalRecordServiceTest     : Starting MedicalRecordServiceTest using Java 21.0.5 with PID 29996 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-17T14:20:12.379+01:00  INFO 29996 --- [SafetyNet] [main] c.S.service.MedicalRecordServiceTest     : No active profile set, falling back to 1 default profile: "default"
+2025-03-17T14:20:14.425+01:00  INFO 29996 --- [SafetyNet] [main] c.S.service.MedicalRecordServiceTest     : Started MedicalRecordServiceTest in 2.577 seconds (process running for 4.187)
+2025-03-17T14:20:14.452+01:00  INFO 29996 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-17T14:20:14.526+01:00  INFO 29996 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-17T14:20:14.535+01:00  INFO 29996 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-17T14:21:36.431+01:00  INFO 33564 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Starting SafetyNetApplication using Java 21.0.5 with PID 33564 (C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet\target\classes started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-17T14:21:36.433+01:00  INFO 33564 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-17T14:21:37.408+01:00  INFO 33564 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-17T14:21:37.427+01:00  INFO 33564 --- [SafetyNet] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-17T14:21:37.427+01:00  INFO 33564 --- [SafetyNet] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-17T14:21:37.496+01:00  INFO 33564 --- [SafetyNet] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-17T14:21:37.496+01:00  INFO 33564 --- [SafetyNet] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1000 ms
+2025-03-17T14:21:37.913+01:00  INFO 33564 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-17T14:21:37.921+01:00  INFO 33564 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Started SafetyNetApplication in 1.962 seconds (process running for 2.747)
+2025-03-17T14:21:37.945+01:00  INFO 33564 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-17T14:21:38.018+01:00  INFO 33564 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-17T14:21:38.027+01:00  INFO 33564 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-17T14:23:55.926+01:00  INFO 28648 --- [SafetyNet] [main] c.S.c.MedicalRecordControllerTest        : Starting MedicalRecordControllerTest using Java 21.0.5 with PID 28648 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-17T14:23:55.928+01:00  INFO 28648 --- [SafetyNet] [main] c.S.c.MedicalRecordControllerTest        : No active profile set, falling back to 1 default profile: "default"
+2025-03-17T14:23:57.622+01:00  INFO 28648 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-17T14:23:57.624+01:00  INFO 28648 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-17T14:23:57.629+01:00  INFO 28648 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2025-03-17T14:23:57.716+01:00  INFO 28648 --- [SafetyNet] [main] c.S.c.MedicalRecordControllerTest        : Started MedicalRecordControllerTest in 2.318 seconds (process running for 4.806)
+2025-03-17T14:25:08.412+01:00  INFO 31120 --- [SafetyNet] [main] c.S.c.MedicalRecordControllerTest        : Starting MedicalRecordControllerTest using Java 21.0.5 with PID 31120 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-17T14:25:08.415+01:00  INFO 31120 --- [SafetyNet] [main] c.S.c.MedicalRecordControllerTest        : No active profile set, falling back to 1 default profile: "default"
+2025-03-17T14:25:10.921+01:00  INFO 31120 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-17T14:25:10.922+01:00  INFO 31120 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-17T14:25:10.927+01:00  INFO 31120 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2025-03-17T14:25:11.000+01:00  INFO 31120 --- [SafetyNet] [main] c.S.c.MedicalRecordControllerTest        : Started MedicalRecordControllerTest in 3.086 seconds (process running for 4.565)
+2025-03-17T14:25:21.270+01:00  INFO 20064 --- [SafetyNet] [main] c.S.c.MedicalRecordControllerTest        : Starting MedicalRecordControllerTest using Java 21.0.5 with PID 20064 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-17T14:25:21.272+01:00  INFO 20064 --- [SafetyNet] [main] c.S.c.MedicalRecordControllerTest        : No active profile set, falling back to 1 default profile: "default"
+2025-03-17T14:25:23.787+01:00  INFO 20064 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-17T14:25:23.787+01:00  INFO 20064 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-17T14:25:23.791+01:00  INFO 20064 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-03-17T14:25:23.858+01:00  INFO 20064 --- [SafetyNet] [main] c.S.c.MedicalRecordControllerTest        : Started MedicalRecordControllerTest in 3.071 seconds (process running for 4.489)
+2025-03-17T14:26:23.043+01:00  INFO 30416 --- [SafetyNet] [main] c.S.c.MedicalRecordControllerTest        : Starting MedicalRecordControllerTest using Java 21.0.5 with PID 30416 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-17T14:26:23.045+01:00  INFO 30416 --- [SafetyNet] [main] c.S.c.MedicalRecordControllerTest        : No active profile set, falling back to 1 default profile: "default"
+2025-03-17T14:26:25.563+01:00  INFO 30416 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-17T14:26:25.564+01:00  INFO 30416 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-17T14:26:25.569+01:00  INFO 30416 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2025-03-17T14:26:25.640+01:00  INFO 30416 --- [SafetyNet] [main] c.S.c.MedicalRecordControllerTest        : Started MedicalRecordControllerTest in 3.087 seconds (process running for 4.578)
+2025-03-17T14:26:39.101+01:00  INFO 33352 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 33352 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-17T14:26:39.103+01:00  INFO 33352 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-17T14:26:41.612+01:00  INFO 33352 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-17T14:26:41.612+01:00  INFO 33352 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-17T14:26:41.616+01:00  INFO 33352 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+2025-03-17T14:26:41.692+01:00  INFO 33352 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 3.074 seconds (process running for 4.479)
+2025-03-17T14:28:17.596+01:00  INFO 30908 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 30908 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-17T14:28:17.599+01:00  INFO 30908 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-17T14:28:20.214+01:00  INFO 30908 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-17T14:28:20.215+01:00  INFO 30908 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-17T14:28:20.219+01:00  INFO 30908 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-03-17T14:28:20.283+01:00  INFO 30908 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 3.203 seconds (process running for 4.796)
+2025-03-17T14:29:46.896+01:00  INFO 30056 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 30056 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-17T14:29:46.899+01:00  INFO 30056 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-17T14:29:49.557+01:00  INFO 30056 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-17T14:29:49.558+01:00  INFO 30056 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-17T14:29:49.562+01:00  INFO 30056 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2025-03-17T14:29:49.627+01:00  INFO 30056 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 3.228 seconds (process running for 4.686)
+2025-03-17T14:35:07.457+01:00  INFO 6892 --- [SafetyNet] [main] c.S.service.FirestationServiceTest       : Starting FirestationServiceTest using Java 21.0.5 with PID 6892 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-17T14:35:07.460+01:00  INFO 6892 --- [SafetyNet] [main] c.S.service.FirestationServiceTest       : No active profile set, falling back to 1 default profile: "default"
+2025-03-17T14:35:09.214+01:00  INFO 6892 --- [SafetyNet] [main] c.S.service.FirestationServiceTest       : Started FirestationServiceTest in 2.201 seconds (process running for 3.475)
+2025-03-17T14:35:09.253+01:00  INFO 6892 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-17T14:35:09.317+01:00  INFO 6892 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-17T14:35:09.322+01:00  INFO 6892 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-17T14:36:45.385+01:00  INFO 34564 --- [SafetyNet] [main] c.S.service.FirestationServiceTest       : Starting FirestationServiceTest using Java 21.0.5 with PID 34564 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-17T14:36:45.387+01:00  INFO 34564 --- [SafetyNet] [main] c.S.service.FirestationServiceTest       : No active profile set, falling back to 1 default profile: "default"
+2025-03-17T14:36:47.250+01:00  INFO 34564 --- [SafetyNet] [main] c.S.service.FirestationServiceTest       : Started FirestationServiceTest in 2.331 seconds (process running for 3.538)
+2025-03-17T14:36:47.283+01:00  INFO 34564 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-17T14:36:47.363+01:00  INFO 34564 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-17T14:36:47.369+01:00  INFO 34564 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-17T14:41:38.423+01:00  INFO 20336 --- [SafetyNet] [main] c.S.service.MedicalRecordServiceTest     : Starting MedicalRecordServiceTest using Java 21.0.5 with PID 20336 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-17T14:41:38.426+01:00  INFO 20336 --- [SafetyNet] [main] c.S.service.MedicalRecordServiceTest     : No active profile set, falling back to 1 default profile: "default"
+2025-03-17T14:41:40.168+01:00  INFO 20336 --- [SafetyNet] [main] c.S.service.MedicalRecordServiceTest     : Started MedicalRecordServiceTest in 2.239 seconds (process running for 3.463)
+2025-03-17T14:41:40.192+01:00  INFO 20336 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-17T14:41:40.260+01:00  INFO 20336 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-17T14:41:40.264+01:00  INFO 20336 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-17T14:42:15.757+01:00  INFO 32328 --- [SafetyNet] [main] c.S.service.MedicalRecordServiceTest     : Starting MedicalRecordServiceTest using Java 21.0.5 with PID 32328 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-17T14:42:15.760+01:00  INFO 32328 --- [SafetyNet] [main] c.S.service.MedicalRecordServiceTest     : No active profile set, falling back to 1 default profile: "default"
+2025-03-17T14:42:17.472+01:00  INFO 32328 --- [SafetyNet] [main] c.S.service.MedicalRecordServiceTest     : Started MedicalRecordServiceTest in 2.165 seconds (process running for 3.437)
+2025-03-17T14:42:17.506+01:00  INFO 32328 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-17T14:42:17.606+01:00  INFO 32328 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-17T14:42:17.612+01:00  INFO 32328 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-17T14:45:48.513+01:00  INFO 1208 --- [SafetyNet] [main] c.S.service.MedicalRecordServiceTest     : Starting MedicalRecordServiceTest using Java 21.0.5 with PID 1208 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-17T14:45:48.515+01:00  INFO 1208 --- [SafetyNet] [main] c.S.service.MedicalRecordServiceTest     : No active profile set, falling back to 1 default profile: "default"
+2025-03-17T14:45:50.165+01:00  INFO 1208 --- [SafetyNet] [main] c.S.service.MedicalRecordServiceTest     : Started MedicalRecordServiceTest in 2.153 seconds (process running for 3.431)
+2025-03-17T14:45:50.228+01:00  INFO 1208 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-17T14:45:50.341+01:00  INFO 1208 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-17T14:45:50.348+01:00  INFO 1208 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-17T14:46:59.525+01:00  INFO 34248 --- [SafetyNet] [main] c.SafetyNet.service.PersonServiceTest    : Starting PersonServiceTest using Java 21.0.5 with PID 34248 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-17T14:46:59.527+01:00  INFO 34248 --- [SafetyNet] [main] c.SafetyNet.service.PersonServiceTest    : No active profile set, falling back to 1 default profile: "default"
+2025-03-17T14:47:01.365+01:00  INFO 34248 --- [SafetyNet] [main] c.SafetyNet.service.PersonServiceTest    : Started PersonServiceTest in 2.304 seconds (process running for 3.517)
+2025-03-17T14:47:01.391+01:00  INFO 34248 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-17T14:47:01.475+01:00  INFO 34248 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-17T14:47:01.481+01:00  INFO 34248 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-17T14:48:59.435+01:00  INFO 21096 --- [SafetyNet] [main] c.SafetyNet.service.PersonServiceTest    : Starting PersonServiceTest using Java 21.0.5 with PID 21096 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-17T14:48:59.437+01:00  INFO 21096 --- [SafetyNet] [main] c.SafetyNet.service.PersonServiceTest    : No active profile set, falling back to 1 default profile: "default"
+2025-03-17T14:49:01.283+01:00  INFO 21096 --- [SafetyNet] [main] c.SafetyNet.service.PersonServiceTest    : Started PersonServiceTest in 2.385 seconds (process running for 3.752)
+2025-03-17T14:49:01.313+01:00  INFO 21096 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-17T14:49:01.403+01:00  INFO 21096 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-17T14:49:01.410+01:00  INFO 21096 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-17T14:49:44.995+01:00  INFO 6420 --- [SafetyNet] [main] c.S.service.FirestationServiceTest       : Starting FirestationServiceTest using Java 21.0.5 with PID 6420 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-17T14:49:44.997+01:00  INFO 6420 --- [SafetyNet] [main] c.S.service.FirestationServiceTest       : No active profile set, falling back to 1 default profile: "default"
+2025-03-17T14:49:46.762+01:00  INFO 6420 --- [SafetyNet] [main] c.S.service.FirestationServiceTest       : Started FirestationServiceTest in 2.274 seconds (process running for 3.48)
+2025-03-17T14:49:46.798+01:00  INFO 6420 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-17T14:49:46.884+01:00  INFO 6420 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-17T14:49:46.893+01:00  INFO 6420 --- [SafetyNet] [main] c.S.r.InitializationListsRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-17T14:57:35.844+01:00  INFO 34848 --- [SafetyNet] [main] c.S.c.MedicalRecordControllerTest        : Starting MedicalRecordControllerTest using Java 21.0.5 with PID 34848 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-17T14:57:35.848+01:00  INFO 34848 --- [SafetyNet] [main] c.S.c.MedicalRecordControllerTest        : No active profile set, falling back to 1 default profile: "default"
+2025-03-17T14:57:38.379+01:00  INFO 34848 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-17T14:57:38.380+01:00  INFO 34848 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-17T14:57:38.383+01:00  INFO 34848 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2025-03-17T14:57:38.456+01:00  INFO 34848 --- [SafetyNet] [main] c.S.c.MedicalRecordControllerTest        : Started MedicalRecordControllerTest in 3.152 seconds (process running for 4.725)

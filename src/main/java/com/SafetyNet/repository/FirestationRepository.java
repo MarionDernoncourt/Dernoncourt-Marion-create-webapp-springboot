@@ -14,22 +14,23 @@ public class FirestationRepository implements IFirestationRepository {
 
 	private static final Logger logger = LoggerFactory.getLogger(FirestationRepository.class);
 
-	private InitializationListsRepository initializationListsRepository;
+	private IDataLoaderRepository dataLoaderRepository;
 
-	public FirestationRepository(InitializationListsRepository initializationListsRepository) {
-		this.initializationListsRepository = initializationListsRepository;
+	
+	public FirestationRepository(IDataLoaderRepository dataLoaderRepository) {
+		this.dataLoaderRepository = dataLoaderRepository;
 	}
 
 	@Override
 	public List<Firestation> getAllFirestation() {
-		return initializationListsRepository.getAllFirestation();
+		return dataLoaderRepository.getAllFirestation();
 
 	}
 
 	@Override
-	public Firestation getFirestation_ByAddress(String address) {
+	public Firestation getFirestationByAddress(String address) {
 
-		List<Firestation> firestations = initializationListsRepository.getAllFirestation();
+		List<Firestation> firestations = dataLoaderRepository.getAllFirestation();
 		return firestations.stream().filter(station -> station.getAddress().equalsIgnoreCase(address)).findFirst()
 				.orElse(null);
 	}
@@ -37,7 +38,7 @@ public class FirestationRepository implements IFirestationRepository {
 	@Override
 	public Firestation createFirestation(Firestation firestation) {
 
-		List<Firestation> firestations = initializationListsRepository.getAllFirestation();
+		List<Firestation> firestations = dataLoaderRepository.getAllFirestation();
 
 		for (Firestation station : firestations) {
 			if (station.getAddress().equalsIgnoreCase(firestation.getAddress())) {
@@ -51,7 +52,7 @@ public class FirestationRepository implements IFirestationRepository {
 
 	@Override
 	public Firestation updateFirestation(Firestation firestation) {
-		List<Firestation> firestations = initializationListsRepository.getAllFirestation();
+		List<Firestation> firestations = dataLoaderRepository.getAllFirestation();
 
 		for (Firestation station : firestations) {
 			if (station.getAddress().equalsIgnoreCase(firestation.getAddress())) {
@@ -66,7 +67,7 @@ public class FirestationRepository implements IFirestationRepository {
 	@Override
 	public boolean deleteFirestation(String address ) {
 		
-		List<Firestation> firestations = initializationListsRepository.getAllFirestation()	;
+		List<Firestation> firestations = dataLoaderRepository.getAllFirestation()	;
 		
 		boolean firestationRemoved = firestations.removeIf(station -> address.equalsIgnoreCase(station.getAddress()) );
 		return firestationRemoved;

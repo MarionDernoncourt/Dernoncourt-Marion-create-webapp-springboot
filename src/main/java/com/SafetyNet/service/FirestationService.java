@@ -29,8 +29,8 @@ public class FirestationService {
 		return firestationRepository.getAllFirestation();
 	}
 	
-	public Firestation getFirestation_ByAddress(String address) {
-		return firestationRepository.getFirestation_ByAddress(address);
+	public Firestation getFirestationByAddress(String address) {
+		return firestationRepository.getFirestationByAddress(address);
 	}
 	
 	public Firestation createFirestation (Firestation firestation) {

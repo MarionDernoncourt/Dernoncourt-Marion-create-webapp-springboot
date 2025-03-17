@@ -40,7 +40,7 @@ public class FirestationControllerIT {
 	}
 	
 	@Test 
-	public void testGetFirestation_withWrongAddress() throws Exception {
+	public void testGetFirestationwithWrongAddress() throws Exception {
 		mockMvc.perform(get("/firestation").param("address", "123 Main St").param("station", "1")).andExpect(status().isNotFound());
 	}
 	
@@ -57,7 +57,7 @@ public class FirestationControllerIT {
 	}
 	
 	@Test 
-	public void testUpdateFirestation_withNonExistantStation() throws Exception {
+	public void testUpdateFirestationwithNonExistantStation() throws Exception {
 		String updatedFirestation = objectMapper.writeValueAsString(new Firestation("644 Gershwin Cir", 1));
 		mockMvc.perform(put("/fierstation").contentType(MediaType.APPLICATION_JSON).content(updatedFirestation)).andExpect(status().isNotFound());
 	}
@@ -69,7 +69,7 @@ public class FirestationControllerIT {
 	}
 	
 	@Test
-	public void testDeleteFirestation_withNonExistantArgument() throws Exception {
+	public void testDeleteFirestationwithNonExistantArgument() throws Exception {
 		String firestationToDelete = objectMapper.writeValueAsString(new Firestation("159 Culver St", 1));
 		mockMvc.perform(delete("/firestation").contentType(MediaType.APPLICATION_JSON).content(firestationToDelete)).andExpect(status().isNotFound());
 	}

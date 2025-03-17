@@ -1,8 +1,8 @@
 package com.SafetyNet.controller;
 
+import static org.hamcrest.CoreMatchers.is;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -32,7 +32,6 @@ import com.SafetyNet.service.MedicalRecordService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
-@ExtendWith(MockitoExtension.class)
 @WebMvcTest(MedicalRecordController.class)
 public class MedicalRecordControllerTest {
 
@@ -42,8 +41,7 @@ public class MedicalRecordControllerTest {
 	@MockBean
 	private MedicalRecordService medicalRecordService;
 
-	@InjectMocks
-	private MedicalRecordController medicalRecordController;
+
 
 	private ObjectMapper objectMapper = new ObjectMapper();
 
@@ -69,13 +67,13 @@ public class MedicalRecordControllerTest {
 	}
 
 	@Test
-	public void testGetAllMedicalRecords_FromEmptyList() throws Exception {
+	public void testGetAllMedicalRecordsFromEmptyList() throws Exception {
 		when(medicalRecordService.getAllMedicalRecord()).thenReturn(List.of());
 		mockMvc.perform(get("/medicalrecords")).andExpect(status().isNotFound());
 	}
 
 	@Test
-	public void testGetMedicalRecord_ByFirstnameAndLastname() throws Exception {
+	public void testGetMedicalRecordByFirstnameAndLastname() throws Exception {
 		when(medicalRecordService.getMedicalRecord(anyString(), anyString())).thenReturn(mockMedRecord.get(0));
 		mockMvc.perform(get("/medicalrecord").param("firstName", "John").param("lastName", "Boyd"))
 				.andExpect(status().isOk());
@@ -83,7 +81,7 @@ public class MedicalRecordControllerTest {
 	}
 
 	@Test
-	public void testGetMedicalRecord_ByFirstnameAndLastName_withWrongArgument() throws Exception {
+	public void testGetMedicalRecordByFirstnameAndLastName_withWrongArgument() throws Exception {
 		when(medicalRecordService.getMedicalRecord(anyString(), anyString())).thenReturn(null);
 		mockMvc.perform(get("/medicalrecord").param("firstName", "Jane").param("lastName", "Boyd"))
 				.andExpect(status().isNotFound());
@@ -97,7 +95,7 @@ public class MedicalRecordControllerTest {
 		String newMedRecordJson = objectMapper.writeValueAsString(newMedRecord);
 		when(medicalRecordService.createMedicalRecord(newMedRecord)).thenReturn(newMedRecord);
 		mockMvc.perform(post("/medicalrecord").contentType(MediaType.APPLICATION_JSON).content(newMedRecordJson))
-				.andExpect(status().isCreated());
+				.andExpect(status().isCreated()).andExpect(jsonPath("$.firstName", is("Harry")));
 	}
 
 	@Test
@@ -112,7 +110,7 @@ public class MedicalRecordControllerTest {
 	}
 
 	@Test
-	public void testUpdateMedicalRecord_withWrongArgument() throws Exception {
+	public void testUpdateMedicalRecordwithWrongArgument() throws Exception {
 		MedicalRecord medRecordToUpdate = new MedicalRecord("Hermione", "Granger",
 				LocalDate.parse("03/06/1984", DateTimeFormatter.ofPattern("MM/dd/yyyy")), List.of("doliprane 1000mg"),
 				List.of("nillacilan"));
@@ -130,7 +128,7 @@ public class MedicalRecordControllerTest {
 	}
 	
 	@Test
-	public void testDeleteMedicalRecord_withWrongArgument() throws Exception {
+	public void testDeleteMedicalRecordwithWrongArgument() throws Exception {
 		when(medicalRecordService.deleteMedicalRecord("John", "Boyd")).thenReturn(false);
 		mockMvc.perform(delete("/medicalrecord").param("firstName", "John").param("lastName", "Boyd")).andExpect(status().isNotFound());
 	}

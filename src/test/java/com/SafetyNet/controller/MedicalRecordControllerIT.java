@@ -39,13 +39,13 @@ public class MedicalRecordControllerIT {
 	}
 
 	@Test
-	public void testGetMedicalRecord_ByFirstNameAndLastName() throws Exception {
+	public void testGetMedicalRecordByFirstNameAndLastName() throws Exception {
 		mockMvc.perform(get("/medicalrecord").param("firstName", "Jacob").param("lastName", "Boyd"))
 				.andExpect(status().isOk()).andExpect(jsonPath("$.firstName", is("Jacob")));
 	}
 
 	@Test
-	public void testGetMedicalRecord_withNonExistantFirstNameAndLastName() throws Exception {
+	public void testGetMedicalRecordwithNonExistantFirstNameAndLastName() throws Exception {
 		mockMvc.perform(get("/medicalrecord").param("firstName", "Hermione").param("lastName", "Granger"))
 				.andExpect(status().isNotFound());
 	}
@@ -71,7 +71,7 @@ public class MedicalRecordControllerIT {
 	}
 
 	@Test
-	public void testUpdateMedicalRecord_withWrongFirstNameAndLastName() throws Exception {
+	public void testUpdateMedicalRecordwithWrongFirstNameAndLastName() throws Exception {
 		MedicalRecord updatedMedRecord = new MedicalRecord("Betty", "Boop",
 				LocalDate.parse("03/06/1984", DateTimeFormatter.ofPattern("MM/dd/yyyy")), List.of("aznol:350mg"),
 				List.of("nillacilan"));
@@ -86,7 +86,7 @@ public class MedicalRecordControllerIT {
 	}
 	
 	@Test
-	public void testDeleteMedicalRecord_withWrongFirstNameAndLastName() throws Exception {
+	public void testDeleteMedicalRecordwithWrongFirstNameAndLastName() throws Exception {
 		mockMvc.perform(delete("/medicalrecord").param("firstName", "Albus").param("lastName", "Dumbledore")).andExpect(status().isNotFound());
 	}
 
