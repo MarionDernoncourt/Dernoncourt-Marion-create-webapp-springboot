@@ -8,6 +8,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -16,6 +17,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
 import com.SafetyNet.model.Person;
+import com.SafetyNet.repository.DataLoaderRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @SpringBootTest
@@ -26,7 +28,16 @@ public class PersonControllerIT {
 	private MockMvc mockMvc;
 
 	private ObjectMapper objectMapper = new ObjectMapper();
+	@Autowired
+	private 		DataLoaderRepository dataLoaderRepository;
 
+
+	@BeforeEach
+	void setUp () {
+		dataLoaderRepository.setFirestations(null);
+		dataLoaderRepository.setMedicalRecords(null);
+		dataLoaderRepository.setPersons(null);
+	}
 	@Test
 	public void testGetAllPersons() throws Exception {
 		mockMvc.perform(get("/persons")).andExpect(status().isOk()).andExpect(jsonPath("$[0].firstName", is("John")));

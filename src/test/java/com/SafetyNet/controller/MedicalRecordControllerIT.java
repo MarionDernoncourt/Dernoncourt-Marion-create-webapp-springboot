@@ -12,6 +12,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -20,6 +21,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
 import com.SafetyNet.model.MedicalRecord;
+import com.SafetyNet.repository.DataLoaderRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @SpringBootTest
@@ -31,6 +33,15 @@ public class MedicalRecordControllerIT {
 
 	@Autowired
 	private ObjectMapper objectMapper;
+	@Autowired
+	private DataLoaderRepository dataLoaderRepository;
+
+	@BeforeEach
+	void setUp() {
+		dataLoaderRepository.setFirestations(null);
+		dataLoaderRepository.setMedicalRecords(null);
+		dataLoaderRepository.setPersons(null);
+	}
 
 	@Test
 	public void testGetAllMedicalRecords() throws Exception {
@@ -39,20 +50,8 @@ public class MedicalRecordControllerIT {
 	}
 
 	@Test
-	public void testGetMedicalRecordByFirstNameAndLastName() throws Exception {
-		mockMvc.perform(get("/medicalrecord").param("firstName", "Jacob").param("lastName", "Boyd"))
-				.andExpect(status().isOk()).andExpect(jsonPath("$.firstName", is("Jacob")));
-	}
-
-	@Test
-	public void testGetMedicalRecordwithNonExistantFirstNameAndLastName() throws Exception {
-		mockMvc.perform(get("/medicalrecord").param("firstName", "Hermione").param("lastName", "Granger"))
-				.andExpect(status().isNotFound());
-	}
-
-	@Test
 	public void testCreateMedicalRecord() throws Exception {
-		MedicalRecord newMedRecord = new MedicalRecord("John", "Boyd",
+		MedicalRecord newMedRecord = new MedicalRecord("Harry", "Potter",
 				LocalDate.parse("03/06/1984", DateTimeFormatter.ofPattern("MM/dd/yyyy")),
 				List.of("aznol:350mg", "hydrapermazol:100mg"), List.of("nillacilan"));
 		String newMedRecordJson = objectMapper.writeValueAsString(newMedRecord);
@@ -79,15 +78,17 @@ public class MedicalRecordControllerIT {
 		mockMvc.perform(put("/medicalrecord").contentType(MediaType.APPLICATION_JSON).content(updatedMedRecordJson))
 				.andExpect(status().isNotFound());
 	}
-	
+
 	@Test
 	public void testDeleteMedicalRecord() throws Exception {
-		mockMvc.perform(delete("/medicalrecord").param("firstName", "Eric").param("lastName", "Cadigan")).andExpect(status().isNoContent());
+		mockMvc.perform(delete("/medicalrecord").param("firstName", "Eric").param("lastName", "Cadigan"))
+				.andExpect(status().isNoContent());
 	}
-	
+
 	@Test
 	public void testDeleteMedicalRecordwithWrongFirstNameAndLastName() throws Exception {
-		mockMvc.perform(delete("/medicalrecord").param("firstName", "Albus").param("lastName", "Dumbledore")).andExpect(status().isNotFound());
+		mockMvc.perform(delete("/medicalrecord").param("firstName", "Albus").param("lastName", "Dumbledore"))
+				.andExpect(status().isNotFound());
 	}
 
 }

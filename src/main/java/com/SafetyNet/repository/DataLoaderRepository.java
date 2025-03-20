@@ -22,25 +22,26 @@ import lombok.Data;
 
 @Data
 @Repository
-public class InitializationListsRepository implements CommandLineRunner, IDataLoaderRepository {
+public class DataLoaderRepository implements CommandLineRunner, IDataLoaderRepository {
 	
-	private static final Logger logger = LoggerFactory.getLogger(InitializationListsRepository.class);
+	private static final Logger logger = LoggerFactory.getLogger(DataLoaderRepository.class);
 
-	private List<Person> persons = new ArrayList<Person>();
+	private List<Person> persons = null;
 
-	private List<Firestation> firestations = new ArrayList<Firestation>();
+	private List<Firestation> firestations = null;
 
-	private List<MedicalRecord> medicalRecords = new ArrayList<MedicalRecord>();
+	private List<MedicalRecord> medicalRecords = null;
 
 	private ObjectMapper objectMapper = new ObjectMapper();
 	private File jsonFile = new File("src/main/resources/data.json");
 
 	public List<Person> getAllPersons() {
 			try {
-			if (!persons.isEmpty()) {
+			if (persons != null) {
 				logger.debug("Liste de personne déjà chargée en mémoire");
 				return persons;
 			}
+			
 			JsonNode root = objectMapper.readTree(jsonFile);
 			JsonNode personsNode = root.get("persons");
 			if (personsNode == null || !personsNode.isArray()) {
@@ -60,7 +61,7 @@ public class InitializationListsRepository implements CommandLineRunner, IDataLo
 
 	public List<Firestation> getAllFirestation() {
 		try {
-			if (!firestations.isEmpty()) {
+			if (firestations != null) {
 				logger.debug("Liste de casernes déjà chargée en mémoire");
 				return firestations;
 			}
@@ -85,7 +86,7 @@ public class InitializationListsRepository implements CommandLineRunner, IDataLo
 	public List<MedicalRecord> getAllMedicalRecord() {
 
 		try {
-			if (!medicalRecords.isEmpty()) {
+			if (medicalRecords != null) {
 				logger.debug("Liste de dossier médical déjà chargée en mémoire");
 
 				return medicalRecords;

@@ -4,24 +4,31 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.util.List;
+
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.SafetyNet.model.Person;
+import com.SafetyNet.repository.DataLoaderRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 @SpringBootTest
-public class PersonServiceTest {
+public class PersonServiceIT {
 
 	@Autowired
 	private PersonService personService;
 
+	
 
 	@Test
 	public void testGetAllPersons() {
-		assertTrue(!personService.getAllPersons().isEmpty());
+		List<Person> persons = personService.getAllPersons();
+		System.out.println(persons.size());
+		assertTrue(!persons.isEmpty());
+		
 	}
 
 	@Test

@@ -31,15 +31,6 @@ public class PersonController {
 		return ResponseEntity.status(HttpStatus.OK).body(persons);
 	}
 
-	@GetMapping("/person")
-	public ResponseEntity<Person> getPersonByFirstNameAndLastName(@RequestParam String firstName,
-			@RequestParam String lastName) {
-		Person person = personService.getPersonByFirstNameAndLastName(firstName, lastName);
-		if (person == null) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-		}
-		return ResponseEntity.status(HttpStatus.OK).body(person);
-	}
 
 	@PostMapping("/person")
 	public ResponseEntity<Person> createPerson(@RequestBody Person person) {
@@ -74,19 +65,6 @@ public class PersonController {
 
 	}
 
-	// @GetMapping("/firestation")
-	// public ResponseEntity<FireStationCoverageDTO>
-	// getPerson_ByStationNumber(@RequestParam int stationNumber)
-	// throws Exception {
-
-//		FireStationCoverageDTO firestationCoverageDTO = fireStationCoverageService
-	// .getFireStationCoverage(stationNumber);
-
-	// if (firestationCoverageDTO == null) {
-	// return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
-//		}
-	// return new ResponseEntity<FireStationCoverageDTO>(firestationCoverageDTO,
-	// HttpStatus.OK);
-//	}
+	
 
 }

@@ -34,16 +34,6 @@ public class MedicalRecordController {
 		return ResponseEntity.status(HttpStatus.OK).body(medicalRecords);
 	}
 
-	@GetMapping("/medicalrecord")
-	public ResponseEntity<MedicalRecord> getMedicalRecordByLastNameAndFirstName(@RequestParam String firstName,
-			@RequestParam String lastName) throws IOException {
-
-		MedicalRecord medicalRecord = medicalRecordService.getMedicalRecord(firstName, lastName);
-		if (medicalRecord == null) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-		}
-		return ResponseEntity.status(HttpStatus.OK).body(medicalRecord);
-	}
 
 	@PostMapping("/medicalrecord")
 	public ResponseEntity<MedicalRecord> createdMedicalRecord(@RequestBody MedicalRecord medicalRecord) {

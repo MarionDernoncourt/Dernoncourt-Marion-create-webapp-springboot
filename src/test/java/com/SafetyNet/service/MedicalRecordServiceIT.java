@@ -9,18 +9,30 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.SafetyNet.model.MedicalRecord;
+import com.SafetyNet.repository.DataLoaderRepository;
 
 @SpringBootTest
-public class MedicalRecordServiceTest {
+public class MedicalRecordServiceIT {
 
 	@Autowired
 	private MedicalRecordService medRecordService;
 
+	@Autowired
+	private 		DataLoaderRepository dataLoaderRepository;
+
+
+	@BeforeEach
+	void setUp () {
+		dataLoaderRepository.setFirestations(null);
+		dataLoaderRepository.setMedicalRecords(null);
+		dataLoaderRepository.setPersons(null);
+	}
 	@Test
 	public void testGetAllMedicalRecords() throws IOException {
 		List<MedicalRecord> medRecords = medRecordService.getAllMedicalRecord();

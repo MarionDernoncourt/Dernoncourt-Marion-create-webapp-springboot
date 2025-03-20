@@ -72,20 +72,7 @@ public class MedicalRecordControllerTest {
 		mockMvc.perform(get("/medicalrecords")).andExpect(status().isNotFound());
 	}
 
-	@Test
-	public void testGetMedicalRecordByFirstnameAndLastname() throws Exception {
-		when(medicalRecordService.getMedicalRecord(anyString(), anyString())).thenReturn(mockMedRecord.get(0));
-		mockMvc.perform(get("/medicalrecord").param("firstName", "John").param("lastName", "Boyd"))
-				.andExpect(status().isOk());
-
-	}
-
-	@Test
-	public void testGetMedicalRecordByFirstnameAndLastName_withWrongArgument() throws Exception {
-		when(medicalRecordService.getMedicalRecord(anyString(), anyString())).thenReturn(null);
-		mockMvc.perform(get("/medicalrecord").param("firstName", "Jane").param("lastName", "Boyd"))
-				.andExpect(status().isNotFound());
-	}
+	
 
 	@Test
 	public void testCreateMedicalRecord() throws Exception {

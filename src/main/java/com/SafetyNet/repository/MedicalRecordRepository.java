@@ -1,15 +1,12 @@
 package com.SafetyNet.repository;
 
-import java.io.IOException;
 import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.SafetyNet.model.MedicalRecord;
-import com.SafetyNet.service.AgeCalculatorService;
 
 @Repository
 public class MedicalRecordRepository implements IMedicalRecordRepository {
@@ -24,13 +21,11 @@ public class MedicalRecordRepository implements IMedicalRecordRepository {
 	}
 
 	@Override
-	public List<MedicalRecord> getAllMedicalRecord() throws IOException {
-		List<MedicalRecord> medicalRecords = dataLoaderRepository.getAllMedicalRecord();
+	public List<MedicalRecord> getAllMedicalRecord() {
 		logger.debug("Accès aux données : Récupération de tous les dossiers médicaux");
-		if (medicalRecords.isEmpty()) {
-			logger.error("Aucun dossier trouvé");
+
+		List<MedicalRecord> medicalRecords = dataLoaderRepository.getAllMedicalRecord();
 		
-		}
 		return medicalRecords;
 	}
 
@@ -45,18 +40,10 @@ public class MedicalRecordRepository implements IMedicalRecordRepository {
 
 	@Override
 	public MedicalRecord createMedicalRecord(MedicalRecord medicalRecord) {
-
-		List<MedicalRecord> medicalRecords = dataLoaderRepository.getAllMedicalRecord();
 		logger.debug("Accès aux donnéees, création de {}", medicalRecord);
-		for (MedicalRecord medRecord : medicalRecords) {
-			if (medRecord.getFirstName().equalsIgnoreCase(medicalRecord.getFirstName())
-					&& medRecord.getLastName().equalsIgnoreCase(medicalRecord.getLastName())) {
-				logger.error("Ce dossier médical existe déjà, il ne peut pas être créé.");
-				return null;
-			}
-
-		}
-		medicalRecords.add(medicalRecord);
+		
+		dataLoaderRepository.getAllMedicalRecord().add(medicalRecord);
+		
 		logger.info("Dossier médical ajouté avec succès : {}", medicalRecord);
 		return medicalRecord;
 
@@ -82,8 +69,10 @@ public class MedicalRecordRepository implements IMedicalRecordRepository {
 
 	@Override
 	public boolean deleteMedicalRecord(String firstName, String lastName) {
-		List<MedicalRecord> medicalRecords = dataLoaderRepository.getAllMedicalRecord();
 		logger.debug("Accès aux données, suppression de {} {}", firstName, lastName);
+
+		List<MedicalRecord> medicalRecords = dataLoaderRepository.getAllMedicalRecord();
+		
 		boolean medRecordRemoved = medicalRecords
 				.removeIf(medRecord -> medRecord.getFirstName().equalsIgnoreCase(firstName)
 						&& medRecord.getLastName().equalsIgnoreCase(lastName));

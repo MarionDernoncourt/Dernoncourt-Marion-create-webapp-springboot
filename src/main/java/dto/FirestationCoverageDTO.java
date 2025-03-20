@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class FireStationCoverageDTO {
+public class FirestationCoverageDTO {
 
 	@Data
     @AllArgsConstructor

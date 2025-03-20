@@ -68,24 +68,6 @@ public class PersonControllerTest {
 		assertEquals(content, "");
 	}
 
-	@Test
-	public void testGetPersonByFirstNameAndLastName() throws Exception {
-		String foundPersonJson = objectMapper.writeValueAsString(mockPersons.get(0));
-		when(personService.getPersonByFirstNameAndLastName("John", "Doe")).thenReturn(mockPersons.get(0));
-
-		MvcResult result = mockMvc.perform(get("/person").param("firstName", "John").param("lastName", "Doe"))
-				.andExpect(status().isOk()).andReturn();
-		assertEquals(foundPersonJson, result.getResponse().getContentAsString());
-
-	}
-
-	@Test
-	public void testGetPersonByNameWithWrongArgument() throws Exception {
-		when(personService.getPersonByFirstNameAndLastName("John", "Nobody")).thenReturn(null);
-		MvcResult result = mockMvc.perform(get("/person").param("firstName", "John").param("lastName", "Nobody"))
-				.andExpect(status().isNotFound()).andReturn();
-		assertEquals(404, result.getResponse().getStatus());
-	}
 
 	@Test
 	public void testCreatePerson() throws Exception {

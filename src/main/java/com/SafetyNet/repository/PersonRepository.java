@@ -1,6 +1,7 @@
 package com.SafetyNet.repository;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,19 +23,18 @@ public class PersonRepository implements IPersonRepository {
 	@Override
 	public List<Person> getAllPersons() {
 		logger.debug("Accès aux données : récupération de toutes les personnes");
-		List<Person> persons = dataLoaderRepository.getAllPersons();
-		if (persons.isEmpty()) {
-			logger.error("Aucune personne dans la liste");
 
-		}
+		List<Person> persons = dataLoaderRepository.getAllPersons();
+
 		return persons;
 	}
 
 	@Override
 	public Person getPersonByFirstNameAndLastName(String firstName, String lastName) {
+		logger.debug("Accès aux données, recherche de {} {}", firstName, lastName);
 
 		List<Person> persons = dataLoaderRepository.getAllPersons();
-		logger.debug("Accès aux données, recherche de {} {}", firstName, lastName);
+
 		return persons.stream().filter(resident -> resident.getFirstName().equalsIgnoreCase(firstName)
 				&& resident.getLastName().equalsIgnoreCase(lastName)).findFirst().orElse(null);
 
@@ -42,17 +42,10 @@ public class PersonRepository implements IPersonRepository {
 
 	@Override
 	public Person createPerson(Person person) {
-
-		List<Person> persons = dataLoaderRepository.getAllPersons();
 		logger.debug("Accès aux données: création de {}", person);
-		for (Person resident : persons) {
-			if (resident.getFirstName().equalsIgnoreCase(person.getFirstName())
-					&& resident.getLastName().equalsIgnoreCase(person.getLastName())) {
-				logger.error("Cette personne existe déjà : {}", person);
-				return null;
-			}
-		}
-		persons.add(person);
+
+		dataLoaderRepository.getAllPersons().add(person);
+
 		logger.info("Nouvelle personne ajoutée avec succès : {}", person);
 		return person;
 	}
@@ -90,5 +83,6 @@ public class PersonRepository implements IPersonRepository {
 		}
 		return personRemoved;
 	}
+
 
 }
