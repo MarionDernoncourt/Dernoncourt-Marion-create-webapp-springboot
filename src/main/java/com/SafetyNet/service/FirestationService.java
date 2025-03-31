@@ -12,15 +12,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.SafetyNet.model.Firestation;
-import com.SafetyNet.model.Person;
 import com.SafetyNet.repository.IFirestationRepository;
 import com.SafetyNet.repository.PersonRepository;
 
 @Service
 public class FirestationService {
 
-	@Autowired
-	private PersonRepository personRepository;
 
 	private static final Logger logger = LoggerFactory.getLogger(FirestationService.class);
 

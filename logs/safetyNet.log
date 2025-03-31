@@ -419,3 +419,761 @@
 2025-03-31T10:57:42.112+02:00  INFO 72724 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
 2025-03-31T10:57:42.112+02:00  INFO 72724 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
 2025-03-31T10:57:42.112+02:00  INFO 72724 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes rattachées à la station 2 : 4
+2025-03-31T12:03:14.780+02:00  INFO 75264 --- [SafetyNet] [RMI TCP Connection(69)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-03-31T12:03:14.933+02:00  INFO 75264 --- [SafetyNet] [RMI TCP Connection(69)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-31T12:03:15.023+02:00  INFO 75264 --- [SafetyNet] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-31T12:03:17.584+02:00  INFO 69092 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Starting SafetyNetApplication using Java 21.0.5 with PID 69092 (C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet\target\classes started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T12:03:17.588+02:00  INFO 69092 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T12:03:18.585+02:00  INFO 69092 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-31T12:03:18.605+02:00  INFO 69092 --- [SafetyNet] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-31T12:03:18.606+02:00  INFO 69092 --- [SafetyNet] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-31T12:03:18.674+02:00  INFO 69092 --- [SafetyNet] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-31T12:03:18.674+02:00  INFO 69092 --- [SafetyNet] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1022 ms
+2025-03-31T12:03:19.127+02:00  INFO 69092 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-31T12:03:19.134+02:00  INFO 69092 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Started SafetyNetApplication in 2.079 seconds (process running for 2.799)
+2025-03-31T12:03:19.165+02:00  INFO 69092 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T12:03:19.228+02:00  INFO 69092 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T12:03:19.232+02:00  INFO 69092 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T12:03:30.692+02:00  INFO 69092 --- [SafetyNet] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-31T12:03:30.692+02:00  INFO 69092 --- [SafetyNet] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-31T12:03:30.694+02:00  INFO 69092 --- [SafetyNet] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-03-31T12:03:30.762+02:00  WARN 69092 --- [SafetyNet] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'address' for method parameter type String is not present]
+2025-03-31T12:03:36.691+02:00  INFO 69092 --- [SafetyNet] [http-nio-8080-exec-4] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T12:03:36.696+02:00  INFO 69092 --- [SafetyNet] [http-nio-8080-exec-4] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T12:04:25.905+02:00  INFO 69092 --- [SafetyNet] [http-nio-8080-exec-5] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T12:04:25.906+02:00  INFO 69092 --- [SafetyNet] [http-nio-8080-exec-5] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:03:21.334+02:00  INFO 69092 --- [SafetyNet] [http-nio-8080-exec-8] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:03:21.350+02:00  INFO 69092 --- [SafetyNet] [http-nio-8080-exec-8] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:24:18.782+02:00  INFO 69092 --- [SafetyNet] [RMI TCP Connection(28)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-03-31T14:24:18.854+02:00  INFO 69092 --- [SafetyNet] [RMI TCP Connection(28)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-31T14:24:18.947+02:00  INFO 69092 --- [SafetyNet] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-31T14:24:21.521+02:00  INFO 75632 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Starting SafetyNetApplication using Java 21.0.5 with PID 75632 (C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet\target\classes started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:24:21.524+02:00  INFO 75632 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:24:22.570+02:00  INFO 75632 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-31T14:24:22.592+02:00  INFO 75632 --- [SafetyNet] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-31T14:24:22.593+02:00  INFO 75632 --- [SafetyNet] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-31T14:24:22.676+02:00  INFO 75632 --- [SafetyNet] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-31T14:24:22.677+02:00  INFO 75632 --- [SafetyNet] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1088 ms
+2025-03-31T14:24:23.095+02:00  INFO 75632 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-31T14:24:23.103+02:00  INFO 75632 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Started SafetyNetApplication in 2.05 seconds (process running for 2.788)
+2025-03-31T14:24:23.126+02:00  INFO 75632 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:24:23.183+02:00  INFO 75632 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:24:23.189+02:00  INFO 75632 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:24:27.962+02:00  INFO 75632 --- [SafetyNet] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-31T14:24:27.963+02:00  INFO 75632 --- [SafetyNet] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-31T14:24:27.967+02:00  INFO 75632 --- [SafetyNet] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-03-31T14:24:28.021+02:00  INFO 75632 --- [SafetyNet] [http-nio-8080-exec-1] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:24:28.027+02:00  INFO 75632 --- [SafetyNet] [http-nio-8080-exec-1] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:24:28.028+02:00  INFO 75632 --- [SafetyNet] [http-nio-8080-exec-1] com.SafetyNet.service.PersonService      : Nombre d'habitants à l'adresse 1509 Culver St : 5
+2025-03-31T14:25:53.636+02:00  INFO 75632 --- [SafetyNet] [RMI TCP Connection(5)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-03-31T14:25:53.640+02:00  INFO 75632 --- [SafetyNet] [RMI TCP Connection(5)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-31T14:25:53.657+02:00  INFO 75632 --- [SafetyNet] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-31T14:25:55.766+02:00  INFO 72812 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Starting SafetyNetApplication using Java 21.0.5 with PID 72812 (C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet\target\classes started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:25:55.776+02:00  INFO 72812 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:25:56.676+02:00  INFO 72812 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-31T14:25:56.692+02:00  INFO 72812 --- [SafetyNet] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-31T14:25:56.693+02:00  INFO 72812 --- [SafetyNet] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-31T14:25:56.757+02:00  INFO 72812 --- [SafetyNet] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-31T14:25:56.758+02:00  INFO 72812 --- [SafetyNet] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 921 ms
+2025-03-31T14:25:57.178+02:00  INFO 72812 --- [SafetyNet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-31T14:25:57.187+02:00  INFO 72812 --- [SafetyNet] [main] com.SafetyNet.SafetyNetApplication       : Started SafetyNetApplication in 1.89 seconds (process running for 2.561)
+2025-03-31T14:25:57.208+02:00  INFO 72812 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:25:57.261+02:00  INFO 72812 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:25:57.271+02:00  INFO 72812 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:25:59.081+02:00  INFO 72812 --- [SafetyNet] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-31T14:25:59.083+02:00  INFO 72812 --- [SafetyNet] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-31T14:25:59.084+02:00  INFO 72812 --- [SafetyNet] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-03-31T14:25:59.142+02:00  INFO 72812 --- [SafetyNet] [http-nio-8080-exec-3] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:25:59.153+02:00  INFO 72812 --- [SafetyNet] [http-nio-8080-exec-3] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:25:59.154+02:00  INFO 72812 --- [SafetyNet] [http-nio-8080-exec-3] com.SafetyNet.service.PersonService      : Nombre d'habitants à l'adresse 1509 Culver St : 5, desservis par la(les) caserne(s) [3]
+2025-03-31T14:27:51.794+02:00  INFO 72812 --- [SafetyNet] [http-nio-8080-exec-2] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:27:51.795+02:00 ERROR 72812 --- [SafetyNet] [http-nio-8080-exec-2] com.SafetyNet.service.PersonService      : Aucun habitant à l'adresse 1509 St
+2025-03-31T14:28:03.161+02:00  INFO 72812 --- [SafetyNet] [http-nio-8080-exec-5] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:28:03.162+02:00 ERROR 72812 --- [SafetyNet] [http-nio-8080-exec-5] com.SafetyNet.service.PersonService      : Aucun habitant à l'adresse 
+2025-03-31T14:31:47.264+02:00  INFO 72812 --- [SafetyNet] [http-nio-8080-exec-8] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:31:47.265+02:00 ERROR 72812 --- [SafetyNet] [http-nio-8080-exec-8] com.SafetyNet.service.PersonService      : Aucun habitant à l'adresse 112 Stepple Pl
+2025-03-31T14:31:54.571+02:00  INFO 72812 --- [SafetyNet] [http-nio-8080-exec-10] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:31:54.592+02:00  INFO 72812 --- [SafetyNet] [http-nio-8080-exec-10] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:31:54.595+02:00  INFO 72812 --- [SafetyNet] [http-nio-8080-exec-10] com.SafetyNet.service.PersonService      : Nombre d'habitants à l'adresse 112 Steppes Pl : 3, desservis par la(les) caserne(s) [3, 4]
+2025-03-31T14:33:20.053+02:00  INFO 73064 --- [SafetyNet] [main] c.S.controller.ReportingControllerIT     : Starting ReportingControllerIT using Java 21.0.5 with PID 73064 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:33:20.056+02:00  INFO 73064 --- [SafetyNet] [main] c.S.controller.ReportingControllerIT     : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:33:22.575+02:00  INFO 73064 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-31T14:33:22.575+02:00  INFO 73064 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-31T14:33:22.577+02:00  INFO 73064 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-03-31T14:33:22.640+02:00  INFO 73064 --- [SafetyNet] [main] c.S.controller.ReportingControllerIT     : Started ReportingControllerIT in 3.248 seconds (process running for 4.932)
+2025-03-31T14:33:22.676+02:00  INFO 73064 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:33:22.758+02:00  INFO 73064 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:33:22.765+02:00  INFO 73064 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:33:23.849+02:00  INFO 73064 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:33:23.856+02:00  INFO 73064 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:33:23.857+02:00  INFO 73064 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre d'habitants à l'adresse 112 Steppes Pl : 3, couverts par la(les) caserne(s) [3, 4]
+2025-03-31T14:35:00.822+02:00  INFO 79404 --- [SafetyNet] [main] c.S.controller.ReportingControllerIT     : Starting ReportingControllerIT using Java 21.0.5 with PID 79404 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:35:00.827+02:00  INFO 79404 --- [SafetyNet] [main] c.S.controller.ReportingControllerIT     : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:35:02.815+02:00  INFO 79404 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-31T14:35:02.816+02:00  INFO 79404 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-31T14:35:02.818+02:00  INFO 79404 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-03-31T14:35:02.877+02:00  INFO 79404 --- [SafetyNet] [main] c.S.controller.ReportingControllerIT     : Started ReportingControllerIT in 2.556 seconds (process running for 4.007)
+2025-03-31T14:35:02.911+02:00  INFO 79404 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:35:02.997+02:00  INFO 79404 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:35:03.006+02:00  INFO 79404 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:35:04.105+02:00  INFO 79404 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:35:04.113+02:00  INFO 79404 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:35:04.114+02:00  INFO 79404 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre d'habitants à l'adresse 112 Steppes Pl : 3, couverts par la(les) caserne(s) [3, 4]
+2025-03-31T14:35:35.704+02:00  INFO 72188 --- [SafetyNet] [main] c.S.controller.ReportingControllerIT     : Starting ReportingControllerIT using Java 21.0.5 with PID 72188 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:35:35.707+02:00  INFO 72188 --- [SafetyNet] [main] c.S.controller.ReportingControllerIT     : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:35:37.524+02:00  INFO 72188 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-31T14:35:37.525+02:00  INFO 72188 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-31T14:35:37.526+02:00  INFO 72188 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-03-31T14:35:37.578+02:00  INFO 72188 --- [SafetyNet] [main] c.S.controller.ReportingControllerIT     : Started ReportingControllerIT in 2.333 seconds (process running for 3.683)
+2025-03-31T14:35:37.605+02:00  INFO 72188 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:35:37.667+02:00  INFO 72188 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:35:37.673+02:00  INFO 72188 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:35:38.661+02:00  INFO 72188 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:35:38.667+02:00  INFO 72188 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:35:38.669+02:00  INFO 72188 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre d'habitants à l'adresse 112 Steppes Pl : 3, couverts par la(les) caserne(s) [3, 4]
+2025-03-31T14:36:28.501+02:00  INFO 78588 --- [SafetyNet] [main] c.S.controller.ReportingControllerIT     : Starting ReportingControllerIT using Java 21.0.5 with PID 78588 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:36:28.503+02:00  INFO 78588 --- [SafetyNet] [main] c.S.controller.ReportingControllerIT     : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:36:30.162+02:00  INFO 78588 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-31T14:36:30.163+02:00  INFO 78588 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-31T14:36:30.165+02:00  INFO 78588 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-03-31T14:36:30.212+02:00  INFO 78588 --- [SafetyNet] [main] c.S.controller.ReportingControllerIT     : Started ReportingControllerIT in 2.22 seconds (process running for 3.576)
+2025-03-31T14:36:30.240+02:00  INFO 78588 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:36:30.299+02:00  INFO 78588 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:36:30.303+02:00  INFO 78588 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:36:31.275+02:00  INFO 78588 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:36:31.282+02:00  INFO 78588 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:36:31.283+02:00  INFO 78588 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre d'habitants à l'adresse 112 Steppes Pl : 3, couverts par la(les) caserne(s) [3, 4]
+2025-03-31T14:38:59.722+02:00  INFO 26764 --- [SafetyNet] [main] c.S.controller.ReportingControllerIT     : Starting ReportingControllerIT using Java 21.0.5 with PID 26764 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:38:59.726+02:00  INFO 26764 --- [SafetyNet] [main] c.S.controller.ReportingControllerIT     : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:39:01.541+02:00  INFO 26764 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-31T14:39:01.542+02:00  INFO 26764 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-31T14:39:01.544+02:00  INFO 26764 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-03-31T14:39:01.593+02:00  INFO 26764 --- [SafetyNet] [main] c.S.controller.ReportingControllerIT     : Started ReportingControllerIT in 2.326 seconds (process running for 3.684)
+2025-03-31T14:39:01.625+02:00  INFO 26764 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:39:01.711+02:00  INFO 26764 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:39:01.717+02:00  INFO 26764 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:39:02.894+02:00  INFO 26764 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:39:02.903+02:00  INFO 26764 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:39:02.905+02:00  INFO 26764 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre d'habitants à l'adresse 112 Steppes Pl : 3, couverts par la(les) caserne(s) [3, 4]
+2025-03-31T14:39:22.687+02:00  INFO 76560 --- [SafetyNet] [main] c.S.controller.ReportingControllerIT     : Starting ReportingControllerIT using Java 21.0.5 with PID 76560 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:39:22.690+02:00  INFO 76560 --- [SafetyNet] [main] c.S.controller.ReportingControllerIT     : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:39:24.357+02:00  INFO 76560 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-31T14:39:24.358+02:00  INFO 76560 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-31T14:39:24.361+02:00  INFO 76560 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2025-03-31T14:39:24.413+02:00  INFO 76560 --- [SafetyNet] [main] c.S.controller.ReportingControllerIT     : Started ReportingControllerIT in 2.181 seconds (process running for 3.604)
+2025-03-31T14:39:24.461+02:00  INFO 76560 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:39:24.533+02:00  INFO 76560 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:39:24.537+02:00  INFO 76560 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:39:25.564+02:00  INFO 76560 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:39:25.569+02:00  INFO 76560 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:39:25.570+02:00  INFO 76560 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre d'habitants à l'adresse 112 Steppes Pl : 3, couverts par la(les) caserne(s) [3, 4]
+2025-03-31T14:40:31.494+02:00  INFO 76600 --- [SafetyNet] [main] c.S.controller.ReportingControllerIT     : Starting ReportingControllerIT using Java 21.0.5 with PID 76600 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:40:31.498+02:00  INFO 76600 --- [SafetyNet] [main] c.S.controller.ReportingControllerIT     : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:40:33.219+02:00  INFO 76600 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-31T14:40:33.219+02:00  INFO 76600 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-31T14:40:33.221+02:00  INFO 76600 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-03-31T14:40:33.265+02:00  INFO 76600 --- [SafetyNet] [main] c.S.controller.ReportingControllerIT     : Started ReportingControllerIT in 2.259 seconds (process running for 3.602)
+2025-03-31T14:40:33.293+02:00  INFO 76600 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:40:33.369+02:00  INFO 76600 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:40:33.376+02:00  INFO 76600 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:40:34.414+02:00  INFO 76600 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:40:34.424+02:00  INFO 76600 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:40:34.425+02:00  INFO 76600 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre d'habitants à l'adresse 112 Steppes Pl : 3, couverts par la(les) caserne(s) [3, 4]
+2025-03-31T14:43:14.187+02:00  INFO 74944 --- [SafetyNet] [main] c.S.controller.ReportingControllerIT     : Starting ReportingControllerIT using Java 21.0.5 with PID 74944 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:43:14.189+02:00  INFO 74944 --- [SafetyNet] [main] c.S.controller.ReportingControllerIT     : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:43:15.994+02:00  INFO 74944 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-31T14:43:15.996+02:00  INFO 74944 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-31T14:43:15.998+02:00  INFO 74944 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-03-31T14:43:16.043+02:00  INFO 74944 --- [SafetyNet] [main] c.S.controller.ReportingControllerIT     : Started ReportingControllerIT in 2.356 seconds (process running for 3.764)
+2025-03-31T14:43:16.074+02:00  INFO 74944 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:43:16.138+02:00  INFO 74944 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:43:16.143+02:00  INFO 74944 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:43:17.129+02:00  INFO 74944 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:43:17.134+02:00  INFO 74944 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:43:17.137+02:00  INFO 74944 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre d'habitants à l'adresse 112 Steppes Pl : 3, couverts par la(les) caserne(s) [3, 4]
+2025-03-31T14:50:58.429+02:00  INFO 75780 --- [SafetyNet] [main] c.S.service.ReportingServiceTestIT       : Starting ReportingServiceTestIT using Java 21.0.5 with PID 75780 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:50:58.431+02:00  INFO 75780 --- [SafetyNet] [main] c.S.service.ReportingServiceTestIT       : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:51:00.267+02:00  INFO 75780 --- [SafetyNet] [main] c.S.service.ReportingServiceTestIT       : Started ReportingServiceTestIT in 2.303 seconds (process running for 3.596)
+2025-03-31T14:51:00.303+02:00  INFO 75780 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:51:00.369+02:00  INFO 75780 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:51:00.375+02:00  INFO 75780 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:51:01.383+02:00  INFO 75780 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:51:01.390+02:00  INFO 75780 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:51:01.391+02:00  INFO 75780 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre d'habitants à l'adresse 1509 Culver St : 5, couverts par la(les) caserne(s) [3]
+2025-03-31T14:51:16.582+02:00  INFO 74804 --- [SafetyNet] [main] c.S.service.ReportingServiceTestIT       : Starting ReportingServiceTestIT using Java 21.0.5 with PID 74804 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:51:16.584+02:00  INFO 74804 --- [SafetyNet] [main] c.S.service.ReportingServiceTestIT       : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:51:18.344+02:00  INFO 74804 --- [SafetyNet] [main] c.S.service.ReportingServiceTestIT       : Started ReportingServiceTestIT in 2.226 seconds (process running for 3.554)
+2025-03-31T14:51:18.383+02:00  INFO 74804 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:51:18.464+02:00  INFO 74804 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:51:18.470+02:00  INFO 74804 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:51:19.437+02:00  INFO 74804 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:51:19.445+02:00  INFO 74804 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:51:19.447+02:00  INFO 74804 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre d'habitants à l'adresse 1509 Culver St : 5, couverts par la(les) caserne(s) [3]
+2025-03-31T14:52:06.037+02:00  INFO 71488 --- [SafetyNet] [main] c.S.c.FirestationControllerTest          : Starting FirestationControllerTest using Java 21.0.5 with PID 71488 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:52:06.041+02:00  INFO 71488 --- [SafetyNet] [main] c.S.c.FirestationControllerTest          : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:52:08.321+02:00  INFO 71488 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-31T14:52:08.322+02:00  INFO 71488 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-31T14:52:08.325+02:00  INFO 71488 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-03-31T14:52:08.393+02:00  INFO 71488 --- [SafetyNet] [main] c.S.c.FirestationControllerTest          : Started FirestationControllerTest in 3.019 seconds (process running for 9.902)
+2025-03-31T14:52:09.186+02:00  INFO 71488 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.controller.MedicalRecordControllerTest]: MedicalRecordControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:52:09.238+02:00  INFO 71488 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.controller.MedicalRecordControllerTest
+2025-03-31T14:52:09.317+02:00  INFO 71488 --- [SafetyNet] [main] c.S.c.MedicalRecordControllerTest        : Starting MedicalRecordControllerTest using Java 21.0.5 with PID 71488 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:52:09.318+02:00  INFO 71488 --- [SafetyNet] [main] c.S.c.MedicalRecordControllerTest        : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:52:09.718+02:00  INFO 71488 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-31T14:52:09.719+02:00  INFO 71488 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-31T14:52:09.721+02:00  INFO 71488 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-03-31T14:52:09.733+02:00  INFO 71488 --- [SafetyNet] [main] c.S.c.MedicalRecordControllerTest        : Started MedicalRecordControllerTest in 0.48 seconds (process running for 11.241)
+2025-03-31T14:52:09.995+02:00  INFO 71488 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.controller.PersonControllerTest]: PersonControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:52:10.020+02:00  INFO 71488 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.controller.PersonControllerTest
+2025-03-31T14:52:10.074+02:00  INFO 71488 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 71488 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:52:10.075+02:00  INFO 71488 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:52:10.441+02:00  INFO 71488 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-31T14:52:10.441+02:00  INFO 71488 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-31T14:52:10.442+02:00  INFO 71488 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2025-03-31T14:52:10.450+02:00  INFO 71488 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 0.423 seconds (process running for 11.958)
+2025-03-31T14:52:10.552+02:00  INFO 71488 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.SafetyNetApplicationTests]: SafetyNetApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:52:10.567+02:00  INFO 71488 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.SafetyNetApplicationTests
+2025-03-31T14:52:10.615+02:00  INFO 71488 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : Starting SafetyNetApplicationTests using Java 21.0.5 with PID 71488 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:52:10.615+02:00  INFO 71488 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:52:11.342+02:00  INFO 71488 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : Started SafetyNetApplicationTests in 0.761 seconds (process running for 12.85)
+2025-03-31T14:52:11.360+02:00  INFO 71488 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:52:11.375+02:00  INFO 71488 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:52:11.380+02:00  INFO 71488 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:52:18.199+02:00  INFO 73244 --- [SafetyNet] [main] c.S.controller.FirestationControllerIT   : Starting FirestationControllerIT using Java 21.0.5 with PID 73244 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:52:18.202+02:00  INFO 73244 --- [SafetyNet] [main] c.S.controller.FirestationControllerIT   : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:52:20.641+02:00  INFO 73244 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-31T14:52:20.642+02:00  INFO 73244 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-31T14:52:20.643+02:00  INFO 73244 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-03-31T14:52:20.690+02:00  INFO 73244 --- [SafetyNet] [main] c.S.controller.FirestationControllerIT   : Started FirestationControllerIT in 3.333 seconds (process running for 6.355)
+2025-03-31T14:52:20.728+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:52:20.822+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:52:20.828+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:52:22.208+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:52:22.209+02:00 ERROR 73244 --- [SafetyNet] [main] c.S.repository.FirestationRepository     : Impossible de supprimer, caserne non trouvée
+2025-03-31T14:52:22.209+02:00 ERROR 73244 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Echec de la suppression, caserne non trouvée
+2025-03-31T14:52:22.263+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:52:22.264+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.FirestationRepository     : La caserne a été supprimée avec succès
+2025-03-31T14:52:22.265+02:00  INFO 73244 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Caserne supprimée avec succès
+2025-03-31T14:52:22.356+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:52:22.357+02:00  INFO 73244 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:52:22.363+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.FirestationRepository     : Caserne créée avec succès : Firestation(address=18 bomberos St, station=2)
+2025-03-31T14:52:22.364+02:00  INFO 73244 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Caserne créée avec succès : Firestation(address=18 bomberos St, station=2)
+2025-03-31T14:52:22.410+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:52:22.411+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.FirestationRepository     : Caserne mise à jour avec succès : Firestation(address=1509 Culver St, station=1)
+2025-03-31T14:52:22.513+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:52:22.514+02:00  INFO 73244 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:52:22.535+02:00  INFO 73244 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.controller.MedicalRecordControllerIT]: MedicalRecordControllerIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:52:22.542+02:00  INFO 73244 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.controller.MedicalRecordControllerIT
+2025-03-31T14:52:22.572+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:52:22.575+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.MedicalRecordRepository   : Dossier médical ajouté avec succès : MedicalRecord(firstName=Harry, lastName=Potter, birthdate=1984-03-06, medications=[aznol:350mg, hydrapermazol:100mg], allergies=[nillacilan])
+2025-03-31T14:52:22.594+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:52:22.596+02:00 ERROR 73244 --- [SafetyNet] [main] c.S.repository.MedicalRecordRepository   : Impossible de supprimer, dossier inexistant pour Albus Dumbledore
+2025-03-31T14:52:22.596+02:00 ERROR 73244 --- [SafetyNet] [main] c.S.service.MedicalRecordService         : Impossible de supprimer, dossier non trouvé
+2025-03-31T14:52:22.606+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:52:22.608+02:00  INFO 73244 --- [SafetyNet] [main] c.S.service.MedicalRecordService         : Dossiers récupérés : 23
+2025-03-31T14:52:22.620+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:52:22.622+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.MedicalRecordRepository   : Dossier supprimé avec succès
+2025-03-31T14:52:22.622+02:00  INFO 73244 --- [SafetyNet] [main] c.S.service.MedicalRecordService         : Dossier supprimé avec succès
+2025-03-31T14:52:22.636+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:52:22.641+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.MedicalRecordRepository   : Dossier médical mis à jour avec succès : MedicalRecord(firstName=Roger, lastName=Boyd, birthdate=1984-03-06, medications=[aznol:350mg], allergies=[nillacilan])
+2025-03-31T14:52:22.656+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:52:22.658+02:00 ERROR 73244 --- [SafetyNet] [main] c.S.repository.MedicalRecordRepository   : Aucun dossier trouvé pour la mise à jour de MedicalRecord(firstName=Betty, lastName=Boop, birthdate=1984-03-06, medications=[aznol:350mg], allergies=[nillacilan])
+2025-03-31T14:52:22.659+02:00 ERROR 73244 --- [SafetyNet] [main] c.S.service.MedicalRecordService         : Echec de la mise à jour, dossier introuvable
+2025-03-31T14:52:22.670+02:00  INFO 73244 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.controller.PersonControllerIT]: PersonControllerIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:52:22.674+02:00  INFO 73244 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.controller.PersonControllerIT
+2025-03-31T14:52:22.693+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:52:22.694+02:00 ERROR 73244 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Aucune personne trouvée pour la mise à jour: Person(firstName=Hermione, lastName=Granger, address=123 Main St, city=city, zip=12345, phone=123-456-789, email=boyd@example.com)
+2025-03-31T14:52:22.699+02:00 ERROR 73244 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Mise à jour impossible, personne introuvable
+2025-03-31T14:52:22.710+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:52:22.712+02:00  INFO 73244 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:52:22.728+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:52:22.730+02:00  INFO 73244 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Nouvelle personne ajoutée avec succès : Person(firstName=John, lastName=Doe, address=123 Main St, city=city, zip=12345, phone=123-456-789, email=john@example.com)
+2025-03-31T14:52:22.740+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:52:22.741+02:00 ERROR 73244 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Impossible de supprimer : personne non trouvée
+2025-03-31T14:52:22.741+02:00 ERROR 73244 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Echec de la suppression: personne non trouvée
+2025-03-31T14:52:22.751+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:52:22.755+02:00  INFO 73244 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Personne mise à jour avec succès: Person(firstName=John, lastName=Boyd, address=123 Main St, city=city, zip=12345, phone=123-456-789, email=boyd@example.com)
+2025-03-31T14:52:22.765+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:52:22.767+02:00  INFO 73244 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Personne supprimée avec succès
+2025-03-31T14:52:22.768+02:00  INFO 73244 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Personne supprimée avec succès
+2025-03-31T14:52:22.781+02:00  INFO 73244 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.controller.ReportingControllerIT]: ReportingControllerIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:52:22.785+02:00  INFO 73244 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.controller.ReportingControllerIT
+2025-03-31T14:52:22.793+02:00  INFO 73244 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 22
+2025-03-31T14:52:22.794+02:00  INFO 73244 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personne vivant à cette adresse : 4
+2025-03-31T14:52:22.796+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:52:22.801+02:00  INFO 73244 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre d'enfants vivants a cette adresse : 2
+2025-03-31T14:52:22.817+02:00  INFO 73244 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 22
+2025-03-31T14:52:22.822+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:52:22.823+02:00  INFO 73244 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:52:22.824+02:00  INFO 73244 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre d'habitants à l'adresse 112 Steppes Pl : 3, couverts par la(les) caserne(s) [3, 4]
+2025-03-31T14:52:22.851+02:00  INFO 73244 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:52:22.852+02:00  INFO 73244 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 22
+2025-03-31T14:52:22.852+02:00  INFO 73244 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes rattachées à la station 1 : 6
+2025-03-31T14:52:22.853+02:00  INFO 73244 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre d'adultes : 5, et nombre d'enfants : {]
+2025-03-31T14:52:22.866+02:00  INFO 73244 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:52:22.867+02:00  INFO 73244 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 22
+2025-03-31T14:52:22.868+02:00  INFO 73244 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes rattachées à la station 2 : 5
+2025-03-31T14:52:22.879+02:00  INFO 73244 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.service.FirestationServiceIT]: FirestationServiceIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:52:22.899+02:00  INFO 73244 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.service.FirestationServiceIT
+2025-03-31T14:52:22.938+02:00  INFO 73244 --- [SafetyNet] [main] c.S.service.FirestationServiceIT         : Starting FirestationServiceIT using Java 21.0.5 with PID 73244 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:52:22.939+02:00  INFO 73244 --- [SafetyNet] [main] c.S.service.FirestationServiceIT         : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:52:23.297+02:00  INFO 73244 --- [SafetyNet] [main] c.S.service.FirestationServiceIT         : Started FirestationServiceIT in 0.393 seconds (process running for 8.962)
+2025-03-31T14:52:23.299+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:52:23.302+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:52:23.304+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:52:23.313+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:52:23.314+02:00  INFO 73244 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:52:23.314+02:00  INFO 73244 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:52:23.315+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.FirestationRepository     : Caserne créée avec succès : Firestation(address=112 Fire St, station=3)
+2025-03-31T14:52:23.315+02:00  INFO 73244 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Caserne créée avec succès : Firestation(address=112 Fire St, station=3)
+2025-03-31T14:52:23.315+02:00  INFO 73244 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 14
+2025-03-31T14:52:23.327+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:52:23.328+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.FirestationRepository     : La caserne a été supprimée avec succès
+2025-03-31T14:52:23.329+02:00  INFO 73244 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Caserne supprimée avec succès
+2025-03-31T14:52:23.336+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:52:23.337+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.FirestationRepository     : La caserne a été supprimée avec succès
+2025-03-31T14:52:23.337+02:00  INFO 73244 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Caserne supprimée avec succès
+2025-03-31T14:52:23.345+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:52:23.346+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.FirestationRepository     : La caserne a été supprimée avec succès
+2025-03-31T14:52:23.346+02:00  INFO 73244 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Caserne supprimée avec succès
+2025-03-31T14:52:23.354+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:52:23.354+02:00  INFO 73244 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:52:23.355+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.FirestationRepository     : Caserne mise à jour avec succès : Firestation(address=1509 Culver St, station=2)
+2025-03-31T14:52:23.355+02:00  INFO 73244 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:52:23.364+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:52:23.366+02:00  INFO 73244 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:52:23.372+02:00  INFO 73244 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.service.MedicalRecordServiceIT]: MedicalRecordServiceIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:52:23.374+02:00  INFO 73244 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.service.MedicalRecordServiceIT
+2025-03-31T14:52:23.382+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:52:23.391+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:52:23.392+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.MedicalRecordRepository   : Dossier médical mis à jour avec succès : MedicalRecord(firstName=Jacob, lastName=Boyd, birthdate=1989-03-06, medications=[pharmacol:5000mg, terazine:10mg, noznazol:250mg], allergies=[nillacilan])
+2025-03-31T14:52:23.399+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:52:23.401+02:00  INFO 73244 --- [SafetyNet] [main] c.S.service.MedicalRecordService         : Dossiers récupérés : 23
+2025-03-31T14:52:23.406+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:52:23.407+02:00  INFO 73244 --- [SafetyNet] [main] c.S.service.MedicalRecordService         : Dossiers récupérés : 23
+2025-03-31T14:52:23.407+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.MedicalRecordRepository   : Dossier médical ajouté avec succès : MedicalRecord(firstName=Harry, lastName=Potter, birthdate=1984-03-06, medications=[hydrapermazol:100mg], allergies=[nillacilan])
+2025-03-31T14:52:23.408+02:00  INFO 73244 --- [SafetyNet] [main] c.S.service.MedicalRecordService         : Dossiers récupérés : 24
+2025-03-31T14:52:23.413+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:52:23.414+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.MedicalRecordRepository   : Dossier supprimé avec succès
+2025-03-31T14:52:23.415+02:00  INFO 73244 --- [SafetyNet] [main] c.S.service.MedicalRecordService         : Dossier supprimé avec succès
+2025-03-31T14:52:23.415+02:00 ERROR 73244 --- [SafetyNet] [main] c.S.service.MedicalRecordService         : Aucun dossier trouvé avec ces informations
+2025-03-31T14:52:23.422+02:00  INFO 73244 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.service.PersonServiceIT]: PersonServiceIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:52:23.423+02:00  INFO 73244 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.service.PersonServiceIT
+2025-03-31T14:52:23.430+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:52:23.431+02:00  INFO 73244 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:52:23.436+02:00  INFO 73244 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:52:23.437+02:00  INFO 73244 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Nouvelle personne ajoutée avec succès : Person(firstName=Harry, lastName=Potter, address=321 Chemin de Traverse, city=London, zip=45654, phone=987-654-321, email=HarryPotter@poudlard.com)
+2025-03-31T14:52:23.437+02:00  INFO 73244 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 24
+2025-03-31T14:52:23.446+02:00  INFO 73244 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Personne mise à jour avec succès: Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874-6512, email=johnBoyd@email.com)
+2025-03-31T14:52:23.450+02:00  INFO 73244 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Personne supprimée avec succès
+2025-03-31T14:52:23.450+02:00  INFO 73244 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Personne supprimée avec succès
+2025-03-31T14:52:23.450+02:00 ERROR 73244 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Aucune personne trouvée avec ces informations
+2025-03-31T14:52:23.455+02:00  INFO 73244 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.service.ReportingServiceTestIT]: ReportingServiceTestIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:52:23.457+02:00  INFO 73244 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.service.ReportingServiceTestIT
+2025-03-31T14:52:23.464+02:00  INFO 73244 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:52:23.464+02:00  INFO 73244 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personne vivant à cette adresse : 5
+2025-03-31T14:52:23.465+02:00  INFO 73244 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre d'enfants vivants a cette adresse : 2
+2025-03-31T14:52:23.470+02:00  INFO 73244 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:52:23.472+02:00  INFO 73244 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:52:23.473+02:00  INFO 73244 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:52:23.473+02:00  INFO 73244 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre d'habitants à l'adresse 1509 Culver St : 5, couverts par la(les) caserne(s) [3]
+2025-03-31T14:52:23.478+02:00  INFO 73244 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:52:23.478+02:00  INFO 73244 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:52:23.478+02:00  INFO 73244 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes rattachées à la station 2 : 4
+2025-03-31T14:52:23.479+02:00  INFO 73244 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre d'adultes : 3, et nombre d'enfants : {]
+2025-03-31T14:52:23.495+02:00  INFO 73244 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:52:23.495+02:00  INFO 73244 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:52:23.495+02:00  INFO 73244 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes rattachées à la station 2 : 4
+2025-03-31T14:55:55.189+02:00  INFO 23584 --- [SafetyNet] [main] c.S.c.FirestationControllerTest          : Starting FirestationControllerTest using Java 21.0.5 with PID 23584 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:55:55.193+02:00  INFO 23584 --- [SafetyNet] [main] c.S.c.FirestationControllerTest          : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:55:58.251+02:00  INFO 23584 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-31T14:55:58.251+02:00  INFO 23584 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-31T14:55:58.255+02:00  INFO 23584 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2025-03-31T14:55:58.327+02:00  INFO 23584 --- [SafetyNet] [main] c.S.c.FirestationControllerTest          : Started FirestationControllerTest in 4.265 seconds (process running for 10.372)
+2025-03-31T14:55:59.160+02:00  INFO 23584 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.controller.MedicalRecordControllerTest]: MedicalRecordControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:55:59.206+02:00  INFO 23584 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.controller.MedicalRecordControllerTest
+2025-03-31T14:55:59.292+02:00  INFO 23584 --- [SafetyNet] [main] c.S.c.MedicalRecordControllerTest        : Starting MedicalRecordControllerTest using Java 21.0.5 with PID 23584 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:55:59.293+02:00  INFO 23584 --- [SafetyNet] [main] c.S.c.MedicalRecordControllerTest        : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:55:59.782+02:00  INFO 23584 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-31T14:55:59.783+02:00  INFO 23584 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-31T14:55:59.784+02:00  INFO 23584 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-03-31T14:55:59.800+02:00  INFO 23584 --- [SafetyNet] [main] c.S.c.MedicalRecordControllerTest        : Started MedicalRecordControllerTest in 0.579 seconds (process running for 11.845)
+2025-03-31T14:56:00.157+02:00  INFO 23584 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.controller.PersonControllerTest]: PersonControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:56:00.232+02:00  INFO 23584 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.controller.PersonControllerTest
+2025-03-31T14:56:00.312+02:00  INFO 23584 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 23584 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:56:00.313+02:00  INFO 23584 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:56:00.742+02:00  INFO 23584 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-31T14:56:00.743+02:00  INFO 23584 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-31T14:56:00.744+02:00  INFO 23584 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-03-31T14:56:00.753+02:00  INFO 23584 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 0.511 seconds (process running for 12.798)
+2025-03-31T14:56:00.876+02:00  INFO 23584 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.SafetyNetApplicationTests]: SafetyNetApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:56:00.893+02:00  INFO 23584 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.SafetyNetApplicationTests
+2025-03-31T14:56:00.943+02:00  INFO 23584 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : Starting SafetyNetApplicationTests using Java 21.0.5 with PID 23584 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:56:00.944+02:00  INFO 23584 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:56:01.811+02:00  INFO 23584 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : Started SafetyNetApplicationTests in 0.907 seconds (process running for 13.856)
+2025-03-31T14:56:01.827+02:00  INFO 23584 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:56:01.841+02:00  INFO 23584 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:56:01.846+02:00  INFO 23584 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:56:25.225+02:00  INFO 79312 --- [SafetyNet] [main] c.S.c.FirestationControllerTest          : Starting FirestationControllerTest using Java 21.0.5 with PID 79312 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:56:25.228+02:00  INFO 79312 --- [SafetyNet] [main] c.S.c.FirestationControllerTest          : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:56:27.443+02:00  INFO 79312 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-31T14:56:27.444+02:00  INFO 79312 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-31T14:56:27.448+02:00  INFO 79312 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2025-03-31T14:56:27.513+02:00  INFO 79312 --- [SafetyNet] [main] c.S.c.FirestationControllerTest          : Started FirestationControllerTest in 3.015 seconds (process running for 8.474)
+2025-03-31T14:56:28.430+02:00  INFO 79312 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.controller.MedicalRecordControllerTest]: MedicalRecordControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:56:28.487+02:00  INFO 79312 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.controller.MedicalRecordControllerTest
+2025-03-31T14:56:28.566+02:00  INFO 79312 --- [SafetyNet] [main] c.S.c.MedicalRecordControllerTest        : Starting MedicalRecordControllerTest using Java 21.0.5 with PID 79312 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:56:28.567+02:00  INFO 79312 --- [SafetyNet] [main] c.S.c.MedicalRecordControllerTest        : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:56:28.982+02:00  INFO 79312 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-31T14:56:28.983+02:00  INFO 79312 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-31T14:56:28.984+02:00  INFO 79312 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-03-31T14:56:28.995+02:00  INFO 79312 --- [SafetyNet] [main] c.S.c.MedicalRecordControllerTest        : Started MedicalRecordControllerTest in 0.492 seconds (process running for 9.955)
+2025-03-31T14:56:29.253+02:00  INFO 79312 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.controller.PersonControllerTest]: PersonControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:56:29.286+02:00  INFO 79312 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.controller.PersonControllerTest
+2025-03-31T14:56:29.359+02:00  INFO 79312 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 79312 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:56:29.359+02:00  INFO 79312 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:56:29.763+02:00  INFO 79312 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-31T14:56:29.765+02:00  INFO 79312 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-31T14:56:29.765+02:00  INFO 79312 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2025-03-31T14:56:29.773+02:00  INFO 79312 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 0.478 seconds (process running for 10.735)
+2025-03-31T14:56:29.900+02:00  INFO 79312 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.SafetyNetApplicationTests]: SafetyNetApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:56:29.918+02:00  INFO 79312 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.SafetyNetApplicationTests
+2025-03-31T14:56:29.972+02:00  INFO 79312 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : Starting SafetyNetApplicationTests using Java 21.0.5 with PID 79312 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:56:29.973+02:00  INFO 79312 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:56:30.779+02:00  INFO 79312 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : Started SafetyNetApplicationTests in 0.847 seconds (process running for 11.74)
+2025-03-31T14:56:30.795+02:00  INFO 79312 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:56:30.810+02:00  INFO 79312 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:56:30.816+02:00  INFO 79312 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:56:37.915+02:00  INFO 77924 --- [SafetyNet] [main] c.S.controller.FirestationControllerIT   : Starting FirestationControllerIT using Java 21.0.5 with PID 77924 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:56:37.918+02:00  INFO 77924 --- [SafetyNet] [main] c.S.controller.FirestationControllerIT   : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:56:39.917+02:00  INFO 77924 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-31T14:56:39.918+02:00  INFO 77924 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-31T14:56:39.919+02:00  INFO 77924 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-03-31T14:56:39.956+02:00  INFO 77924 --- [SafetyNet] [main] c.S.controller.FirestationControllerIT   : Started FirestationControllerIT in 2.751 seconds (process running for 6.571)
+2025-03-31T14:56:39.993+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:56:40.089+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:56:40.095+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:56:41.398+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:56:41.400+02:00 ERROR 77924 --- [SafetyNet] [main] c.S.repository.FirestationRepository     : Impossible de supprimer, caserne non trouvée
+2025-03-31T14:56:41.400+02:00 ERROR 77924 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Echec de la suppression, caserne non trouvée
+2025-03-31T14:56:41.455+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:56:41.456+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.FirestationRepository     : La caserne a été supprimée avec succès
+2025-03-31T14:56:41.456+02:00  INFO 77924 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Caserne supprimée avec succès
+2025-03-31T14:56:41.533+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:56:41.534+02:00  INFO 77924 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:56:41.537+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.FirestationRepository     : Caserne créée avec succès : Firestation(address=18 bomberos St, station=2)
+2025-03-31T14:56:41.538+02:00  INFO 77924 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Caserne créée avec succès : Firestation(address=18 bomberos St, station=2)
+2025-03-31T14:56:41.577+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:56:41.578+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.FirestationRepository     : Caserne mise à jour avec succès : Firestation(address=1509 Culver St, station=1)
+2025-03-31T14:56:41.666+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:56:41.667+02:00  INFO 77924 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:56:41.692+02:00  INFO 77924 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.controller.MedicalRecordControllerIT]: MedicalRecordControllerIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:56:41.698+02:00  INFO 77924 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.controller.MedicalRecordControllerIT
+2025-03-31T14:56:41.729+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:56:41.737+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.MedicalRecordRepository   : Dossier médical ajouté avec succès : MedicalRecord(firstName=Harry, lastName=Potter, birthdate=1984-03-06, medications=[aznol:350mg, hydrapermazol:100mg], allergies=[nillacilan])
+2025-03-31T14:56:41.761+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:56:41.764+02:00 ERROR 77924 --- [SafetyNet] [main] c.S.repository.MedicalRecordRepository   : Impossible de supprimer, dossier inexistant pour Albus Dumbledore
+2025-03-31T14:56:41.765+02:00 ERROR 77924 --- [SafetyNet] [main] c.S.service.MedicalRecordService         : Impossible de supprimer, dossier non trouvé
+2025-03-31T14:56:41.776+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:56:41.778+02:00  INFO 77924 --- [SafetyNet] [main] c.S.service.MedicalRecordService         : Dossiers récupérés : 23
+2025-03-31T14:56:41.794+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:56:41.796+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.MedicalRecordRepository   : Dossier supprimé avec succès
+2025-03-31T14:56:41.796+02:00  INFO 77924 --- [SafetyNet] [main] c.S.service.MedicalRecordService         : Dossier supprimé avec succès
+2025-03-31T14:56:41.813+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:56:41.818+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.MedicalRecordRepository   : Dossier médical mis à jour avec succès : MedicalRecord(firstName=Roger, lastName=Boyd, birthdate=1984-03-06, medications=[aznol:350mg], allergies=[nillacilan])
+2025-03-31T14:56:41.831+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:56:41.832+02:00 ERROR 77924 --- [SafetyNet] [main] c.S.repository.MedicalRecordRepository   : Aucun dossier trouvé pour la mise à jour de MedicalRecord(firstName=Betty, lastName=Boop, birthdate=1984-03-06, medications=[aznol:350mg], allergies=[nillacilan])
+2025-03-31T14:56:41.832+02:00 ERROR 77924 --- [SafetyNet] [main] c.S.service.MedicalRecordService         : Echec de la mise à jour, dossier introuvable
+2025-03-31T14:56:41.843+02:00  INFO 77924 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.controller.PersonControllerIT]: PersonControllerIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:56:41.846+02:00  INFO 77924 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.controller.PersonControllerIT
+2025-03-31T14:56:41.867+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:56:41.869+02:00 ERROR 77924 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Aucune personne trouvée pour la mise à jour: Person(firstName=Hermione, lastName=Granger, address=123 Main St, city=city, zip=12345, phone=123-456-789, email=boyd@example.com)
+2025-03-31T14:56:41.877+02:00 ERROR 77924 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Mise à jour impossible, personne introuvable
+2025-03-31T14:56:41.889+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:56:41.890+02:00  INFO 77924 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:56:41.905+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:56:41.906+02:00  INFO 77924 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Nouvelle personne ajoutée avec succès : Person(firstName=John, lastName=Doe, address=123 Main St, city=city, zip=12345, phone=123-456-789, email=john@example.com)
+2025-03-31T14:56:41.915+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:56:41.918+02:00 ERROR 77924 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Impossible de supprimer : personne non trouvée
+2025-03-31T14:56:41.918+02:00 ERROR 77924 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Echec de la suppression: personne non trouvée
+2025-03-31T14:56:41.929+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:56:41.933+02:00  INFO 77924 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Personne mise à jour avec succès: Person(firstName=John, lastName=Boyd, address=123 Main St, city=city, zip=12345, phone=123-456-789, email=boyd@example.com)
+2025-03-31T14:56:41.942+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:56:41.943+02:00  INFO 77924 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Personne supprimée avec succès
+2025-03-31T14:56:41.943+02:00  INFO 77924 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Personne supprimée avec succès
+2025-03-31T14:56:41.951+02:00  INFO 77924 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.controller.ReportingControllerIT]: ReportingControllerIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:56:41.956+02:00  INFO 77924 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.controller.ReportingControllerIT
+2025-03-31T14:56:41.966+02:00  INFO 77924 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 22
+2025-03-31T14:56:41.967+02:00  INFO 77924 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personne vivant à cette adresse : 4
+2025-03-31T14:56:41.970+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:56:41.975+02:00  INFO 77924 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre d'enfants vivants a cette adresse : 2
+2025-03-31T14:56:41.995+02:00  INFO 77924 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 22
+2025-03-31T14:56:42.000+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:56:42.001+02:00  INFO 77924 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:56:42.002+02:00  INFO 77924 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre d'habitants à l'adresse 112 Steppes Pl : 3, couverts par la(les) caserne(s) [3, 4]
+2025-03-31T14:56:42.025+02:00  INFO 77924 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:56:42.026+02:00  INFO 77924 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 22
+2025-03-31T14:56:42.027+02:00  INFO 77924 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes rattachées à la station 1 : 6
+2025-03-31T14:56:42.027+02:00  INFO 77924 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre d'adultes : 5, et nombre d'enfants : {]
+2025-03-31T14:56:42.039+02:00  INFO 77924 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:56:42.041+02:00  INFO 77924 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 22
+2025-03-31T14:56:42.041+02:00  INFO 77924 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes rattachées à la station 2 : 5
+2025-03-31T14:56:42.051+02:00  INFO 77924 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.service.FirestationServiceIT]: FirestationServiceIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:56:42.078+02:00  INFO 77924 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.service.FirestationServiceIT
+2025-03-31T14:56:42.121+02:00  INFO 77924 --- [SafetyNet] [main] c.S.service.FirestationServiceIT         : Starting FirestationServiceIT using Java 21.0.5 with PID 77924 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:56:42.121+02:00  INFO 77924 --- [SafetyNet] [main] c.S.service.FirestationServiceIT         : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:56:42.488+02:00  INFO 77924 --- [SafetyNet] [main] c.S.service.FirestationServiceIT         : Started FirestationServiceIT in 0.404 seconds (process running for 9.103)
+2025-03-31T14:56:42.490+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:56:42.493+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:56:42.497+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:56:42.506+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:56:42.507+02:00  INFO 77924 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:56:42.507+02:00  INFO 77924 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:56:42.507+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.FirestationRepository     : Caserne créée avec succès : Firestation(address=112 Fire St, station=3)
+2025-03-31T14:56:42.507+02:00  INFO 77924 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Caserne créée avec succès : Firestation(address=112 Fire St, station=3)
+2025-03-31T14:56:42.507+02:00  INFO 77924 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 14
+2025-03-31T14:56:42.521+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:56:42.523+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.FirestationRepository     : La caserne a été supprimée avec succès
+2025-03-31T14:56:42.523+02:00  INFO 77924 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Caserne supprimée avec succès
+2025-03-31T14:56:42.530+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:56:42.531+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.FirestationRepository     : La caserne a été supprimée avec succès
+2025-03-31T14:56:42.532+02:00  INFO 77924 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Caserne supprimée avec succès
+2025-03-31T14:56:42.540+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:56:42.540+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.FirestationRepository     : La caserne a été supprimée avec succès
+2025-03-31T14:56:42.541+02:00  INFO 77924 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Caserne supprimée avec succès
+2025-03-31T14:56:42.547+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:56:42.548+02:00  INFO 77924 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:56:42.548+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.FirestationRepository     : Caserne mise à jour avec succès : Firestation(address=1509 Culver St, station=2)
+2025-03-31T14:56:42.549+02:00  INFO 77924 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:56:42.559+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:56:42.559+02:00  INFO 77924 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:56:42.567+02:00  INFO 77924 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.service.MedicalRecordServiceIT]: MedicalRecordServiceIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:56:42.572+02:00  INFO 77924 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.service.MedicalRecordServiceIT
+2025-03-31T14:56:42.590+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:56:42.602+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:56:42.604+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.MedicalRecordRepository   : Dossier médical mis à jour avec succès : MedicalRecord(firstName=Jacob, lastName=Boyd, birthdate=1989-03-06, medications=[pharmacol:5000mg, terazine:10mg, noznazol:250mg], allergies=[nillacilan])
+2025-03-31T14:56:42.612+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:56:42.613+02:00  INFO 77924 --- [SafetyNet] [main] c.S.service.MedicalRecordService         : Dossiers récupérés : 23
+2025-03-31T14:56:42.624+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:56:42.625+02:00  INFO 77924 --- [SafetyNet] [main] c.S.service.MedicalRecordService         : Dossiers récupérés : 23
+2025-03-31T14:56:42.626+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.MedicalRecordRepository   : Dossier médical ajouté avec succès : MedicalRecord(firstName=Harry, lastName=Potter, birthdate=1984-03-06, medications=[hydrapermazol:100mg], allergies=[nillacilan])
+2025-03-31T14:56:42.626+02:00  INFO 77924 --- [SafetyNet] [main] c.S.service.MedicalRecordService         : Dossiers récupérés : 24
+2025-03-31T14:56:42.635+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:56:42.636+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.MedicalRecordRepository   : Dossier supprimé avec succès
+2025-03-31T14:56:42.638+02:00  INFO 77924 --- [SafetyNet] [main] c.S.service.MedicalRecordService         : Dossier supprimé avec succès
+2025-03-31T14:56:42.638+02:00 ERROR 77924 --- [SafetyNet] [main] c.S.service.MedicalRecordService         : Aucun dossier trouvé avec ces informations
+2025-03-31T14:56:42.647+02:00  INFO 77924 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.service.PersonServiceIT]: PersonServiceIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:56:42.649+02:00  INFO 77924 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.service.PersonServiceIT
+2025-03-31T14:56:42.658+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:56:42.659+02:00  INFO 77924 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:56:42.665+02:00  INFO 77924 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:56:42.666+02:00  INFO 77924 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Nouvelle personne ajoutée avec succès : Person(firstName=Harry, lastName=Potter, address=321 Chemin de Traverse, city=London, zip=45654, phone=987-654-321, email=HarryPotter@poudlard.com)
+2025-03-31T14:56:42.667+02:00  INFO 77924 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 24
+2025-03-31T14:56:42.680+02:00  INFO 77924 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Personne mise à jour avec succès: Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874-6512, email=johnBoyd@email.com)
+2025-03-31T14:56:42.688+02:00  INFO 77924 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Personne supprimée avec succès
+2025-03-31T14:56:42.689+02:00  INFO 77924 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Personne supprimée avec succès
+2025-03-31T14:56:42.689+02:00 ERROR 77924 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Aucune personne trouvée avec ces informations
+2025-03-31T14:56:42.699+02:00  INFO 77924 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.service.ReportingServiceTestIT]: ReportingServiceTestIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:56:42.702+02:00  INFO 77924 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.service.ReportingServiceTestIT
+2025-03-31T14:56:42.711+02:00  INFO 77924 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:56:42.712+02:00  INFO 77924 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personne vivant à cette adresse : 5
+2025-03-31T14:56:42.712+02:00  INFO 77924 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre d'enfants vivants a cette adresse : 2
+2025-03-31T14:56:42.718+02:00  INFO 77924 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:56:42.721+02:00  INFO 77924 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:56:42.722+02:00  INFO 77924 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:56:42.722+02:00  INFO 77924 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre d'habitants à l'adresse 1509 Culver St : 5, couverts par la(les) caserne(s) [3]
+2025-03-31T14:56:42.734+02:00  INFO 77924 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:56:42.736+02:00  INFO 77924 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:56:42.736+02:00  INFO 77924 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes rattachées à la station 2 : 4
+2025-03-31T14:56:42.736+02:00  INFO 77924 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre d'adultes : 3, et nombre d'enfants : {]
+2025-03-31T14:56:42.763+02:00  INFO 77924 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:56:42.764+02:00  INFO 77924 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:56:42.764+02:00  INFO 77924 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes rattachées à la station 2 : 4
+2025-03-31T14:57:33.241+02:00  INFO 76716 --- [SafetyNet] [main] c.S.service.ReportingServiceTestIT       : Starting ReportingServiceTestIT using Java 21.0.5 with PID 76716 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:57:33.243+02:00  INFO 76716 --- [SafetyNet] [main] c.S.service.ReportingServiceTestIT       : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:57:35.609+02:00  INFO 76716 --- [SafetyNet] [main] c.S.service.ReportingServiceTestIT       : Started ReportingServiceTestIT in 2.827 seconds (process running for 4.119)
+2025-03-31T14:57:35.631+02:00  INFO 76716 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:57:35.703+02:00  INFO 76716 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:57:35.709+02:00  INFO 76716 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:57:36.613+02:00  INFO 76716 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:57:36.618+02:00  INFO 76716 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:57:36.619+02:00  INFO 76716 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes rattachées à la station 2 : 5
+2025-03-31T14:57:36.621+02:00  INFO 76716 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre d'adultes : 4, et nombre d'enfants : {]
+2025-03-31T14:59:07.847+02:00  INFO 77196 --- [SafetyNet] [main] c.S.c.FirestationControllerTest          : Starting FirestationControllerTest using Java 21.0.5 with PID 77196 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:59:07.849+02:00  INFO 77196 --- [SafetyNet] [main] c.S.c.FirestationControllerTest          : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:59:10.165+02:00  INFO 77196 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-31T14:59:10.166+02:00  INFO 77196 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-31T14:59:10.169+02:00  INFO 77196 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-03-31T14:59:10.240+02:00  INFO 77196 --- [SafetyNet] [main] c.S.c.FirestationControllerTest          : Started FirestationControllerTest in 3.17 seconds (process running for 7.841)
+2025-03-31T14:59:11.158+02:00  INFO 77196 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.controller.MedicalRecordControllerTest]: MedicalRecordControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:59:11.200+02:00  INFO 77196 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.controller.MedicalRecordControllerTest
+2025-03-31T14:59:11.290+02:00  INFO 77196 --- [SafetyNet] [main] c.S.c.MedicalRecordControllerTest        : Starting MedicalRecordControllerTest using Java 21.0.5 with PID 77196 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:59:11.291+02:00  INFO 77196 --- [SafetyNet] [main] c.S.c.MedicalRecordControllerTest        : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:59:11.794+02:00  INFO 77196 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-31T14:59:11.794+02:00  INFO 77196 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-31T14:59:11.796+02:00  INFO 77196 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-03-31T14:59:11.814+02:00  INFO 77196 --- [SafetyNet] [main] c.S.c.MedicalRecordControllerTest        : Started MedicalRecordControllerTest in 0.603 seconds (process running for 9.415)
+2025-03-31T14:59:12.122+02:00  INFO 77196 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.controller.PersonControllerTest]: PersonControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:59:12.158+02:00  INFO 77196 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.controller.PersonControllerTest
+2025-03-31T14:59:12.242+02:00  INFO 77196 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Starting PersonControllerTest using Java 21.0.5 with PID 77196 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:59:12.243+02:00  INFO 77196 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:59:12.634+02:00  INFO 77196 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-31T14:59:12.635+02:00  INFO 77196 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-31T14:59:12.636+02:00  INFO 77196 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-03-31T14:59:12.647+02:00  INFO 77196 --- [SafetyNet] [main] c.S.controller.PersonControllerTest      : Started PersonControllerTest in 0.479 seconds (process running for 10.248)
+2025-03-31T14:59:12.764+02:00  INFO 77196 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.SafetyNetApplicationTests]: SafetyNetApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:59:12.782+02:00  INFO 77196 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.SafetyNetApplicationTests
+2025-03-31T14:59:12.836+02:00  INFO 77196 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : Starting SafetyNetApplicationTests using Java 21.0.5 with PID 77196 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:59:12.837+02:00  INFO 77196 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:59:13.595+02:00  INFO 77196 --- [SafetyNet] [main] c.SafetyNet.SafetyNetApplicationTests    : Started SafetyNetApplicationTests in 0.8 seconds (process running for 11.196)
+2025-03-31T14:59:13.611+02:00  INFO 77196 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:59:13.628+02:00  INFO 77196 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:59:13.634+02:00  INFO 77196 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:59:21.131+02:00  INFO 76240 --- [SafetyNet] [main] c.S.controller.FirestationControllerIT   : Starting FirestationControllerIT using Java 21.0.5 with PID 76240 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:59:21.135+02:00  INFO 76240 --- [SafetyNet] [main] c.S.controller.FirestationControllerIT   : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:59:23.306+02:00  INFO 76240 --- [SafetyNet] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-03-31T14:59:23.307+02:00  INFO 76240 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-03-31T14:59:23.308+02:00  INFO 76240 --- [SafetyNet] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-03-31T14:59:23.353+02:00  INFO 76240 --- [SafetyNet] [main] c.S.controller.FirestationControllerIT   : Started FirestationControllerIT in 3.01 seconds (process running for 6.484)
+2025-03-31T14:59:23.413+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:59:23.537+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:59:23.545+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:59:25.039+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:59:25.040+02:00 ERROR 76240 --- [SafetyNet] [main] c.S.repository.FirestationRepository     : Impossible de supprimer, caserne non trouvée
+2025-03-31T14:59:25.041+02:00 ERROR 76240 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Echec de la suppression, caserne non trouvée
+2025-03-31T14:59:25.106+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:59:25.107+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.FirestationRepository     : La caserne a été supprimée avec succès
+2025-03-31T14:59:25.107+02:00  INFO 76240 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Caserne supprimée avec succès
+2025-03-31T14:59:25.200+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:59:25.202+02:00  INFO 76240 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:59:25.206+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.FirestationRepository     : Caserne créée avec succès : Firestation(address=18 bomberos St, station=2)
+2025-03-31T14:59:25.207+02:00  INFO 76240 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Caserne créée avec succès : Firestation(address=18 bomberos St, station=2)
+2025-03-31T14:59:25.284+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:59:25.286+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.FirestationRepository     : Caserne mise à jour avec succès : Firestation(address=1509 Culver St, station=1)
+2025-03-31T14:59:25.397+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:59:25.398+02:00  INFO 76240 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:59:25.431+02:00  INFO 76240 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.controller.MedicalRecordControllerIT]: MedicalRecordControllerIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:59:25.440+02:00  INFO 76240 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.controller.MedicalRecordControllerIT
+2025-03-31T14:59:25.476+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:59:25.478+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.MedicalRecordRepository   : Dossier médical ajouté avec succès : MedicalRecord(firstName=Harry, lastName=Potter, birthdate=1984-03-06, medications=[aznol:350mg, hydrapermazol:100mg], allergies=[nillacilan])
+2025-03-31T14:59:25.500+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:59:25.503+02:00 ERROR 76240 --- [SafetyNet] [main] c.S.repository.MedicalRecordRepository   : Impossible de supprimer, dossier inexistant pour Albus Dumbledore
+2025-03-31T14:59:25.504+02:00 ERROR 76240 --- [SafetyNet] [main] c.S.service.MedicalRecordService         : Impossible de supprimer, dossier non trouvé
+2025-03-31T14:59:25.517+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:59:25.520+02:00  INFO 76240 --- [SafetyNet] [main] c.S.service.MedicalRecordService         : Dossiers récupérés : 23
+2025-03-31T14:59:25.540+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:59:25.542+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.MedicalRecordRepository   : Dossier supprimé avec succès
+2025-03-31T14:59:25.544+02:00  INFO 76240 --- [SafetyNet] [main] c.S.service.MedicalRecordService         : Dossier supprimé avec succès
+2025-03-31T14:59:25.560+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:59:25.563+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.MedicalRecordRepository   : Dossier médical mis à jour avec succès : MedicalRecord(firstName=Roger, lastName=Boyd, birthdate=1984-03-06, medications=[aznol:350mg], allergies=[nillacilan])
+2025-03-31T14:59:25.577+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:59:25.579+02:00 ERROR 76240 --- [SafetyNet] [main] c.S.repository.MedicalRecordRepository   : Aucun dossier trouvé pour la mise à jour de MedicalRecord(firstName=Betty, lastName=Boop, birthdate=1984-03-06, medications=[aznol:350mg], allergies=[nillacilan])
+2025-03-31T14:59:25.580+02:00 ERROR 76240 --- [SafetyNet] [main] c.S.service.MedicalRecordService         : Echec de la mise à jour, dossier introuvable
+2025-03-31T14:59:25.595+02:00  INFO 76240 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.controller.PersonControllerIT]: PersonControllerIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:59:25.602+02:00  INFO 76240 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.controller.PersonControllerIT
+2025-03-31T14:59:25.622+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:59:25.624+02:00 ERROR 76240 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Aucune personne trouvée pour la mise à jour: Person(firstName=Hermione, lastName=Granger, address=123 Main St, city=city, zip=12345, phone=123-456-789, email=boyd@example.com)
+2025-03-31T14:59:25.628+02:00 ERROR 76240 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Mise à jour impossible, personne introuvable
+2025-03-31T14:59:25.645+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:59:25.649+02:00  INFO 76240 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:59:25.670+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:59:25.671+02:00  INFO 76240 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Nouvelle personne ajoutée avec succès : Person(firstName=John, lastName=Doe, address=123 Main St, city=city, zip=12345, phone=123-456-789, email=john@example.com)
+2025-03-31T14:59:25.683+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:59:25.685+02:00 ERROR 76240 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Impossible de supprimer : personne non trouvée
+2025-03-31T14:59:25.685+02:00 ERROR 76240 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Echec de la suppression: personne non trouvée
+2025-03-31T14:59:25.701+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:59:25.705+02:00  INFO 76240 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Personne mise à jour avec succès: Person(firstName=John, lastName=Boyd, address=123 Main St, city=city, zip=12345, phone=123-456-789, email=boyd@example.com)
+2025-03-31T14:59:25.721+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:59:25.723+02:00  INFO 76240 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Personne supprimée avec succès
+2025-03-31T14:59:25.723+02:00  INFO 76240 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Personne supprimée avec succès
+2025-03-31T14:59:25.732+02:00  INFO 76240 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.controller.ReportingControllerIT]: ReportingControllerIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:59:25.736+02:00  INFO 76240 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.controller.ReportingControllerIT
+2025-03-31T14:59:25.748+02:00  INFO 76240 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 22
+2025-03-31T14:59:25.751+02:00  INFO 76240 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personne vivant à cette adresse : 4
+2025-03-31T14:59:25.754+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:59:25.762+02:00  INFO 76240 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre d'enfants vivants a cette adresse : 2
+2025-03-31T14:59:25.781+02:00  INFO 76240 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 22
+2025-03-31T14:59:25.788+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:59:25.789+02:00  INFO 76240 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:59:25.790+02:00  INFO 76240 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre d'habitants à l'adresse 112 Steppes Pl : 3, couverts par la(les) caserne(s) [3, 4]
+2025-03-31T14:59:25.813+02:00  INFO 76240 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:59:25.815+02:00  INFO 76240 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 22
+2025-03-31T14:59:25.815+02:00  INFO 76240 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes rattachées à la station 1 : 6
+2025-03-31T14:59:25.816+02:00  INFO 76240 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre d'adultes : 5, et nombre d'enfants : {]
+2025-03-31T14:59:25.830+02:00  INFO 76240 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:59:25.831+02:00  INFO 76240 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 22
+2025-03-31T14:59:25.832+02:00  INFO 76240 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes rattachées à la station 2 : 5
+2025-03-31T14:59:25.842+02:00  INFO 76240 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.service.FirestationServiceIT]: FirestationServiceIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:59:25.870+02:00  INFO 76240 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.service.FirestationServiceIT
+2025-03-31T14:59:25.920+02:00  INFO 76240 --- [SafetyNet] [main] c.S.service.FirestationServiceIT         : Starting FirestationServiceIT using Java 21.0.5 with PID 76240 (started by mario in C:\Users\mario\Desktop\Formation Openclassrooms\Developpeur_application_JAVA\Projet_5\safetynet)
+2025-03-31T14:59:25.921+02:00  INFO 76240 --- [SafetyNet] [main] c.S.service.FirestationServiceIT         : No active profile set, falling back to 1 default profile: "default"
+2025-03-31T14:59:26.306+02:00  INFO 76240 --- [SafetyNet] [main] c.S.service.FirestationServiceIT         : Started FirestationServiceIT in 0.43 seconds (process running for 9.437)
+2025-03-31T14:59:26.308+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:59:26.312+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:59:26.315+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:59:26.326+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:59:26.326+02:00  INFO 76240 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:59:26.326+02:00  INFO 76240 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:59:26.327+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.FirestationRepository     : Caserne créée avec succès : Firestation(address=112 Fire St, station=3)
+2025-03-31T14:59:26.327+02:00  INFO 76240 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Caserne créée avec succès : Firestation(address=112 Fire St, station=3)
+2025-03-31T14:59:26.327+02:00  INFO 76240 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 14
+2025-03-31T14:59:26.340+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:59:26.342+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.FirestationRepository     : La caserne a été supprimée avec succès
+2025-03-31T14:59:26.342+02:00  INFO 76240 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Caserne supprimée avec succès
+2025-03-31T14:59:26.347+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:59:26.348+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.FirestationRepository     : La caserne a été supprimée avec succès
+2025-03-31T14:59:26.348+02:00  INFO 76240 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Caserne supprimée avec succès
+2025-03-31T14:59:26.355+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:59:26.355+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.FirestationRepository     : La caserne a été supprimée avec succès
+2025-03-31T14:59:26.355+02:00  INFO 76240 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Caserne supprimée avec succès
+2025-03-31T14:59:26.363+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:59:26.363+02:00  INFO 76240 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:59:26.364+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.FirestationRepository     : Caserne mise à jour avec succès : Firestation(address=1509 Culver St, station=2)
+2025-03-31T14:59:26.364+02:00  INFO 76240 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:59:26.373+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:59:26.373+02:00  INFO 76240 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:59:26.382+02:00  INFO 76240 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.service.MedicalRecordServiceIT]: MedicalRecordServiceIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:59:26.385+02:00  INFO 76240 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.service.MedicalRecordServiceIT
+2025-03-31T14:59:26.399+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:59:26.409+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:59:26.410+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.MedicalRecordRepository   : Dossier médical mis à jour avec succès : MedicalRecord(firstName=Jacob, lastName=Boyd, birthdate=1989-03-06, medications=[pharmacol:5000mg, terazine:10mg, noznazol:250mg], allergies=[nillacilan])
+2025-03-31T14:59:26.419+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:59:26.420+02:00  INFO 76240 --- [SafetyNet] [main] c.S.service.MedicalRecordService         : Dossiers récupérés : 23
+2025-03-31T14:59:26.427+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:59:26.428+02:00  INFO 76240 --- [SafetyNet] [main] c.S.service.MedicalRecordService         : Dossiers récupérés : 23
+2025-03-31T14:59:26.429+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.MedicalRecordRepository   : Dossier médical ajouté avec succès : MedicalRecord(firstName=Harry, lastName=Potter, birthdate=1984-03-06, medications=[hydrapermazol:100mg], allergies=[nillacilan])
+2025-03-31T14:59:26.429+02:00  INFO 76240 --- [SafetyNet] [main] c.S.service.MedicalRecordService         : Dossiers récupérés : 24
+2025-03-31T14:59:26.438+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de dossier medical : 23
+2025-03-31T14:59:26.439+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.MedicalRecordRepository   : Dossier supprimé avec succès
+2025-03-31T14:59:26.439+02:00  INFO 76240 --- [SafetyNet] [main] c.S.service.MedicalRecordService         : Dossier supprimé avec succès
+2025-03-31T14:59:26.439+02:00 ERROR 76240 --- [SafetyNet] [main] c.S.service.MedicalRecordService         : Aucun dossier trouvé avec ces informations
+2025-03-31T14:59:26.447+02:00  INFO 76240 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.service.PersonServiceIT]: PersonServiceIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:59:26.449+02:00  INFO 76240 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.service.PersonServiceIT
+2025-03-31T14:59:26.457+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre d'habitants : 23
+2025-03-31T14:59:26.457+02:00  INFO 76240 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:59:26.461+02:00  INFO 76240 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:59:26.461+02:00  INFO 76240 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Nouvelle personne ajoutée avec succès : Person(firstName=Harry, lastName=Potter, address=321 Chemin de Traverse, city=London, zip=45654, phone=987-654-321, email=HarryPotter@poudlard.com)
+2025-03-31T14:59:26.461+02:00  INFO 76240 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 24
+2025-03-31T14:59:26.469+02:00  INFO 76240 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Personne mise à jour avec succès: Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874-6512, email=johnBoyd@email.com)
+2025-03-31T14:59:26.474+02:00  INFO 76240 --- [SafetyNet] [main] c.SafetyNet.repository.PersonRepository  : Personne supprimée avec succès
+2025-03-31T14:59:26.474+02:00  INFO 76240 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Personne supprimée avec succès
+2025-03-31T14:59:26.474+02:00 ERROR 76240 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Aucune personne trouvée avec ces informations
+2025-03-31T14:59:26.478+02:00  INFO 76240 --- [SafetyNet] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.SafetyNet.service.ReportingServiceTestIT]: ReportingServiceTestIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-31T14:59:26.479+02:00  INFO 76240 --- [SafetyNet] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.SafetyNet.SafetyNetApplication for test class com.SafetyNet.service.ReportingServiceTestIT
+2025-03-31T14:59:26.484+02:00  INFO 76240 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:59:26.485+02:00  INFO 76240 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personne vivant à cette adresse : 5
+2025-03-31T14:59:26.485+02:00  INFO 76240 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre d'enfants vivants a cette adresse : 2
+2025-03-31T14:59:26.490+02:00  INFO 76240 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:59:26.492+02:00  INFO 76240 --- [SafetyNet] [main] c.S.repository.DataLoaderRepository      : Lecture du fichier ok, nombre de firestation : 13
+2025-03-31T14:59:26.493+02:00  INFO 76240 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:59:26.493+02:00  INFO 76240 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre d'habitants à l'adresse 1509 Culver St : 5, couverts par la(les) caserne(s) [3]
+2025-03-31T14:59:26.500+02:00  INFO 76240 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:59:26.501+02:00  INFO 76240 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:59:26.501+02:00  INFO 76240 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes rattachées à la station 2 : 4
+2025-03-31T14:59:26.502+02:00  INFO 76240 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre d'adultes : 3, et nombre d'enfants : {]
+2025-03-31T14:59:26.506+02:00  INFO 76240 --- [SafetyNet] [main] c.SafetyNet.service.FirestationService   : Nombre de casernes récupérées : 13
+2025-03-31T14:59:26.507+02:00  INFO 76240 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes récupérées : 23
+2025-03-31T14:59:26.507+02:00  INFO 76240 --- [SafetyNet] [main] com.SafetyNet.service.PersonService      : Nombre de personnes rattachées à la station 2 : 4
+2025-03-31T15:12:54.029+02:00  INFO 72812 --- [SafetyNet] [RMI TCP Connection(50)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-03-31T15:12:54.085+02:00  INFO 72812 --- [SafetyNet] [RMI TCP Connection(50)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-31T15:12:54.132+02:00  INFO 72812 --- [SafetyNet] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete

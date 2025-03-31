@@ -4,17 +4,22 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.SafetyNet.model.MedicalRecord;
 import com.SafetyNet.model.Person;
 
-import dto.ChildAlertDTO;
-import dto.ChildAlertDTO.ChildInfoDTO;
-import dto.ChildAlertDTO.ResidentInfoDTO;
+import dto.ChildrendInfoDTO;
+import dto.ChildrendInfoDTO.ChildInfoDTO;
+import dto.ChildrendInfoDTO.ResidentInfoDTO;
+import dto.FireInfoDTO;
+import dto.FireInfoDTO.MedicationRecord;
+import dto.FireInfoDTO.ResidentFireInfoDTO;
 import dto.FirestationCoverageDTO;
 import dto.PhoneNumberDTO;
 
@@ -31,8 +36,8 @@ public class ReportingService {
 	@Autowired
 	private AgeCalculatorService ageCalculatorService;
 
-//	@Autowired
-//	private MedicalRecord medicalRecord;
+	@Autowired
+	private MedicalRecordService medicalRecordService;
 
 	public FirestationCoverageDTO getFirestationCoverage(int stationNumber) {
 		logger.debug("Tentative de récupération des personnes couvertes par la caserne numéro : {}", stationNumber);
@@ -71,7 +76,7 @@ public class ReportingService {
 		return new FirestationCoverageDTO(coveredResidentDTO, nbOfAdults, nbOfChildren);
 	}
 
-	public ChildAlertDTO getChildAlert(String address) {
+	public ChildrendInfoDTO getChildInfoByAddress(String address) {
 		logger.debug("Tentative de récupération des enfants habitant à l'addresse {}", address);
 
 		List<Person> residents = personService.getAllPersons().stream()
@@ -83,7 +88,7 @@ public class ReportingService {
 			logger.error("Aucun résident connu a cette adresse");
 			return null;
 		}
-		
+
 		List<ChildInfoDTO> coveredChildren = new ArrayList<ChildInfoDTO>();
 
 		logger.debug("Récupération de l'age de chaque résident vivant à l'adresse {}", address);
@@ -106,10 +111,9 @@ public class ReportingService {
 			}
 		}
 		logger.info("Nombre d'enfants vivants a cette adresse : {}", coveredChildren.size());
-		return new ChildAlertDTO(coveredChildren);
+		return new ChildrendInfoDTO(coveredChildren);
 	}
-	
-	
+
 	public PhoneNumberDTO getPhoneNumber(int firestation) {
 		List<String> stationAddress = firestationService.findByStationNumber(firestation).stream()
 				.map(station -> station.getAddress()).toList();
@@ -123,15 +127,51 @@ public class ReportingService {
 				.filter(person -> stationAddress.contains(person.getAddress())).toList();
 
 		logger.info("Nombre de personnes rattachées à la station {} : {}", firestation, persons.size());
-		
+
 		Set<String> phoneNumber = new HashSet<String>();
-		
+
 		for (Person person : persons) {
 			phoneNumber.add(person.getPhone());
 		}
-		
 		return new PhoneNumberDTO(phoneNumber);
+	}
+
+	public FireInfoDTO getResidentInfoCaseOfFire(String address) {
+
+		logger.debug("Tentative de récupération des habitants vivant à l'adresse {}", address);
 		
+		List<Person> residents = personService.getAllPersons().stream()
+				.filter(resident -> resident.getAddress().equalsIgnoreCase(address)).toList();
+		
+		if(residents.isEmpty()) {
+			logger.error("Aucun habitant à l'adresse {}", address);
+			return null;
+		}
+
+		List<ResidentFireInfoDTO> residentFireInfo = new ArrayList<>();
+
+		for (Person resident : residents) {
+
+			List<MedicationRecord> medicationsRecord = new ArrayList<>();
+
+			int age = ageCalculatorService.calculatePersonAge(resident.getFirstName(), resident.getLastName());
+			
+			MedicalRecord medRecord = medicalRecordService.getMedicalRecord(resident.getFirstName(), resident.getLastName());
+
+			medicationsRecord.add(new MedicationRecord(medRecord.getMedications(), medRecord.getAllergies()));
+
+			ResidentFireInfoDTO residentInfo = new ResidentFireInfoDTO(resident.getLastName(), resident.getPhone(), age,
+					medicationsRecord);
+
+			residentFireInfo.add(residentInfo);
+		}
+
+		List<Integer> stationNumber = firestationService.getAllFirestation().stream()
+				.filter(station -> station.getAddress().equalsIgnoreCase(address)).map(station -> station.getStation())
+				.collect(Collectors.toList());
+
+		logger.info("Nombre d'habitants à l'adresse {} : {}, couverts par la(les) caserne(s) {}", address, residentFireInfo.size(), stationNumber);
+		return new FireInfoDTO(residentFireInfo, stationNumber);
 	}
 
 }

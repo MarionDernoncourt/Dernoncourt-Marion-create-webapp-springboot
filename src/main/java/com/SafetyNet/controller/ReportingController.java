@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.SafetyNet.service.ReportingService;
 
-import dto.ChildAlertDTO;
+import dto.ChildrendInfoDTO;
+import dto.FireInfoDTO;
 import dto.FirestationCoverageDTO;
 import dto.PhoneNumberDTO;
 
@@ -29,8 +30,8 @@ public class ReportingController {
 	}
 
 	@GetMapping("/childAlert")
-	public ResponseEntity<ChildAlertDTO> getChildAlert(@RequestParam String address) {
-		ChildAlertDTO coveredChildren = reportingService.getChildAlert(address);
+	public ResponseEntity<ChildrendInfoDTO> getChildInfoByAddress(@RequestParam String address) {
+		ChildrendInfoDTO coveredChildren = reportingService.getChildInfoByAddress(address);
 		if (coveredChildren == null) {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
@@ -46,5 +47,14 @@ public class ReportingController {
 		}
 		return ResponseEntity.status(HttpStatus.OK).body(phoneNumber);
 	}
-
+	
+	@GetMapping("/fire")
+	public ResponseEntity<FireInfoDTO> getResidentInfoCaseOfFire(@RequestParam String address) {
+		FireInfoDTO residents = reportingService.getResidentInfoCaseOfFire(address);
+		if(residents == null) {
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+		}
+		return ResponseEntity.status(HttpStatus.OK).body(residents);
+		}
+	
 }

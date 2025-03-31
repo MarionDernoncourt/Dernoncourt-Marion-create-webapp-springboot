@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ChildAlertDTO {
+public class ChildrendInfoDTO {
 
 	private List<ChildInfoDTO> coveredChildren;
 
