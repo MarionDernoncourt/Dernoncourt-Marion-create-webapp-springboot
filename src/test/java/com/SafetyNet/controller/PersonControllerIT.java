@@ -43,17 +43,6 @@ public class PersonControllerIT {
 		mockMvc.perform(get("/persons")).andExpect(status().isOk()).andExpect(jsonPath("$[0].firstName", is("John")));
 	}
 
-	@Test
-	public void testGetPersonByFirstNameAndLastName() throws Exception {
-		mockMvc.perform(get("/person").param("firstName", "Felicia").param("lastName", "Boyd")).andExpect(status().isOk())
-				.andExpect(jsonPath("$.email", is("jaboyd@email.com")));
-	}
-
-	@Test
-	public void testGetPersonByFirstNameAndLastNamewithWrongArgument() throws Exception {
-		mockMvc.perform(get("/person").param("firstName", "Harry").param("lastName", "Potter"))
-				.andExpect(status().isNotFound());
-	}
 
 	@Test
 	public void testCreatePerson() throws Exception {

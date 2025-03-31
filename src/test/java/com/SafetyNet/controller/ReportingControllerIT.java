@@ -1,6 +1,7 @@
 package com.SafetyNet.controller;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import org.junit.jupiter.api.Test;
@@ -20,5 +21,15 @@ public class ReportingControllerIT {
 	@Test
 	public void testGetFirestationCoverage() throws Exception {
 		mockMvc.perform(get("/firestation").param("stationNumber", "1")).andExpect(status().isOk());
+	}
+	
+	@Test
+	public void testGetChildAlert() throws Exception {
+		mockMvc.perform(get("/childAlert").param("address", "1509 Culver St")).andExpect(status().isOk()).andExpect(jsonPath("$.coveredChildren").isArray());
+	}
+	
+	@Test
+	public void testGetPhoneNumber() throws Exception {
+		mockMvc.perform(get("/phoneAlert").param("firestation", "2")).andExpect(status().isOk()).andExpect(jsonPath("$.phoneNumber").isArray());
 	}
 }
