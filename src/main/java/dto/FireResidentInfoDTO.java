@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class FireInfoDTO {
+public class FireResidentInfoDTO {
 
 	private List<ResidentFireInfoDTO> residents;
 	private List<Integer> stationNumber;
@@ -21,13 +21,13 @@ public class FireInfoDTO {
 		private String lastName;
 		private String phone;
 		private int age;
-		private List<MedicationRecord> medicationRecord;
+		private List<MedicationRecordFireInfo> medicationRecord;
 	}
 	
 	@Data
     @AllArgsConstructor
     @NoArgsConstructor
-    public static class MedicationRecord {
+    public static class MedicationRecordFireInfo {
 		private List<String> medications;
 		private List<String> allergies; 
 		}

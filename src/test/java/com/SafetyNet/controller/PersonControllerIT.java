@@ -38,6 +38,7 @@ public class PersonControllerIT {
 		dataLoaderRepository.setMedicalRecords(null);
 		dataLoaderRepository.setPersons(null);
 	}
+	
 	@Test
 	public void testGetAllPersons() throws Exception {
 		mockMvc.perform(get("/persons")).andExpect(status().isOk()).andExpect(jsonPath("$[0].firstName", is("John")));
