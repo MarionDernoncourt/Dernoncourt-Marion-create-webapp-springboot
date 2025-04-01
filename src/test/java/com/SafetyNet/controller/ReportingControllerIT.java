@@ -1,5 +1,6 @@
 package com.SafetyNet.controller;
 
+import static org.hamcrest.CoreMatchers.hasItem;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -34,17 +35,17 @@ public class ReportingControllerIT {
 
 	@Test
 	public void testGetResidentCoveredByFirestation() throws Exception {
-		mockMvc.perform(get("/firestation").param("stationNumber", "1")).andExpect(status().isOk());
+		mockMvc.perform(get("/firestation").param("stationNumber", "1")).andExpect(status().isOk()).andExpect(jsonPath("$.numberOfAdult").value(5));
 	}
 	
 	@Test
 	public void testGetChildrenInfoByAddress() throws Exception {
-		mockMvc.perform(get("/childAlert").param("address", "1509 Culver St")).andExpect(status().isOk()).andExpect(jsonPath("$.coveredChildren").isArray());
+		mockMvc.perform(get("/childAlert").param("address", "1509 Culver St")).andExpect(status().isOk()).andExpect(jsonPath("$.coveredChildren.length()").value(2));
 	}
 	
 	@Test
 	public void testGetPhoneNumberByFirestation() throws Exception {
-		mockMvc.perform(get("/phoneAlert").param("firestation", "2")).andExpect(status().isOk()).andExpect(jsonPath("$.phoneNumber").isArray());
+		mockMvc.perform(get("/phoneAlert").param("firestation", "2")).andExpect(status().isOk()).andExpect(jsonPath("$.phoneNumber.length()").value(4));
 	}
 	
 	@Test
@@ -54,11 +55,17 @@ public class ReportingControllerIT {
 	
 	@Test
 	public void testGetFloodInfoByStation() throws Exception {
-		mockMvc.perform(get("/flood").param("stations", "1,2")).andExpect(status().isOk()).andExpect(jsonPath("$[0].address").exists()).andExpect(jsonPath("$[0].residents").isArray());
+		mockMvc.perform(get("/flood").param("stations", "1,2")).andExpect(status().isOk()).andExpect(jsonPath("$[*].residents[0].lastName").value(hasItem("Duncan")));
 	}
 	
 	@Test
 	public void testGetResidentInfoByLastName() throws Exception {
-		mockMvc.perform(get("/personInfolastName={lastName}", "Boyd")).andExpect(status().isOk()).andExpect(jsonPath("$.residents[0]").exists());
+		mockMvc.perform(get("/personInfolastName={lastName}", "Boyd")).andExpect(status().isOk()).andExpect(jsonPath("$.residents.length()").value(6)).andExpect(jsonPath("$.residents[0].lastName").value("Boyd"));
+	}
+	
+	@Test
+	public void testGetEmailInfoByCity() throws Exception {
+		mockMvc.perform(get("/communityEmail").param("city", "Culver")).andExpect(status().isOk()).andExpect(jsonPath("$.emails.length()").value(23));
+		
 	}
 }

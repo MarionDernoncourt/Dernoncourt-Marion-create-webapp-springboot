@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.SafetyNet.service.ReportingService;
 
 import dto.ChildrendInfoDTO;
+import dto.EmailInfoDTO;
 import dto.FireResidentInfoDTO;
 import dto.FirestationCoverageDTO;
 import dto.FloodHouseholdInfoDTO;
@@ -42,42 +43,50 @@ public class ReportingController {
 		}
 		return ResponseEntity.status(HttpStatus.OK).body(coveredChildren);
 	}
-	
-	
+
 	@GetMapping("/phoneAlert")
 	public ResponseEntity<PhoneNumberDTO> getPhoneNumberByFirestation(@RequestParam int firestation) {
 		PhoneNumberDTO phoneNumber = reportingService.getPhoneNumberByFirestation(firestation);
-		if(phoneNumber == null) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).build()	;
+		if (phoneNumber == null) {
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 		return ResponseEntity.status(HttpStatus.OK).body(phoneNumber);
 	}
-	
+
 	@GetMapping("/fire")
 	public ResponseEntity<FireResidentInfoDTO> getFireInfoByAddress(@RequestParam String address) {
 		FireResidentInfoDTO residents = reportingService.getFireInfoByAddress(address);
-		if(residents == null) {
+		if (residents == null) {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 		return ResponseEntity.status(HttpStatus.OK).body(residents);
-		}
-	
+	}
+
 	@GetMapping("/flood")
 	public ResponseEntity<List<FloodHouseholdInfoDTO>> getFloodInfobyStation(@RequestParam List<Integer> stations) {
 		List<FloodHouseholdInfoDTO> residents = reportingService.getFloodInfobyStation(stations);
 		if (residents == null) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).build()	;
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 		return ResponseEntity.status(HttpStatus.OK).body(residents);
 	}
-	
+
 	@GetMapping("/personInfolastName={lastName}")
 	public ResponseEntity<ResidentInfoLByLastNameDTO> getResidentInfoByLastName(@PathVariable String lastName) {
 		ResidentInfoLByLastNameDTO residents = reportingService.getResidentInfoByLastName(lastName);
-		if(residents == null) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).build()	;
-					}
+		if (residents == null) {
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+		}
 		return ResponseEntity.status(HttpStatus.OK).body(residents);
 	}
-	
+
+	@GetMapping("/communityEmail")
+	public ResponseEntity<EmailInfoDTO> getEmailByCity(@RequestParam String city) {
+		EmailInfoDTO emails = reportingService.getEmailByCity(city);
+		if (emails == null) {
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+		}
+		return ResponseEntity.status(HttpStatus.OK).body(emails);
+	}
+
 }

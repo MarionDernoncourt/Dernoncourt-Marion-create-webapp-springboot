@@ -15,6 +15,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.SafetyNet.repository.DataLoaderRepository;
 
 import dto.ChildrendInfoDTO;
+import dto.EmailInfoDTO;
 import dto.FireResidentInfoDTO;
 import dto.FirestationCoverageDTO;
 import dto.FloodHouseholdInfoDTO;
@@ -38,8 +39,7 @@ class ReportingServiceTestIT {
 	@Test
 	public void testGetResidentCoveredByFirestation() {
 		FirestationCoverageDTO coveredPersons = reportingService.getResidentCoveredByFirestation(2);
-		assertTrue(coveredPersons.getCoveredResident().size() > 0);
-		assertTrue(coveredPersons.getNumberOfAdult() > 0);
+		assertEquals(4, coveredPersons.getNumberOfAdult());
 	}
 
 	@Test
@@ -51,25 +51,30 @@ class ReportingServiceTestIT {
 	@Test
 	public void testGetPhoneNumberByFirestation() {
 		PhoneNumberDTO phoneNumber = reportingService.getPhoneNumberByFirestation(2);
-		assertFalse((phoneNumber.getPhoneNumber().isEmpty()));
+		assertEquals(4, phoneNumber.getPhoneNumber().size());
 	}
 
 	@Test
 	public void testGetFireInfoByAddress() {
 		FireResidentInfoDTO residentInfo = reportingService.getFireInfoByAddress("1509 Culver St");
-		assertFalse(residentInfo.getResidents().isEmpty());
+		assertEquals(5, residentInfo.getResidents().size());
 		assertEquals(List.of(3), residentInfo.getStationNumber());
 	}
 	
 	@Test
 	public void testGetFloodInfoByStation() {
 		List<FloodHouseholdInfoDTO> householdsInfo = reportingService.getFloodInfobyStation(List.of(1,4));
-		assertFalse(householdsInfo.isEmpty());
+		assertEquals(5, householdsInfo.size());
 	}
 	
 	@Test
 	public void testGetResidentInfoByLastName() {
 		ResidentInfoLByLastNameDTO residents = reportingService.getResidentInfoByLastName("Cadigan");
-		assertNotNull(residents);
+		assertEquals("951 LoneTree Rd", residents.getResidents().get(0).getAddress());
+	}
+	
+	@Test void testGetEmailByCity() {
+		EmailInfoDTO emails = reportingService.getEmailByCity("Culver");
+		assertEquals(23, emails.getEmails().size());
 	}
 }

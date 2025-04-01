@@ -17,6 +17,7 @@ import com.SafetyNet.model.Person;
 import dto.ChildrendInfoDTO;
 import dto.ChildrendInfoDTO.ChildInfoDTO;
 import dto.ChildrendInfoDTO.ResidentInfoDTO;
+import dto.EmailInfoDTO;
 import dto.FireResidentInfoDTO;
 import dto.FireResidentInfoDTO.MedicationRecordFireInfo;
 import dto.FireResidentInfoDTO.ResidentFireInfoDTO;
@@ -230,7 +231,7 @@ public class ReportingService {
 	}
 
 	public ResidentInfoLByLastNameDTO getResidentInfoByLastName(String lastName) {
-
+logger.info("Tentative de récupération des informations concernant les résidents portant le nom {}", lastName);
 		List<Resident> residents = new ArrayList<>();
 
 		List<Person> persons = personService.getAllPersons().stream()
@@ -254,8 +255,25 @@ public class ReportingService {
 
 			residents.add(new Resident(person.getLastName(), person.getAddress(), age, person.getEmail(), medicationsRecord));
 		}
-		
+		logger.info("Nombre de résidents avec le nom {} : {}", lastName, residents.size());
 		return new ResidentInfoLByLastNameDTO(residents);
+	}
+	
+	public EmailInfoDTO getEmailByCity(String city) {
+		logger.debug("Tentative de récupération des mails des habitants de {]", city);
+		List<String> emails = new ArrayList<String>()	;
+		
+		List<Person> residents = personService.getAllPersons().stream().filter(person -> person.getCity().equalsIgnoreCase(city)).toList()	;
+		
+		if(residents.isEmpty()) {
+			logger.error("Aucun habitant trouvé dans la ville {}", city);
+			return null;
+		}
+		for(Person resident : residents) {
+			emails.add(resident.getEmail());
+		}
+		logger.info("Nombre de mails récupérés : {}", emails.size());
+		return new EmailInfoDTO(emails);
 	}
 
 }
