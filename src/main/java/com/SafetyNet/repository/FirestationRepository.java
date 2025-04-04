@@ -61,24 +61,29 @@ public class FirestationRepository implements IFirestationRepository {
 		logger.debug("Accès aux données, suppression de(s) la caserne(s) : {} {}", address, stationNumber);
 
 		List<Firestation> firestations = dataLoaderRepository.getAllFirestation();
-		
-		if (address == null && stationNumber == null) {
-			logger.error("Aucun paramètre fourni pour la suppression");
-			return false;
-		}
-		boolean firestationRemoved = firestations
-				.removeIf(station -> 
-				(address == null || station.getAddress().equalsIgnoreCase(address)) &&
-				(stationNumber == null || Objects.equals(station.getStation(), stationNumber))); // Objects.equals pour comparer int et Integer
 
-		if (firestationRemoved) {
+		boolean removed = false;
+
+		if (address == null && stationNumber != null) {
+
+			removed = firestations.removeIf(station -> Objects.equals(station.getStation(), stationNumber));
+
+		} else if (address != null && stationNumber == null) {
+
+			removed = firestations.removeIf(station -> (station.getAddress().equalsIgnoreCase(address)));
+
+		} else if (address != null && stationNumber != null) {
+			removed = firestations.removeIf(station -> station.getAddress().equalsIgnoreCase(address)
+					&& Objects.equals(station.getStation(), stationNumber));
+
+		}
+		if (removed) {
 			logger.info("La caserne a été supprimée avec succès");
 		} else {
-			logger.error("Impossible de supprimer, caserne non trouvée");
+			logger.error("Aucune caserne supprimée : adresse ou numéro de station non trouvé");
 		}
-		return firestationRemoved;
-	}
+		return removed;
 
-	
+	}
 
 }

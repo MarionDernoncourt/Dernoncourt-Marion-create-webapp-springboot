@@ -46,14 +46,15 @@ public class PersonRepository implements IPersonRepository {
 
 		dataLoaderRepository.getAllPersons().add(person);
 
-		logger.info("Nouvelle personne ajoutée avec succès : {}", person);
 		return person;
 	}
 
 	@Override
 	public Person updatePerson(Person person) {
+		logger.debug("Accès aux données, mis à jour de {} {}", person.getFirstName(), person.getLastName());
+
 		List<Person> persons = dataLoaderRepository.getAllPersons();
-		logger.debug("Accès aux données, mis à jour de {} {}", person);
+		
 		for (Person resident : persons) {
 			if (resident.getFirstName().equalsIgnoreCase(person.getFirstName())
 					&& resident.getLastName().equalsIgnoreCase(person.getLastName())) {
@@ -76,13 +77,8 @@ public class PersonRepository implements IPersonRepository {
 		logger.debug("Accès aux données: suppression de {} {}", firstName, lastName);
 		boolean personRemoved = persons.removeIf(person -> person.getFirstName().equalsIgnoreCase(firstName)
 				&& person.getLastName().equalsIgnoreCase(lastName));
-		if (personRemoved) {
-			logger.info("Personne supprimée avec succès");
-		} else {
-			logger.error("Impossible de supprimer : personne non trouvée");
-		}
+
 		return personRemoved;
 	}
-
 
 }

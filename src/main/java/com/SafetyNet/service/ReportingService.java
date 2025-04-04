@@ -60,8 +60,6 @@ public class ReportingService {
 		List<Person> persons = personService.getAllPersons().stream()
 				.filter(person -> stationAddress.contains(person.getAddress())).toList();
 
-		logger.info("Nombre de personnes rattachées à la station {} : {}", stationNumber, persons.size());
-
 		List<FirestationCoverageDTO.ResidentInfoDTO> coveredResidentDTO = persons.stream()
 				.map(person -> new FirestationCoverageDTO.ResidentInfoDTO(person.getFirstName(), person.getLastName(),
 						person.getAddress(), person.getPhone()))
@@ -88,8 +86,6 @@ public class ReportingService {
 
 		List<Person> residents = personService.getAllPersons().stream()
 				.filter(resident -> resident.getAddress().equalsIgnoreCase(address)).toList();
-
-		logger.info("Nombre de personne vivant à cette adresse : {}", residents.size());
 
 		if (residents.isEmpty()) {
 			logger.error("Aucun résident connu a cette adresse");
@@ -122,6 +118,8 @@ public class ReportingService {
 	}
 
 	public PhoneNumberDTO getPhoneNumberByFirestation(int firestation) {
+		logger.debug("Tentative de récupération des numéro de téléphone rattachés aux station {}", firestation);
+
 		List<String> stationAddress = firestationService.findByStationNumber(firestation).stream()
 				.map(station -> station.getAddress()).toList();
 
@@ -132,8 +130,6 @@ public class ReportingService {
 
 		List<Person> persons = personService.getAllPersons().stream()
 				.filter(person -> stationAddress.contains(person.getAddress())).toList();
-
-		logger.info("Nombre de personnes rattachées à la station {} : {}", firestation, persons.size());
 
 		Set<String> phoneNumber = new HashSet<String>();
 
@@ -195,7 +191,7 @@ public class ReportingService {
 
 			if (stationsAddress.isEmpty()) {
 				logger.error("Le numéro de caserne {} n'est pas connu", station);
-
+				return null;
 			}
 			for (String address : stationsAddress) {
 				logger.debug("Tentative de récupération des résident habitant à l'addresse {}", address);
@@ -221,7 +217,6 @@ public class ReportingService {
 							medicationsRecord));
 				}
 
-				logger.info("Nombre de résidents habitant à l'adresse {} : {}", address, residents.size());
 				households.add(new FloodHouseholdInfoDTO(address, residentInfo));
 
 			}
@@ -231,45 +226,53 @@ public class ReportingService {
 	}
 
 	public ResidentInfoLByLastNameDTO getResidentInfoByLastName(String lastName) {
-logger.info("Tentative de récupération des informations concernant les résidents portant le nom {}", lastName);
+		logger.debug("Tentative de récupération des informations concernant les résidents portant le nom {}", lastName);
+
 		List<Resident> residents = new ArrayList<>();
 
 		List<Person> persons = personService.getAllPersons().stream()
 				.filter(person -> person.getLastName().equalsIgnoreCase(lastName)).toList();
-	
-		if(persons.isEmpty()) {
+
+		if (persons.isEmpty()) {
 			logger.error("Aucun résident trouvé pour le nom {}", lastName);
 			return null;
 		}
-		for(Person person : persons) {
-		
+		for (Person person : persons) {
+			logger.debug("Tentative de récupération des information du résident {} {}", person.getFirstName(),
+					person.getLastName());
+
 			int age = ageCalculatorService.calculatePersonAge(person.getFirstName(), person.getLastName());
-			
+
 			List<MedicationRecordByLastName> medicationsRecord = new ArrayList<>();
-		
+
 			MedicalRecord medRecord = medicalRecordService.getMedicalRecord(person.getFirstName(),
 					person.getLastName());
 
-			medicationsRecord
-					.add(new MedicationRecordByLastName(medRecord.getMedications(), medRecord.getAllergies()));
+			medicationsRecord.add(new MedicationRecordByLastName(medRecord.getMedications(), medRecord.getAllergies()));
 
-			residents.add(new Resident(person.getLastName(), person.getAddress(), age, person.getEmail(), medicationsRecord));
+			residents.add(
+					new Resident(person.getLastName(), person.getAddress(), age, person.getEmail(), medicationsRecord));
 		}
+
 		logger.info("Nombre de résidents avec le nom {} : {}", lastName, residents.size());
 		return new ResidentInfoLByLastNameDTO(residents);
 	}
-	
+
 	public EmailInfoDTO getEmailByCity(String city) {
 		logger.debug("Tentative de récupération des mails des habitants de {]", city);
-		List<String> emails = new ArrayList<String>()	;
-		
-		List<Person> residents = personService.getAllPersons().stream().filter(person -> person.getCity().equalsIgnoreCase(city)).toList()	;
-		
-		if(residents.isEmpty()) {
+
+		List<String> emails = new ArrayList<String>();
+
+		List<Person> residents = personService.getAllPersons().stream()
+				.filter(person -> person.getCity().equalsIgnoreCase(city)).toList();
+
+		if (residents.isEmpty()) {
 			logger.error("Aucun habitant trouvé dans la ville {}", city);
 			return null;
 		}
-		for(Person resident : residents) {
+		for (Person resident : residents) {
+			logger.debug("Tentative de récupération de l'email du résident {} {}", resident.getFirstName(),
+					resident.getLastName());
 			emails.add(resident.getEmail());
 		}
 		logger.info("Nombre de mails récupérés : {}", emails.size());

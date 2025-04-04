@@ -21,30 +21,28 @@ public class PersonService {
 	public List<Person> getAllPersons() {
 		logger.debug("Récupération de toutes les personnes");
 		List<Person> persons = personRepository.getAllPersons();
-		if (persons.isEmpty()) {
-			logger.error("Aucune personne trouvée");
-		}
-		logger.info("Nombre de personnes récupérées : {}", persons.size());
+
 		return persons;
 	}
 
 	public Person getPersonByFirstNameAndLastName(String firstName, String lastName) {
 		logger.debug("Recherche d'une personne avec son nom et prénom : {} {}", firstName, lastName);
 		Person person = personRepository.getPersonByFirstNameAndLastName(firstName, lastName);
+
 		if (person == null) {
-			logger.error("Aucune personne trouvée avec ces informations");
+			logger.error("Aucune personne trouvée avec ces informations : {} {}", firstName, lastName);
+			return null;
 		}
 		return person;
 	}
 
 	public Person createPerson(Person person) {
 		logger.debug("Tentative de la création de la personne : {}", person);
-
 		List<Person> persons = personRepository.getAllPersons();
+
 		for (Person resident : persons) {
 			if (resident.getFirstName().equalsIgnoreCase(person.getFirstName())
 					&& resident.getLastName().equalsIgnoreCase(person.getLastName())) {
-				logger.error("Cette personne existe déjà : {}", person);
 				return null;
 			}
 		}
@@ -59,6 +57,7 @@ public class PersonService {
 		Person updated = personRepository.updatePerson(person);
 		if (updated == null) {
 			logger.error("Mise à jour impossible, personne introuvable");
+			return null;
 		}
 		return updated;
 	}
@@ -66,11 +65,7 @@ public class PersonService {
 	public boolean deletePerson(String firstName, String lastName) {
 		logger.debug("Tentative de suppression de la personne : {} {}", firstName, lastName);
 		boolean deleted = personRepository.deletePerson(firstName, lastName);
-		if (deleted) {
-			logger.info("Personne supprimée avec succès");
-		} else {
-			logger.error("Echec de la suppression: personne non trouvée");
-		}
+	
 		return deleted;
 	}
 

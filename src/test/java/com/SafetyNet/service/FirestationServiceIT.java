@@ -21,8 +21,6 @@ public class FirestationServiceIT {
 	@Autowired
 	private FirestationService firestationService;
 
-	@Autowired
-	private FirestationRepository firestationRepository;
 
 	@Autowired
 	private DataLoaderRepository dataLoaderRepository;
