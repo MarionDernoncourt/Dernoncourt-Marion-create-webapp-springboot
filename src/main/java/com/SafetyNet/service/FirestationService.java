@@ -1,19 +1,16 @@
 package com.SafetyNet.service;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.SafetyNet.model.Firestation;
 import com.SafetyNet.repository.IFirestationRepository;
-import com.SafetyNet.repository.PersonRepository;
 
 @Service
 public class FirestationService {
