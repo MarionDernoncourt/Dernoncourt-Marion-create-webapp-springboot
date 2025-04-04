@@ -56,3 +56,4 @@
 2025-04-04T14:53:27.811+02:00  INFO 92808 --- [SafetyNet] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2025-04-04T14:53:27.812+02:00  INFO 92808 --- [SafetyNet] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2025-04-04T14:53:27.908+02:00 ERROR 92808 --- [SafetyNet] [http-nio-8080-exec-2] com.SafetyNet.service.PersonService      : Aucune caserne n'est rattachée au numéro de station 5
+coucoucoucocu
