@@ -30,6 +30,29 @@ import dto.ResidentInfoLByLastNameDTO;
 import dto.ResidentInfoLByLastNameDTO.MedicationRecordByLastName;
 import dto.ResidentInfoLByLastNameDTO.Resident;
 
+/**
+ * Ce service gère la logique métier pour les différents reporting sur les
+ * résidents : couverture par les casernes de pompiers, enfants vivant à une
+ * adresse, numéros de téléphone rattachés a un numéro de caserne, informations
+ * en cas d'incendie, d'inondations, récupération des données par un nom de
+ * famille, récupération des emails des résidents d'une ville donnée.
+ * 
+ * Utilise {@link FirestationService}, {@link PersonService},
+ * {@link AgeCalculatorService}, {@link MedicalRecordService} pour récupérer les
+ * données nécessaires
+ * 
+ * @see FirestationService
+ * @see PersonService
+ * @see AgeCalculatorService
+ * @see MedicalRecordService
+ * @see FirestationCoverageDTO
+ * @see ChildrendInfoDTO
+ * @see PhoneNumberDTO
+ * @see FireResidentInfoDTO
+ * @see FloodHouseholdInfoDTO
+ * @see ResidentInfoLByLastNameDTO
+ * @see EmailInfoDTO
+ */
 @Service
 public class ReportingService {
 	private static final Logger logger = LoggerFactory.getLogger(PersonService.class);
@@ -46,6 +69,14 @@ public class ReportingService {
 	@Autowired
 	private MedicalRecordService medicalRecordService;
 
+	/**
+	 * Récupère les résidents couvets par un numéro de caserne donné
+	 * 
+	 * @param stationNumber : numéro de station
+	 * @return un objet {@link FirestationCoverageDTO} contenant une liste de
+	 *         résidents ainsi que le nombre d'adultes et d'enfants, ou null si le
+	 *         numéro de station n'est pas connu
+	 */
 	public FirestationCoverageDTO getResidentCoveredByFirestation(int stationNumber) {
 		logger.debug("Tentative de récupération des personnes couvertes par la caserne numéro : {}", stationNumber);
 
@@ -81,6 +112,13 @@ public class ReportingService {
 		return new FirestationCoverageDTO(coveredResidentDTO, nbOfAdults, nbOfChildren);
 	}
 
+	/**
+	 * Récupère les enfants vivant à l'adresse fournie en paramètre
+	 * 
+	 * @param address : adresse dont souhaite connaitre les enfants y vivant
+	 * @return un objet {@link ChildrendInfoDTO} contenant une liste d'enfant vivant
+	 *         a cette adresse, ou null si aucun résident n'habite à cette adresse
+	 */
 	public ChildrendInfoDTO getChildrenInfoByAddress(String address) {
 		logger.debug("Tentative de récupération des enfants habitant à l'addresse {}", address);
 
@@ -117,6 +155,14 @@ public class ReportingService {
 		return new ChildrendInfoDTO(coveredChildren);
 	}
 
+	/**
+	 * Récupère les numéros de téléphone des résidents desservis par le numéro de
+	 * caserne fourni
+	 * 
+	 * @param firestation: numéro de station
+	 * @return un objet {@link PhoneNumberDTO} contenant une liste de numéro de
+	 *         téléphone, ou null si le numéro de station n'est pas connu
+	 */
 	public PhoneNumberDTO getPhoneNumberByFirestation(int firestation) {
 		logger.debug("Tentative de récupération des numéro de téléphone rattachés aux station {}", firestation);
 
@@ -139,6 +185,15 @@ public class ReportingService {
 		return new PhoneNumberDTO(phoneNumber);
 	}
 
+	/**
+	 * Récupère les informations sur les résidents d'une adresse donnée
+	 * 
+	 * @param address : adresse
+	 * @return un objet {@link FireResidentInfoDTO} contenant une liste des
+	 *         résidents vivant à l'adresse donnée ainsi que les numéros de caserne
+	 *         desservant l'adresse donnée ou null si aucun habitant n'est trouvé à
+	 *         cette adresse
+	 */
 	public FireResidentInfoDTO getFireInfoByAddress(String address) {
 
 		logger.debug("Tentative de récupération des habitants vivant à l'adresse {}", address);
@@ -179,6 +234,14 @@ public class ReportingService {
 		return new FireResidentInfoDTO(residentFireInfo, stationNumber);
 	}
 
+	/**
+	 * Récupère les informations des habitants en cas d'inondation selon une liste
+	 * de numéro de station donnée
+	 * 
+	 * @param stations : liste des stations
+	 * @return un objet {@link FloodHouseholdInfoDTO} contenant une liste des foyers
+	 *         desservis par les stations données en paramètre
+	 */
 	public List<FloodHouseholdInfoDTO> getFloodInfobyStation(List<Integer> stations) {
 
 		logger.debug("Tentative de récupération des foyers desservis par la liste de casernes :{}", stations);
@@ -225,6 +288,13 @@ public class ReportingService {
 		return households;
 	}
 
+	/**
+	 * Récupère les informations des résidents selon le nom de famille donnée
+	 * 
+	 * @param lastName : nom de famille
+	 * @return un objet {@link ResidentInfoLByLastNameDTO} contenant une liste de
+	 *         résident avec les informations nécessaires pour chaque habitant
+	 */
 	public ResidentInfoLByLastNameDTO getResidentInfoByLastName(String lastName) {
 		logger.debug("Tentative de récupération des informations concernant les résidents portant le nom {}", lastName);
 
@@ -258,6 +328,13 @@ public class ReportingService {
 		return new ResidentInfoLByLastNameDTO(residents);
 	}
 
+	
+	/**
+	 * Récupère les emails des habitants d'une ville donnée
+	 * 
+	 * @param city : ville pour laquelle on souhaite récupérer les emails	 
+	 * @return un objet {@link EmailInfoDTO} contenant une liste d'emails
+	 */
 	public EmailInfoDTO getEmailByCity(String city) {
 		logger.debug("Tentative de récupération des mails des habitants de {]", city);
 

@@ -12,7 +12,7 @@ public class AgeCalculatorService {
 	@Autowired
 	private MedicalRecordService medicalRecordService;
 
-	public int calculateAge(LocalDate birthdate)  {
+	public int calculateAge(LocalDate birthdate) {
 
 		LocalDate now = LocalDate.now();
 		if (birthdate == null) {
@@ -24,10 +24,8 @@ public class AgeCalculatorService {
 		return Period.between(birthdate, now).getYears();
 	}
 
-
-
 	public int calculatePersonAge(String firstName, String lastName) {
-System.out.println(firstName);
+	
 		LocalDate birthdate = medicalRecordService.getMedicalRecord(firstName, lastName).getBirthdate();
 		if (birthdate == null) {
 			throw new IllegalArgumentException("Birthdate est NULL");

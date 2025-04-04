@@ -22,6 +22,26 @@ import dto.FloodHouseholdInfoDTO;
 import dto.PhoneNumberDTO;
 import dto.ResidentInfoLByLastNameDTO;
 
+/**
+ * Controller REST pour du reporting sur les informations de sécurité des
+ * résidents. Ce controller expose des API permettant de récupérer des données
+ * liées aux résidents : couverture par les casernes de pompiers, enfants vivant
+ * à une adresse, numéros de téléphone rattachés a un numéro de caserne,
+ * informations en cas d'incendie, d'inondations, récupération des données par
+ * un nom de famille, récupération des emails des résidents d'une ville donnée.
+ * 
+ * Utilise {@link Reporting Service} pour la logique métier et renvoie des
+ * réponses sous forme de DTOs.
+ * 
+ * @see ReportingService
+ * @see FirestationCoverageDTO
+ * @see ChildrendInfoDTO
+ * @see PhoneNumberDTO
+ * @see FireResidentInfoDTO
+ * @see FloodHouseholdInfoDTO
+ * @see ResidentInfoLByLastNameDTO
+ * @see EmailInfoDTO
+ */
 @RestController
 public class ReportingController {
 
@@ -30,6 +50,16 @@ public class ReportingController {
 	@Autowired
 	public ReportingService reportingService;
 
+	/**
+	 * Récupère les informations concernant les résidents couverts par une caserne
+	 * de pompiers donnée.
+	 * 
+	 * @param stationNumber:Numéro de la caserne dont on souhaite connaitre les
+	 *                             résidents couverts
+	 * @return Reponse HTTP avec un objet {@link FirestationCoverageDTO} contenant
+	 *         les informations des résidents couvets, ou une erruer 404 NOT FOUND
+	 *         si le numéro de caserne n'est pas trouvé
+	 */
 	@GetMapping("/firestation")
 	public ResponseEntity<FirestationCoverageDTO> getResidentCoveredByFirestation(@RequestParam int stationNumber) {
 		logger.debug("Requete reçue GET firestation coverage with stationNumber : {}", stationNumber);
@@ -51,6 +81,14 @@ public class ReportingController {
 		}
 	}
 
+	/**
+	 * Récupère les informations concernant les enfants vivant à une adresse donnée
+	 * 
+	 * @param address : adresse pour laquelle on souhaite obtenir les informations
+	 * @return Réponse HTTP avec un objet {@link ChildrendInfoDTO} concernant les
+	 *         informations des enfants vivant à l'adresse donnée, ou une erreur 404
+	 *         si aucun résident à l'adresse fournie.
+	 */
 	@GetMapping("/childAlert")
 	public ResponseEntity<ChildrendInfoDTO> getChildrenInfoByAddress(@RequestParam String address) {
 		logger.debug("Requete reçue GET childAlert, enfants vivant à l'adresse {}", address);
@@ -72,6 +110,16 @@ public class ReportingController {
 
 	}
 
+	/**
+	 * Récupère les numéros de téléphone des habitants rattachés à un numéro de
+	 * caserne donné.
+	 * 
+	 * @param firestation : numéro de station dont on souhaite connaitre les numéros
+	 *                    de téléphone rattachés
+	 * @return une réponse HTTP avec un objet {@link PhoneNumberDTO} contenant une
+	 *         liste de numéro de téléphone, ou une erreur 404 si le numéro de
+	 *         station n'est pas trouvé
+	 */
 	@GetMapping("/phoneAlert")
 	public ResponseEntity<PhoneNumberDTO> getPhoneNumberByFirestation(@RequestParam int firestation) {
 		logger.debug(
@@ -80,8 +128,11 @@ public class ReportingController {
 		try {
 			PhoneNumberDTO phoneNumber = reportingService.getPhoneNumberByFirestation(firestation);
 			if (phoneNumber == null) {
+				logger.error("Réponse 404 NOT FOUND, le numéro de station {} n'est pas connu", firestation);
 				return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 			}
+			logger.info("Réponse reçue 200 OK, nombre de numéros de téléphone récupérés : {}",
+					phoneNumber.getPhoneNumber().size());
 			return ResponseEntity.status(HttpStatus.OK).body(phoneNumber);
 		} catch (Exception e) {
 			logger.error(
@@ -92,14 +143,27 @@ public class ReportingController {
 
 	}
 
+	/**
+	 * Récupère les informationssur les résidents vivant à une adresse en cas
+	 * d'incendie.
+	 * 
+	 * @param address : L'adresse pour laquelle on souhaite obtenir les informations
+	 *                sur les résidents
+	 * @return une réponse HTTP avec un objet {@link FireResidentInfoDTO} contenant
+	 *         les informations sur les résidents vivant à l'adresse donnée, ou une
+	 *         erreur 404 si aucun résident trouvé à l'adresse fournie
+	 */
 	@GetMapping("/fire")
 	public ResponseEntity<FireResidentInfoDTO> getFireInfoByAddress(@RequestParam String address) {
 		logger.debug("Requete reçue GET fire informations concernant les habitants vivant à l'adresse {}", address);
 		try {
 			FireResidentInfoDTO residents = reportingService.getFireInfoByAddress(address);
 			if (residents == null) {
+				logger.error("Réponse reçue 404 NOT FOUND, aucun résident trouvé à l'adresse {}", address);
+
 				return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 			}
+			logger.info("Réponse reçue 200 OK, nombre de résident trouvé : {}", residents.getResidents().size());
 			return ResponseEntity.status(HttpStatus.OK).body(residents);
 		} catch (Exception e) {
 			logger.error(
@@ -110,7 +174,18 @@ public class ReportingController {
 
 	}
 
-	@GetMapping("/flood")
+	/**
+	 * Récupère les informations des résidents couverts par les numéros de station
+	 * donnés en paramètre en cas d'inondation
+	 * 
+	 * @param stations : liste de numéro de station pour lesquelles on souhaite
+	 *                 obtenir les informations sur les résidents en cas
+	 *                 d'inondation
+	 * @return réponse HTTP avec un objet {@link FloodHouseholdInfoDTO} contenant
+	 *         une liste de foyers desservis par les stations, ou une erreur 404 NOT
+	 *         FOUND si les numéros de station fournis ne sont pas connus
+	 */
+	@GetMapping("/flood/stations")
 	public ResponseEntity<List<FloodHouseholdInfoDTO>> getFloodInfobyStation(@RequestParam List<Integer> stations) {
 		logger.debug("Requete GET flood information sur les foyers desservis par les casernes {}", stations);
 		try {
@@ -132,6 +207,14 @@ public class ReportingController {
 
 	}
 
+	/**
+	 * Récupèreles inforamtions sur chaque habitant selon son nom de famille
+	 * 
+	 * @param lastName : nom de famille des résidents à chercher
+	 * @return réponse HTTP avec un objet {@link ResidentInfoLByLastNameDTO}
+	 *         contenant les informations des résidents trouvés, ou une erreur 404
+	 *         si aucun résident n'est trouvé avec ce nom
+	 */
 	@GetMapping("/personInfolastName={lastName}")
 	public ResponseEntity<ResidentInfoLByLastNameDTO> getResidentInfoByLastName(@PathVariable String lastName) {
 		logger.debug("Requete reçue GET personInfolastName={}", lastName);
@@ -152,6 +235,14 @@ public class ReportingController {
 		}
 	}
 
+	/**
+	 * Récupère tous les emails des résidents d'une ville donnée
+	 * 
+	 * @param city : la ville dont on souhaite chercher les emails de ses habitants
+	 * @return une réponse HTTP avec un objet {@link EmailInfoDTO} contenant une
+	 *         liste d'email ou une erreur 404 si aucun résident n'est trouvé dans
+	 *         la ville donnée.
+	 */
 	@GetMapping("/communityEmail")
 	public ResponseEntity<EmailInfoDTO> getEmailByCity(@RequestParam String city) {
 		logger.debug("Requete reçue GET communityEmail pour la ville {}", city);

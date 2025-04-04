@@ -9,6 +9,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Représente un dossier médical Contient le nom (String), prénom(String), date
+ * de naissance (LocalDate), les medicaments et leur posologie (List<String>),
+ * et les allergies (List<String>).
+ * 
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -20,6 +26,5 @@ public class MedicalRecord {
 	private LocalDate birthdate;
 	private List<String> medications;
 	private List<String> allergies;
-	
 
 }

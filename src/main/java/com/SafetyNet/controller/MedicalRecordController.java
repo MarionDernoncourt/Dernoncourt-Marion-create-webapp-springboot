@@ -18,6 +18,14 @@ import org.springframework.web.bind.annotation.RestController;
 import com.SafetyNet.model.MedicalRecord;
 import com.SafetyNet.service.MedicalRecordService;
 
+/**
+ * Controlleur REST pour la gestion des casernes de pompiers. Ce controller
+ * expose des API permettant d'effectuer des opérations CRUD sur les dossier
+ * médicaux
+ * 
+ * Utilise {@link MedicalRecordService} pour la logique métier
+ */
+
 @RestController
 public class MedicalRecordController {
 
@@ -26,6 +34,12 @@ public class MedicalRecordController {
 	@Autowired
 	MedicalRecordService medicalRecordService;
 
+	/**
+	 * Récupère la liste de toutes les dossiers médicaux.
+	 * 
+	 * @return Une réponse contenant la liste des dossiers médicaux, ou une
+	 *         erreur 404 si aucundossier n'est trouvé,
+	 */
 	@GetMapping("/medicalrecords")
 	public ResponseEntity<List<MedicalRecord>> getAllMedicalRecord() {
 		logger.debug("Requete reçue : GET medicalrecords");
@@ -44,6 +58,14 @@ public class MedicalRecordController {
 		}
 	}
 
+	
+	/**
+	 * Crée un nouveau dossier médical
+	 * 
+	 * @param medicalRecord -> l'objet à créer
+	 * @return Une réponse 201 CREATED contenant le dossier médical créé ou une
+	 *         erreur 409 si le dossier médical existe déjà avec les informations fournies.
+	 */
 	@PostMapping("/medicalrecord")
 	public ResponseEntity<MedicalRecord> createdMedicalRecord(@RequestBody MedicalRecord medicalRecord) {
 		logger.debug("Requete reçue : CREATE medicalrecord");
@@ -62,6 +84,13 @@ public class MedicalRecordController {
 
 	}
 
+	/**
+	 * Mettre à jour les informations d'un dossier médica
+	 * 
+	 * @param medicalRecord -> Objet MedicalRecord avec les nouvelles informations
+	 * @return réponse 200 OK contenant le dossier médical mise à jour ou une
+	 *         erreur 404 si aucun dossier n'est trouvé
+	 */
 	@PutMapping("/medicalrecord")
 	public ResponseEntity<MedicalRecord> updateMedicalRecord(@RequestBody MedicalRecord medicalRecord) {
 		logger.debug("Requete reçue PUT medicalrecord");
@@ -79,6 +108,15 @@ public class MedicalRecordController {
 		}
 	}
 
+	
+	/**
+	 * Supprimer un dossier médical
+	 * 
+	 * @param firstName -> firstName de la personne a qui appartient le dossier médical
+	 * @param lastName -> lastName de la personne a qui appartient le dossier médical
+	 * @return 204 NO CONTENT si la suppression est réalisée, ou une erreur 404 si
+	 *         aucun dossier n'est trouvé.
+	 */
 	@DeleteMapping("/medicalrecord")
 	public ResponseEntity<Void> deleteMedicalRecord(@RequestParam String firstName, @RequestParam String lastName) {
 		logger.debug("Réquete reçue DELETE medicalrecord");

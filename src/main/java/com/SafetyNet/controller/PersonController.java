@@ -18,6 +18,14 @@ import org.springframework.web.bind.annotation.RestController;
 import com.SafetyNet.model.Person;
 import com.SafetyNet.service.PersonService;
 
+/**
+ * Controlleur REST pour la gestion des résidents. Ce controller expose des API
+ * permettant d'effectuer des opérations CRUD sur les résidents
+ * 
+ * Utilise {@link PersonService} pour la logique métier
+ * 
+ * @see PersonService
+ */
 @RestController
 public class PersonController {
 
@@ -26,6 +34,12 @@ public class PersonController {
 	@Autowired
 	private PersonService personService;
 
+	/**
+	 * Récupère la liste de tous les résidents.
+	 * 
+	 * @return Une réponse contenant la liste des résidents, ou une erreur 404 si
+	 *         aucun résident n'est trouvé,
+	 */
 	@GetMapping("/persons")
 	public ResponseEntity<List<Person>> getAllPersons() {
 		logger.debug("Requete GET persons reçue");
@@ -44,6 +58,13 @@ public class PersonController {
 
 	}
 
+	/**
+	 * Crée un nouveau résident
+	 * 
+	 * @param person -> l'objet à créer
+	 * @return Une réponse 201 CREATED contenant le résident créé ou une erreur 409
+	 *         si le résident existe déjà avec les informations fournies.
+	 */
 	@PostMapping("/person")
 	public ResponseEntity<Person> createPerson(@RequestBody Person person) {
 		logger.debug("Requete reçue CREATE person");
@@ -63,6 +84,13 @@ public class PersonController {
 		}
 	}
 
+	/**
+	 * Mettre à jour les informations d'un résident
+	 * 
+	 * @param person -> Objet Person avec les nouvelles informations
+	 * @return réponse 200 OK contenant le résident est mise à jour ou une erreur
+	 *         404 si aucun résident n'est trouvé
+	 */
 	@PutMapping("/person")
 	public ResponseEntity<Person> updatePerson(@RequestBody Person person) {
 		logger.debug("Requete reçue PUT person");
@@ -84,6 +112,14 @@ public class PersonController {
 
 	}
 
+	/**
+	 * Supprimer un résident
+	 * 
+	 * @param firstName -> firstName de la personne a supprimer
+	 * @param lastName  -> lastName de la personne a supprimer
+	 * @return 204 NO CONTENT si la suppression est réalisée, ou une erreur 404 si
+	 *         aucun résident n'est trouvé.
+	 */
 	@DeleteMapping("/person")
 	public ResponseEntity<Void> deletePerson(@RequestParam String firstName, @RequestParam String lastName) {
 		logger.debug("Requete reçue DELETE person : {} {}", firstName, lastName);

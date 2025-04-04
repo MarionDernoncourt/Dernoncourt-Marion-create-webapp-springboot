@@ -19,6 +19,14 @@ import org.springframework.web.bind.annotation.RestController;
 import com.SafetyNet.model.Firestation;
 import com.SafetyNet.service.FirestationService;
 
+/**
+ * Controlleur REST pour la gestion des casernes de pompiers. Ce controller
+ * expose des API permettant d'effectuer des opérations CRUD sur les casernes de
+ * pompiers.
+ * 
+ * Utilise {@link FirestationService} pour la logique métier
+ */
+
 @RestController
 public class FirestationController {
 
@@ -27,6 +35,12 @@ public class FirestationController {
 	@Autowired
 	private FirestationService firestationService;
 
+	/**
+	 * Récupère la liste de toutes les casernes de pompiers.
+	 * 
+	 * @return Une réponse contenant la liste des casernes de pompiers, ou une
+	 *         erreur 404 si aucune caserne n'est trouvée,
+	 */
 	@GetMapping("/firestations")
 	public ResponseEntity<List<Firestation>> getAllFirestation() {
 		try {
@@ -44,6 +58,13 @@ public class FirestationController {
 		}
 	}
 
+	/**
+	 * Crée une nouvelle caserne de pompiers
+	 * 
+	 * @param firestation -> l'objet à créer
+	 * @return Une réponse 201 CREATED contenant la caserne de pompiers créée ou une
+	 *         erreur 409 si une caserne existe déjà avec les paramètres fournis.
+	 */
 	@PostMapping("/firestation")
 	public ResponseEntity<Firestation> createFirestation(@RequestBody Firestation firestation) {
 		try {
@@ -53,7 +74,8 @@ public class FirestationController {
 				logger.error("Réponse 409 CONFLICT, une caserne existe déjà avec ces informations : {}", firestation);
 				return ResponseEntity.status(HttpStatus.CONFLICT).build();
 			}
-			logger.info("Réponse 201 CREATED, la caserne {} {} a été créée avec succès", firestation.getAddress(), firestation.getStation());
+			logger.info("Réponse 201 CREATED, la caserne {} {} a été créée avec succès", firestation.getAddress(),
+					firestation.getStation());
 			return ResponseEntity.status(HttpStatus.CREATED).body(firestationCreated);
 
 		} catch (Exception e) {
@@ -62,6 +84,13 @@ public class FirestationController {
 		}
 	}
 
+	/**
+	 * Mettre à jour les informations d'une caserne de pompier
+	 * 
+	 * @param firestation -> Objet Firestation avec les nouvelles informations
+	 * @return réponse 200 OK contenant la casernes de pompiers mise à jour ou une
+	 *         erreur 404 si aucune caserne n'est trouvée
+	 */
 	@PutMapping("/firestation")
 	public ResponseEntity<Firestation> updateFirestation(@RequestBody Firestation firestation) {
 		try {
@@ -71,7 +100,8 @@ public class FirestationController {
 				logger.error("Réponse reçue : 404 NOT FOUND, la caserne {}, non trouvée", firestation);
 				return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 			}
-			logger.info("Réponse reçue 200 OK, la caserne a été modifiée : {} {}", firestation.getAddress(), firestation.getStation());
+			logger.info("Réponse reçue 200 OK, la caserne a été modifiée : {} {}", firestation.getAddress(),
+					firestation.getStation());
 			return ResponseEntity.status(HttpStatus.OK).body(updatedFirestation);
 		} catch (Exception e) {
 			logger.error("Erreur lors de la mise à jour de la caserne : {}", e.getMessage(), e);
@@ -79,6 +109,14 @@ public class FirestationController {
 		}
 	}
 
+	/**
+	 * Supprimer une caserne de pompier ou le mapping d'un numéro de station
+	 * 
+	 * @param address       -> adresse de la caserne à supprimer (facultatif)
+	 * @param stationNumber -> numéro de station à supprimer (facultatif)
+	 * @return 204 NO CONTENT si la suppression est réalisée, ou une erreur 404 si
+	 *         aucune caserne n'est trouvée, ou 400 si aucun paramètre n'est fourni
+	 */
 	@DeleteMapping("/firestation")
 	public ResponseEntity<Void> deleteFirestation(@RequestParam(required = false) Optional<String> address,
 			@RequestParam(required = false) Optional<Integer> stationNumber) {
