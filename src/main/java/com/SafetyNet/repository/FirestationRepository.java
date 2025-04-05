@@ -17,10 +17,15 @@ public class FirestationRepository implements IFirestationRepository {
 
 	private IDataLoaderRepository dataLoaderRepository;
 
+	/**
+	 * Constructeur injectant la dépendance vers le repository de chargement de données.
+	 *
+	 * @param dataLoaderRepository le repository permettant de charger les données en mémoire
+	 */
 	public FirestationRepository(IDataLoaderRepository dataLoaderRepository) {
 		this.dataLoaderRepository = dataLoaderRepository;
 	}
-
+	
 	@Override
 	public List<Firestation> getAllFirestation() {
 		logger.debug("Accès aux données, récupération de toutes les casernes");
@@ -30,7 +35,7 @@ public class FirestationRepository implements IFirestationRepository {
 		return stations;
 
 	}
-
+	
 	@Override
 	public Firestation createFirestation(Firestation firestation) {
 		logger.debug("Accès aux données, création de la caserne : {}", firestation);
@@ -40,7 +45,7 @@ public class FirestationRepository implements IFirestationRepository {
 		logger.info("Caserne créée avec succès : {}", firestation);
 		return firestation;
 	}
-
+	
 	@Override
 	public Firestation updateFirestation(Firestation firestation) {
 		List<Firestation> firestations = dataLoaderRepository.getAllFirestation();
@@ -55,7 +60,7 @@ public class FirestationRepository implements IFirestationRepository {
 		logger.error("Aucune caserne trouvée pour la mise à jour");
 		return null;
 	}
-
+	
 	@Override
 	public boolean deleteFirestation(String address, Integer stationNumber) {
 		logger.debug("Accès aux données, suppression de(s) la caserne(s) : {} {}", address, stationNumber);

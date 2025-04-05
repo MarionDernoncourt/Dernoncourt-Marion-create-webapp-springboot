@@ -19,6 +19,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.RuntimeBeanNameReference;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
@@ -57,12 +58,38 @@ public class FirestationControllerTest {
 	}
 
 	@Test
+	public void testGetAllFirestation_ShouldReturnInternalServerError_WhenExceptionIsThrown() throws Exception {
+		when(firestationService.getAllFirestation()).thenThrow(new RuntimeException("Erreur simuléé"));
+		mockMvc.perform(get("/firestations")).andExpect(status().isInternalServerError());
+	}
+
+	@Test
 	public void testCreateFirestation() throws Exception {
 		Firestation newStation = new Firestation("123 North St", 3);
 		String newStationJson = objectMapper.writeValueAsString(newStation);
 		when(firestationService.createFirestation(any(Firestation.class))).thenReturn(newStation);
 		mockMvc.perform(post("/firestation").contentType(MediaType.APPLICATION_JSON).content(newStationJson))
 				.andExpect(status().isCreated());
+	}
+
+	@Test
+	public void testCreateFirestation_ShouldReturnInternalServerError_WhenExceptionIsThrown() throws Exception {
+		Firestation newStation = new Firestation("123 North St", 3);
+		String newStationJson = objectMapper.writeValueAsString(newStation);
+		when(firestationService.createFirestation(any(Firestation.class)))
+				.thenThrow(new RuntimeException("Erreur simulée"));
+		mockMvc.perform(post("/firestation").contentType(MediaType.APPLICATION_JSON).content(newStationJson))
+				.andExpect(status().isInternalServerError());
+	}
+
+	@Test
+	public void testCreateFirestationWithNoArgument() throws Exception {
+		Firestation newStation = new Firestation("123 North St", 3);
+		String newStationJson = objectMapper.writeValueAsString(newStation);
+
+		when(firestationService.createFirestation(any(Firestation.class))).thenReturn(null);
+		mockMvc.perform(post("/firestation").contentType(MediaType.APPLICATION_JSON).content(newStationJson))
+				.andExpect(status().isConflict());
 	}
 
 	@Test
@@ -82,21 +109,35 @@ public class FirestationControllerTest {
 		mockMvc.perform(put("/firestation").contentType(MediaType.APPLICATION_JSON).content(updatedFirestationJson))
 				.andExpect(status().isNotFound());
 	}
+	
+	@Test
+	public void testUpdateFirestation_ShouldReturnInternalServerError_WhenExceptionIsThrown() throws Exception {
+		Firestation updatedFirestation = new Firestation("18 Bomberos St", 1);
+		String updatedFirestationJson = objectMapper.writeValueAsString(updatedFirestation);
+		when(firestationService.updateFirestation(any(Firestation.class))).thenThrow(new RuntimeException("Erreur simulée"));
+		mockMvc.perform(put("/firestation").contentType(MediaType.APPLICATION_JSON).content(updatedFirestationJson)).andExpect(status().isInternalServerError());	}
 
 	@Test
 	public void testDeleteFirestation() throws Exception {
 		Firestation stationToDelete = mockFirestation.get(0);
 		when(firestationService.deleteFirestation(anyString(), anyInt())).thenReturn(true);
-		mockMvc.perform(delete("/firestation").param("address", stationToDelete.getAddress()).param("stationNumber", String.valueOf(stationToDelete.getStation())))
-				.andExpect(status().isNoContent());
+		mockMvc.perform(delete("/firestation").param("address", stationToDelete.getAddress()).param("stationNumber",
+				String.valueOf(stationToDelete.getStation()))).andExpect(status().isNoContent());
 	}
-	
-	
+
 	@Test
 	public void testDeleteFirestation_withWrongArgument() throws Exception {
 		Firestation stationToDelete = mockFirestation.get(0);
 		when(firestationService.deleteFirestation(anyString(), anyInt())).thenReturn(false);
 		mockMvc.perform(delete("/firestation").param("address", stationToDelete.getAddress()))
 				.andExpect(status().isNotFound());
+	}
+	
+	@Test
+	public void testDeleteFirestation_ShouldReturnInternalServerError_WhenExceptionIsThrown () throws Exception {
+		Firestation stationToDelete = mockFirestation.get(0);
+		when(firestationService.deleteFirestation(anyString(), anyInt())).thenThrow(new RuntimeException("Erreur simulée"));
+		mockMvc.perform(delete("/firestation").param("address", stationToDelete.getAddress()).param("stationNumber", String.valueOf(stationToDelete.getStation())))
+				.andExpect(status().isInternalServerError());
 	}
 }

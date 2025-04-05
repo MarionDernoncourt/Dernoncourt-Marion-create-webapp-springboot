@@ -38,7 +38,6 @@ public class PersonControllerTest {
 	@MockBean
 	private PersonService personService;
 
-	
 	List<Person> mockPersons = new ArrayList<Person>();
 
 	private ObjectMapper objectMapper = new ObjectMapper();
@@ -68,17 +67,37 @@ public class PersonControllerTest {
 		assertEquals(content, "");
 	}
 
+	@Test
+	public void testGetAllPerson_ShouldReturnInternalServerError_WhenExceptionIsThrown() throws Exception {
+		when(personService.getAllPersons()).thenReturn(mockPersons);
+		MvcResult result = mockMvc.perform(get("/persons")).andExpect(status().isOk()).andReturn();
+		String content = result.getResponse().getContentAsString();
+		assertEquals(content,
+				"[{\"firstName\":\"John\",\"lastName\":\"Doe\",\"address\":\"123 Main St\",\"city\":\"city\",\"zip\":12345,\"phone\":\"123-456-789\",\"email\":\"john@example.com\"},{\"firstName\":\"Jane\",\"lastName\":\"Doe\",\"address\":\"456 North St\",\"city\":\"city\",\"zip\":98765,\"phone\":\"987-654-321\",\"email\":\"jane@example.com\"}]");
+	}
 
 	@Test
 	public void testCreatePerson() throws Exception {
 		Person person = new Person("Harry", "Potter", "12 Pourdlard St", "London", 12345, "123-456-987",
 				"potter@email.com");
 		String personJson = objectMapper.writeValueAsString(person);
-		
+
 		when(personService.createPerson(any(Person.class))).thenReturn(person);
 
 		mockMvc.perform(post("/person").contentType(MediaType.APPLICATION_JSON).content(personJson))
 				.andExpect(status().isCreated());
+	}
+
+	@Test
+	public void testCreatePerson_ShouldReturnInternalServerError_WhenExceptionIsThrown() throws Exception {
+		Person person = new Person("Harry", "Potter", "12 Pourdlard St", "London", 12345, "123-456-987",
+				"potter@email.com");
+		String personJson = objectMapper.writeValueAsString(person);
+
+		when(personService.createPerson(any(Person.class))).thenThrow(new RuntimeException("Erreur simulée"));
+
+		mockMvc.perform(post("/person").contentType(MediaType.APPLICATION_JSON).content(personJson))
+				.andExpect(status().isInternalServerError());
 	}
 
 	@Test
@@ -109,6 +128,17 @@ public class PersonControllerTest {
 	}
 
 	@Test
+	public void testUpdatePerson_ShouldReturnInternalServerError_WhenExceptionIsThrown () throws Exception {
+		Person updatedPerson = new Person("John", "Doe", "321 Updated St", "city", 12345, "123-456-789",
+				"john@example.com");
+		String updatedPersonJson = objectMapper.writeValueAsString(updatedPerson);
+		when(personService.updatePerson(any(Person.class))).thenThrow(new RuntimeException("Erreur simulée"));
+
+		mockMvc.perform(put("/person").contentType(MediaType.APPLICATION_JSON).content(updatedPersonJson)).andExpect(status().isInternalServerError());
+
+	}
+
+	@Test
 	public void testDeletePerson() throws Exception {
 		when(personService.deletePerson("John", "Doe")).thenReturn(true);
 		mockMvc.perform(delete("/person").param("firstName", "John").param("lastName", "Doe"))
@@ -120,6 +150,13 @@ public class PersonControllerTest {
 		when(personService.deletePerson("John", "Doe")).thenReturn(false);
 		mockMvc.perform(delete("/person").param("firstName", "John").param("lastName", "Doe"))
 				.andExpect(status().isNotFound());
+	}
+
+	@Test
+	public void testDeletePerson_ShouldReturnInternalServerError_WhenExceptionIsThrown() throws Exception {
+		when(personService.deletePerson("John", "Doe")).thenThrow(new RuntimeException("Erreur simulée"));
+		mockMvc.perform(delete("/person").param("firstName", "John").param("lastName", "Doe"))
+				.andExpect(status().isInternalServerError());
 	}
 
 }

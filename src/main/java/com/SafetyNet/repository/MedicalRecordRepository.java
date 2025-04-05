@@ -15,7 +15,7 @@ public class MedicalRecordRepository implements IMedicalRecordRepository {
 
 	private IDataLoaderRepository dataLoaderRepository;
 
-	// Injection des listes chargées lors du lancement de l'app
+	
 	public MedicalRecordRepository(IDataLoaderRepository dataLoaderRepository) {
 		this.dataLoaderRepository = dataLoaderRepository;
 	}

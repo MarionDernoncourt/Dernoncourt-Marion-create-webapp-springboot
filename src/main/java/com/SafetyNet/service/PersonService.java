@@ -18,6 +18,11 @@ public class PersonService {
 	@Autowired
 	private PersonRepository personRepository;
 
+	/**
+	 * Récupère toutes les personnes.
+	 * 
+	 * @return une liste de toutes les personnes présentes dans le repository.
+	 */
 	public List<Person> getAllPersons() {
 		logger.debug("Récupération de toutes les personnes");
 		List<Person> persons = personRepository.getAllPersons();
@@ -25,6 +30,13 @@ public class PersonService {
 		return persons;
 	}
 
+	/**
+	 * Recherche une personne par son prénom et son nom.
+	 * 
+	 * @param firstName le prénom de la personne à rechercher.
+	 * @param lastName  le nom de la personne à rechercher.
+	 * @return la personne trouvée ou null si la personne n'existe pas.
+	 */
 	public Person getPersonByFirstNameAndLastName(String firstName, String lastName) {
 		logger.debug("Recherche d'une personne avec son nom et prénom : {} {}", firstName, lastName);
 		Person person = personRepository.getPersonByFirstNameAndLastName(firstName, lastName);
@@ -36,6 +48,12 @@ public class PersonService {
 		return person;
 	}
 
+	/**
+	 * Crée une nouvelle personne si elle n'existe pas déjà.
+	 * 
+	 * @param person la personne à créer.
+	 * @return la personne créée ou null si la personne existe déjà.
+	 */
 	public Person createPerson(Person person) {
 		logger.debug("Tentative de la création de la personne : {}", person);
 		List<Person> persons = personRepository.getAllPersons();
@@ -52,6 +70,12 @@ public class PersonService {
 		return created;
 	}
 
+	/**
+	 * Met à jour une personne existante.
+	 * 
+	 * @param person la personne avec les nouvelles informations.
+	 * @return la personne mise à jour ou null si la personne n'existe pas.
+	 */
 	public Person updatePerson(Person person) {
 		logger.debug("Tentative de mise à jour de la personne : {} {}", person.getFirstName(), person.getLastName());
 		Person updated = personRepository.updatePerson(person);
@@ -62,6 +86,13 @@ public class PersonService {
 		return updated;
 	}
 
+	/**
+	 * Supprime une personne à partir de son prénom et nom.
+	 * 
+	 * @param firstName le prénom de la personne à supprimer.
+	 * @param lastName  le nom de la personne à supprimer.
+	 * @return true si la personne a été supprimée, false sinon.
+	 */
 	public boolean deletePerson(String firstName, String lastName) {
 		logger.debug("Tentative de suppression de la personne : {} {}", firstName, lastName);
 		boolean deleted = personRepository.deletePerson(firstName, lastName);

@@ -29,7 +29,7 @@ public class FirestationControllerIT {
 
 	@Autowired
 	private ObjectMapper objectMapper;
-	
+
 	@Autowired
 	private DataLoaderRepository dataLoaderRepository;
 
@@ -39,7 +39,7 @@ public class FirestationControllerIT {
 		dataLoaderRepository.setMedicalRecords(null);
 		dataLoaderRepository.setPersons(null);
 	}
-	
+
 	@Test
 	public void testGetAllFirestation() throws Exception {
 		mockMvc.perform(get("/firestations")).andExpect(status().isOk())
@@ -74,8 +74,7 @@ public class FirestationControllerIT {
 
 	@Test
 	public void testDeleteFirestationwithNonExistantArgument() throws Exception {
-		mockMvc.perform(delete("/firestation").param("address", "58 Ramble St"))
-				.andExpect(status().isNotFound());
+		mockMvc.perform(delete("/firestation").param("address", "58 Ramble St")).andExpect(status().isNotFound());
 	}
 
 }

@@ -24,7 +24,7 @@ public class ReportingControllerIT {
 	private MockMvc mockMvc;
 
 	@Autowired
-	private 		DataLoaderRepository dataLoaderRepository;
+	private DataLoaderRepository dataLoaderRepository;
 
 	@BeforeEach
 	void setUp () {
@@ -55,7 +55,7 @@ public class ReportingControllerIT {
 	
 	@Test
 	public void testGetFloodInfoByStation() throws Exception {
-		mockMvc.perform(get("/flood").param("stations", "1,2")).andExpect(status().isOk()).andExpect(jsonPath("$[*].residents[0].lastName").value(hasItem("Duncan")));
+		mockMvc.perform(get("/flood/stations").param("stations", "1,2")).andExpect(status().isOk()).andExpect(jsonPath("$[*].residents[0].lastName").value(hasItem("Duncan")));
 	}
 	
 	@Test

@@ -12,6 +12,11 @@ import org.springframework.web.server.ResponseStatusException;
 import com.SafetyNet.model.Firestation;
 import com.SafetyNet.repository.IFirestationRepository;
 
+/**
+ * Service permettant de gérer les opérations liées aux casernes de pompiers.
+ * Fournit des méthodes pour récupérer, créer, mettre à jour, supprimer et
+ * rechercher des casernes.
+ */
 @Service
 public class FirestationService {
 
@@ -19,10 +24,21 @@ public class FirestationService {
 
 	private IFirestationRepository firestationRepository;
 
+	/**
+	 * Constructeur injectant la dépendance vers le repository des casernes.
+	 *
+	 * @param firestationRepository le repository permettant l'accès aux données des
+	 *                              casernes
+	 */
 	public FirestationService(IFirestationRepository firestationRepository) {
 		this.firestationRepository = firestationRepository;
 	}
 
+	/**
+	 * Récupère la liste de toutes les casernes.
+	 *
+	 * @return une liste de {@link Firestation} représentant toutes les casernes
+	 */
 	public List<Firestation> getAllFirestation() {
 		logger.debug("Tentative de récupération de toutes les casernes");
 
@@ -32,6 +48,15 @@ public class FirestationService {
 
 	}
 
+	/**
+	 * Crée une nouvelle caserne. Vérifie si la caserne existe déjà et si les
+	 * informations sont valides.
+	 *
+	 * @param firestation l'objet {@link Firestation} à créer
+	 * @return la caserne créée ou {@code null} si la création a échoué
+	 * @throws ResponseStatusException si une erreur de validation survient (adresse
+	 *                                 ou numéro de station invalide)
+	 */
 	public Firestation createFirestation(Firestation firestation) {
 		logger.debug("Tentative de création de la caserne : {}", firestation);
 
@@ -52,6 +77,15 @@ public class FirestationService {
 		return station;
 	}
 
+	/**
+	 * Met à jour une caserne existante. Si la caserne n'est pas trouvée, une
+	 * exception est levée.
+	 *
+	 * @param firestation l'objet {@link Firestation} avec les nouvelles
+	 *                    informations
+	 * @return la caserne mise à jour
+	 * @throws ResponseStatusException si la caserne n'a pas été trouvée
+	 */
 	public Firestation updateFirestation(Firestation firestation) {
 		logger.debug("Tentative de mise à jour de la caserne : {}", firestation);
 		Firestation updated = firestationRepository.updateFirestation(firestation);
@@ -63,6 +97,14 @@ public class FirestationService {
 
 	}
 
+	/**
+	 * Supprime une caserne en fonction de l'adresse et du numéro de station.
+	 *
+	 * @param address       l'adresse de la caserne à supprimer
+	 * @param stationNumber le numéro de station de la caserne à supprimer
+	 * @return {@code true} si la suppression a été effectuée avec succès, sinon
+	 *         {@code false}
+	 */
 	public boolean deleteFirestation(String address, Integer stationNumber) {
 		logger.debug("Tentative de suppression de la caserne : {} {}", address, stationNumber);
 
@@ -71,6 +113,12 @@ public class FirestationService {
 		return deleted;
 	}
 
+	/**
+	 * Recherche une caserne à partir de son adresse.
+	 *
+	 * @param address l'adresse de la caserne à rechercher
+	 * @return la caserne correspondante ou {@code null} si non trouvée
+	 */
 	public Firestation findByAddress(String address) {
 		logger.debug("Accès aux données, rechercher de la caserne à l'adresse : {}", address);
 		Firestation stationByAddress = getAllFirestation().stream()
@@ -78,6 +126,12 @@ public class FirestationService {
 		return stationByAddress;
 	}
 
+	/**
+	 * Recherche toutes les casernes correspondant à un numéro de station donné.
+	 *
+	 * @param stationNumber le numéro de station à rechercher
+	 * @return une liste de casernes correspondant au numéro de station
+	 */
 	public List<Firestation> findByStationNumber(int stationNumber) {
 		logger.debug("Accès aux données, recherche des casernes rattachées au numéro : {}", stationNumber);
 		return getAllFirestation().stream().filter(station -> station.getStation() == stationNumber)

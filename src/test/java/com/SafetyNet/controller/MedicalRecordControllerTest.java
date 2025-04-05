@@ -41,8 +41,6 @@ public class MedicalRecordControllerTest {
 	@MockBean
 	private MedicalRecordService medicalRecordService;
 
-
-
 	private ObjectMapper objectMapper = new ObjectMapper();
 
 	List<MedicalRecord> mockMedRecord = new ArrayList<MedicalRecord>();
@@ -72,7 +70,11 @@ public class MedicalRecordControllerTest {
 		mockMvc.perform(get("/medicalrecords")).andExpect(status().isNotFound());
 	}
 
-	
+	@Test
+	public void testGetAllMedicalRecord_ShouldReturnInternalServerError_WhenExceptionIsThrown() throws Exception {
+		when(medicalRecordService.getAllMedicalRecord()).thenThrow(new RuntimeException("Erreur simulée"));
+		mockMvc.perform(get("/medicalrecords")).andExpect(status().isInternalServerError());
+	}
 
 	@Test
 	public void testCreateMedicalRecord() throws Exception {
@@ -83,6 +85,17 @@ public class MedicalRecordControllerTest {
 		when(medicalRecordService.createMedicalRecord(newMedRecord)).thenReturn(newMedRecord);
 		mockMvc.perform(post("/medicalrecord").contentType(MediaType.APPLICATION_JSON).content(newMedRecordJson))
 				.andExpect(status().isCreated()).andExpect(jsonPath("$.firstName", is("Harry")));
+	}
+
+	@Test
+	public void testCreateMedicalRecord_ShouldReturnInternalServerError_WhenExceptionIsThrown() throws Exception {
+		MedicalRecord newMedRecord = new MedicalRecord("Harry", "Potter",
+				LocalDate.parse("03/06/1984", DateTimeFormatter.ofPattern("MM/dd/yyyy")),
+				List.of("hydrapermazol:100mg"), List.of("nillacilan"));
+		String newMedRecordJson = objectMapper.writeValueAsString(newMedRecord);
+		when(medicalRecordService.createMedicalRecord(newMedRecord)).thenThrow(new RuntimeException("Erreur simulée"));
+		mockMvc.perform(post("/medicalrecord").contentType(MediaType.APPLICATION_JSON).content(newMedRecordJson))
+				.andExpect(status().isInternalServerError());
 	}
 
 	@Test
@@ -105,18 +118,39 @@ public class MedicalRecordControllerTest {
 		when(medicalRecordService.updateMedicalRecord(any(MedicalRecord.class))).thenReturn(null);
 		mockMvc.perform(put("/medicalrecord").contentType(MediaType.APPLICATION_JSON).content(medRecordToUpdateJson))
 				.andExpect(status().isNotFound());
-		;
+
+	}
+
+	@Test
+	public void testUpdateMedicalRecord_ShouldReturnInternalServerError_WhenExceptionIsThrown() throws Exception {
+		MedicalRecord medRecordToUpdate = new MedicalRecord("Hermione", "Granger",
+				LocalDate.parse("03/06/1984", DateTimeFormatter.ofPattern("MM/dd/yyyy")), List.of("doliprane 1000mg"),
+				List.of("nillacilan"));
+		String medRecordToUpdateJson = objectMapper.writeValueAsString(medRecordToUpdate);
+		when(medicalRecordService.updateMedicalRecord(any(MedicalRecord.class))).thenThrow(new RuntimeException("Erreur simulée"));
+		mockMvc.perform(put("/medicalrecord").contentType(MediaType.APPLICATION_JSON).content(medRecordToUpdateJson))
+				.andExpect(status().isInternalServerError());
+
 	}
 
 	@Test
 	public void testDeleteMedicalRecord() throws Exception {
 		when(medicalRecordService.deleteMedicalRecord("John", "Boyd")).thenReturn(true);
-		mockMvc.perform(delete("/medicalrecord").param("firstName", "John").param("lastName", "Boyd")).andExpect(status().isNoContent());
+		mockMvc.perform(delete("/medicalrecord").param("firstName", "John").param("lastName", "Boyd"))
+				.andExpect(status().isNoContent());
 	}
-	
+
 	@Test
 	public void testDeleteMedicalRecordwithWrongArgument() throws Exception {
 		when(medicalRecordService.deleteMedicalRecord("John", "Boyd")).thenReturn(false);
-		mockMvc.perform(delete("/medicalrecord").param("firstName", "John").param("lastName", "Boyd")).andExpect(status().isNotFound());
+		mockMvc.perform(delete("/medicalrecord").param("firstName", "John").param("lastName", "Boyd"))
+				.andExpect(status().isNotFound());
+	}
+
+	@Test
+	public void testDeleteMedicalRecord_ShouldReturnInternalServerError_WhenExceptionIsThrown() throws Exception {
+		when(medicalRecordService.deleteMedicalRecord("John", "Boyd")).thenThrow(new RuntimeException("Erreur simulée"));
+		mockMvc.perform(delete("/medicalrecord").param("firstName", "John").param("lastName", "Boyd"))
+				.andExpect(status().isInternalServerError());
 	}
 }
