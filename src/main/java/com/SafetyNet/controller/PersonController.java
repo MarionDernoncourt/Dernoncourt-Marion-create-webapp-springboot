@@ -26,7 +26,7 @@ import com.SafetyNet.service.PersonService;
  * 
  * @see PersonService
  */
-@RestController
+@RestController // Permet a SpringBoot de le reconnaitre comme composant capabke de gérer les requetes http 
 public class PersonController {
 
 	private static Logger logger = LoggerFactory.getLogger(PersonController.class);

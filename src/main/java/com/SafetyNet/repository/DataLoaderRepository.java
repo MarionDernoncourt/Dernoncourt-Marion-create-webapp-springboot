@@ -54,21 +54,28 @@ public class DataLoaderRepository implements CommandLineRunner, IDataLoaderRepos
 	 */
 	public List<Person> getAllPersons() {
 		try {
+			// Vérification si la liste Persons a déjà été chargée en mémoire
 			if (persons != null) {
 				logger.debug("Liste de personne déjà chargée en mémoire");
 				return persons;
 			}
 
-			JsonNode root = objectMapper.readTree(jsonFile);
-			JsonNode personsNode = root.get("persons");
+			// Lecture du fichier JSON
+			JsonNode root = objectMapper.readTree(jsonFile); // Lire le fichier JSON et le convertir en objet JsonNode<
+			JsonNode personsNode = root.get("persons"); // on cherche le noeud "persons"
+			
+			// Verification si le noeud Persons est valide
 			if (personsNode == null || !personsNode.isArray()) {
 				logger.error("Aucune données trouvées dans 'persons'. Retour d'une liste vide");
 				return List.of();
 			}
+			// Conversion des données JSON en objet Java
 			logger.info("Lecture du fichier ok, nombre d'habitants : " + personsNode.size());
 			persons = objectMapper.convertValue(personsNode, new TypeReference<List<Person>>() {
 			});
+			// La liste est stokée dans persons 
 			return persons;
+			
 		} catch (IOException e) {
 			logger.error("Erreur lors de la lecture du fichier JSON", e);
 			return List.of();

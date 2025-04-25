@@ -12,15 +12,14 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.SafetyNet.dto.ChildrendInfoDTO;
+import com.SafetyNet.dto.EmailInfoDTO;
+import com.SafetyNet.dto.FireResidentInfoDTO;
+import com.SafetyNet.dto.FirestationCoverageDTO;
+import com.SafetyNet.dto.FloodHouseholdInfoDTO;
+import com.SafetyNet.dto.PhoneNumberDTO;
+import com.SafetyNet.dto.ResidentInfoLByLastNameDTO;
 import com.SafetyNet.repository.DataLoaderRepository;
-
-import dto.ChildrendInfoDTO;
-import dto.EmailInfoDTO;
-import dto.FireResidentInfoDTO;
-import dto.FirestationCoverageDTO;
-import dto.FloodHouseholdInfoDTO;
-import dto.PhoneNumberDTO;
-import dto.ResidentInfoLByLastNameDTO;
 
 @SpringBootTest
 class ReportingServiceTestIT {

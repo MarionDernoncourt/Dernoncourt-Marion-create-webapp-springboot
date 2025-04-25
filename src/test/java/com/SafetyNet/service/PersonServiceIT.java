@@ -20,15 +20,22 @@ public class PersonServiceIT {
 
 	@Autowired
 	private PersonService personService;
+	@Autowired
+	private DataLoaderRepository dataLoaderRepository;
 
-	
+	@BeforeEach
+	void setUp() {
+		dataLoaderRepository.setFirestations(null);
+		dataLoaderRepository.setMedicalRecords(null);
+		dataLoaderRepository.setPersons(null);
+	}
 
 	@Test
 	public void testGetAllPersons() {
 		List<Person> persons = personService.getAllPersons();
 		System.out.println(persons.size());
 		assertTrue(!persons.isEmpty());
-		
+
 	}
 
 	@Test
@@ -55,7 +62,7 @@ public class PersonServiceIT {
 		Person updatedPerson = personService.getPersonByFirstNameAndLastName("John", "Boyd");
 		assertEquals("johnBoyd@email.com", updatedPerson.getEmail());
 	}
-	
+
 	@Test
 	public void testDeletePerson() {
 		boolean personRemoved = personService.deletePerson("Eric", "Cadigan");

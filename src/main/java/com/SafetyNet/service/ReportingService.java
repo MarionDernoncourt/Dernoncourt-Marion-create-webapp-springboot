@@ -11,24 +11,23 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.SafetyNet.dto.ChildrendInfoDTO;
+import com.SafetyNet.dto.EmailInfoDTO;
+import com.SafetyNet.dto.FireResidentInfoDTO;
+import com.SafetyNet.dto.FirestationCoverageDTO;
+import com.SafetyNet.dto.FloodHouseholdInfoDTO;
+import com.SafetyNet.dto.PhoneNumberDTO;
+import com.SafetyNet.dto.ResidentInfoLByLastNameDTO;
+import com.SafetyNet.dto.ChildrendInfoDTO.ChildInfoDTO;
+import com.SafetyNet.dto.ChildrendInfoDTO.ResidentInfoDTO;
+import com.SafetyNet.dto.FireResidentInfoDTO.MedicationRecordFireInfo;
+import com.SafetyNet.dto.FireResidentInfoDTO.ResidentFireInfoDTO;
+import com.SafetyNet.dto.FloodHouseholdInfoDTO.MedicationRecordFloodInfo;
+import com.SafetyNet.dto.FloodHouseholdInfoDTO.ResidentFloodInfoDTO;
+import com.SafetyNet.dto.ResidentInfoLByLastNameDTO.MedicationRecordByLastName;
+import com.SafetyNet.dto.ResidentInfoLByLastNameDTO.Resident;
 import com.SafetyNet.model.MedicalRecord;
 import com.SafetyNet.model.Person;
-
-import dto.ChildrendInfoDTO;
-import dto.ChildrendInfoDTO.ChildInfoDTO;
-import dto.ChildrendInfoDTO.ResidentInfoDTO;
-import dto.EmailInfoDTO;
-import dto.FireResidentInfoDTO;
-import dto.FireResidentInfoDTO.MedicationRecordFireInfo;
-import dto.FireResidentInfoDTO.ResidentFireInfoDTO;
-import dto.FirestationCoverageDTO;
-import dto.FloodHouseholdInfoDTO;
-import dto.FloodHouseholdInfoDTO.MedicationRecordFloodInfo;
-import dto.FloodHouseholdInfoDTO.ResidentFloodInfoDTO;
-import dto.PhoneNumberDTO;
-import dto.ResidentInfoLByLastNameDTO;
-import dto.ResidentInfoLByLastNameDTO.MedicationRecordByLastName;
-import dto.ResidentInfoLByLastNameDTO.Resident;
 
 /**
  * Ce service gère la logique métier pour les différents reporting sur les

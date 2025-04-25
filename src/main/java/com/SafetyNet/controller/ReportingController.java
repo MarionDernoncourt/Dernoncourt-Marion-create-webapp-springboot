@@ -12,15 +12,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.SafetyNet.dto.ChildrendInfoDTO;
+import com.SafetyNet.dto.EmailInfoDTO;
+import com.SafetyNet.dto.FireResidentInfoDTO;
+import com.SafetyNet.dto.FirestationCoverageDTO;
+import com.SafetyNet.dto.FloodHouseholdInfoDTO;
+import com.SafetyNet.dto.PhoneNumberDTO;
+import com.SafetyNet.dto.ResidentInfoLByLastNameDTO;
 import com.SafetyNet.service.ReportingService;
-
-import dto.ChildrendInfoDTO;
-import dto.EmailInfoDTO;
-import dto.FireResidentInfoDTO;
-import dto.FirestationCoverageDTO;
-import dto.FloodHouseholdInfoDTO;
-import dto.PhoneNumberDTO;
-import dto.ResidentInfoLByLastNameDTO;
 
 /**
  * Controller REST pour du reporting sur les informations de sécurité des
